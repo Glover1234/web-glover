@@ -1,0 +1,11 @@
+2025-06-18 13:20:39.571031: Starting ADVANCED compression process
+2025-06-18 13:20:39.870205: JPEG src/assets/processes/photos/encuadradora1.JPG: 8984831 → 2829354 bytes (68.5%)
+2025-06-18 13:20:40.138943: JPEG src/assets/processes/photos/scanner2.JPG: 8831238 → 2877765 bytes (67.4%)
+2025-06-18 13:20:40.406648: JPEG src/assets/processes/photos/scanner3.JPG: 8831112 → 2875540 bytes (67.4%)
+2025-06-18 13:20:40.667511: JPEG src/assets/processes/photos/encuadradora2.JPG: 8725292 → 2878314 bytes (67.0%)
+2025-06-18 13:20:40.922007: JPEG src/assets/processes/photos/cnc1.JPG: 8398425 → 2669944 bytes (68.2%)
+2025-06-18 13:20:41.191506: JPEG src/assets/processes/photos/cnc2.JPG: 8197983 → 2620865 bytes (68.0%)
+2025-06-18 13:20:41.432990: JPEG src/assets/processes/photos/pintura2.JPG: 8116274 → 2411085 bytes (70.3%)
+2025-06-18 13:20:41.676105: JPEG src/assets/processes/banner/banner1.JPG: 8116274 → 2411085 bytes (70.3%)
+2025-06-18 13:20:41.909395: JPEG src/assets/processes/photos/pintura.JPG: 7717184 → 2325578 bytes (69.9%)
+2025-06-18 13:20:42.209667: PNG src/assets/processes/photos/process3.png: 1604870 → 107271 bytes (93.3%)
