@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, FileText } from 'lucide-react';
 import logo from '../assets/general/logo.jpeg';
 
 const Footer: React.FC = () => {
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="container relative pt-20 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
@@ -29,6 +29,34 @@ const Footer: React.FC = () => {
                 <Linkedin size={20} />
               </a>
             </div>
+          </div>
+          {/* Page Links */}
+          <div>
+            <h4 className="text-lg font-bold uppercase mb-2">Glover</h4>
+            <div className="w-12 h-0.5 bg-red-600 mb-4"></div>
+            <ul className="space-y-3">
+              <li>
+                <a href="/" className="text-neutral-600 hover:text-neutral-900">Home</a>
+              </li>
+              <li>
+                <a href="/business-lines" className="text-neutral-600 hover:text-neutral-900">Líneas de negocio</a>
+              </li>
+              <li>
+                <a href="/certifications-sustainability" className="text-neutral-600 hover:text-neutral-900">Sustentabilidad</a>
+              </li>
+              <li>
+                <a href="/technological-processes" className="text-neutral-600 hover:text-neutral-900">Nuestros Procesos Tecnológicos</a>
+              </li>
+              <li>
+                <a href="/sales-room" className="text-neutral-600 hover:text-neutral-900">Sala de ventas</a>
+              </li>
+              <li>
+                <a href="/about-us" className="text-neutral-600 hover:text-neutral-900">Nosotros</a>
+              </li>
+              <li>
+                <a href="/contact" className="text-neutral-600 hover:text-neutral-900">Contacto</a>
+              </li>
+            </ul>
           </div>
 
           {/* Contact */}
@@ -51,6 +79,42 @@ const Footer: React.FC = () => {
                 <span className="text-neutral-600">contacto@glover.cl</span>
               </li>
             </ul>
+
+            <div className="mt-4">
+              <h5 className="text-sm font-semibold mb-2">Enlaces útiles</h5>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="https://es.surveymonkey.com/r/canal_de_denuncias_del_modelo_de_prevencion_de_delitos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-600 hover:text-red-600 flex items-center"
+                  >
+                    <MapPin className="w-4 h-4 mr-2" /> Canal de Denuncias
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://mailingrosen.com/mailing/pdf/codigo-etica-rosen.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-600 hover:text-red-600 flex items-center"
+                  >
+                    <FileText className="w-4 h-4 mr-2" /> Código de Ética Glover (PDF)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://mailingrosen.com/mailing/pdf/manual-de-prevencion-de-delitos-2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-600 hover:text-red-600 flex items-center"
+                  >
+                    <FileText className="w-4 h-4 mr-2" /> Manual Prevención de Delitos (PDF)
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

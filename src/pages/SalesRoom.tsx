@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Clock, Mail, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactCTA from '../components/home/ContactCTA';
+import Map from '../components/contact/Map';
 import salesroomBanner from '../assets/salesroom/salesroom5.jpeg';
-import salesroom2 from '../assets/salesroom/salesroom2.jpeg';
 import salesroom3 from '../assets/salesroom/salesroom3.jpeg';
 import salesroom4 from '../assets/salesroom/salesroom4.jpeg';
 import salesroom5 from '../assets/salesroom/salesroom5.jpeg';
@@ -98,62 +98,78 @@ const SalesRoom: React.FC = () => {
 				</motion.div>
 			</div>
 
-			{/* Locations Section */}
+			{/* Locations Section - image card + map/details side-by-side */}
 			<section className="py-20">
 				<div className="container">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-						{locations.map((location, index) => (
-							<motion.div
-								key={location.name}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ delay: index * 0.2 }}
-								className="bg-white rounded-lg shadow-lg overflow-hidden"
-							>
-								<div 
-									className="aspect-video overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-									onClick={() => openCarousel(1)}
+				
+					{/* Middle row: image (left) and map (right) side-by-side */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+						{/* Image (left) */}
+						<div>
+							{locations[0] && (
+								<motion.div
+									initial={{ opacity: 0, y: 20 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true }}
+									className="bg-white rounded-lg shadow-lg overflow-hidden"
 								>
-									<img
-										src={location.image}
-										alt={location.name}
-										className="w-full h-full object-cover"
-									/>
-								</div>
-								<div className="p-8">
-									<h2 className="text-2xl font-bold mb-6">
-										{location.name}
-									</h2>
+									<div
+										className="aspect-video overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+										onClick={() => openCarousel(0)}
+									>
+										<img
+											src={locations[0].image}
+											alt={locations[0].name}
+											className="w-full h-full object-cover"
+										/>
+									</div>
+								</motion.div>
+							)}
+						</div>
+
+						{/* Map (right) */}
+						<div>
+							<div className="bg-white rounded-lg shadow-lg overflow-hidden h-[400px]">
+								<Map />
+							</div>
+						</div>
+					</div>
+
+					{/* Bottom: full-width info panel */}
+					<div className="mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
+						<div className="p-8">
+							<h3 className="text-xl font-semibold mb-4">{locations[0].name}</h3>
+							<div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+								<div className="md:col-span-3">
 									<div className="space-y-4">
 										<div className="flex items-start gap-4">
 											<MapPin className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">
-												{location.address}
-											</span>
+											<span className="text-neutral-600">{locations[0].address}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Phone className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">
-												{location.phone}
-											</span>
+											<span className="text-neutral-600">{locations[0].phone}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Mail className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">
-												{location.email}
-											</span>
+											<span className="text-neutral-600">{locations[0].email}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Clock className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">
-												{location.schedule}
-											</span>
+											<span className="text-neutral-600">{locations[0].schedule}</span>
 										</div>
 									</div>
 								</div>
-							</motion.div>
-						))}
+								<div className="md:col-span-1 flex items-center">
+									<button
+										onClick={() => openCarousel(0)}
+										className="w-full px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
+									>
+										Ver imágenes
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
