@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import DoorsSection from '../../components/business/doors/DoorsSection';
 import DoorStylesShowcase from '../../components/business/doors/DoorStylesShowcase';
 import NewCollection from '../../components/business/doors/NewCollection';
@@ -9,6 +10,7 @@ import logo from '../../assets/general/logo-blanco.jpeg';
 import ContactCTA from '../../components/home/ContactCTA';
 
 const DoorsPage: React.FC = () => {
+  const { t } = useTranslation('business');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -36,7 +38,7 @@ const DoorsPage: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider mb-6"
             >
-              PUERTAS
+              {t('doors.hero.title')}
             </motion.h1>
 
             {/* Línea roja */}
@@ -54,7 +56,7 @@ const DoorsPage: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-xl md:text-2xl lg:text-3xl text-white font-light italic mb-20"
             >
-              Madera pino radiata 100% sólida. 
+              {t('doors.hero.tagline')}
             </motion.p>
 
             {/* Logo */}

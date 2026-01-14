@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTranslation } from 'react-i18next';
 
 const AnimatedSlogan: React.FC = () => {
+  const { t } = useTranslation('home');
   const [isTypingDone, setIsTypingDone] = useState(false);
   const [text] = useTypewriter({
-    words: ['GLOVER, CALIDAD QUE SE SIENTE'],
+    words: [t('companyIntro.tagline')],
     loop: 1,
     typeSpeed: 70,
     deleteSpeed: 50,

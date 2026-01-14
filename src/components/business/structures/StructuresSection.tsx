@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -15,47 +16,23 @@ const imageMap: Record<string, string> = {
   estructuras3: Estructura3,
 };
 
-// Structure items data with features
-const structuresData = [
-  {
-    id: 'estructuras1',
-    name: 'Base de Cama',
-    features: [
-      'Estructura sólida con soporte para diversos tipos de colchón',
-      'Diseño optimizado para maximizar espacio de almacenamiento',
-      'Material tratado para resistir humedad y desgaste',
-      'Sistemas de ventilación para mantener el colchón en óptimas condiciones'
-    ]
-  },
-  {
-    id: 'estructuras2',
-    name: 'Estructura de Sofá',
-    features: [
-      'Armazón reforzado para uso intensivo diario',
-      'Construcción desmontable para facilitar envíos y montaje',
-      'Zonas de alta presión reforzadas con maderas nobles',
-      'Compatible con diversos sistemas de suspensión y acolchado'
-    ]
-  },
-  {
-    id: 'estructuras3',
-    name: 'Respaldos',
-    features: [
-      'Diseños ergonómicos adaptados a diferentes necesidades',
-      'Estructura interna que mantiene la forma a lo largo del tiempo',
-      'Sistemas de fijación seguros para bases de cama y sofás',
-      'Versiones fijas o modulares según requerimientos del cliente'
-    ]
-  }
-];
+interface StructureProduct {
+  id: string;
+  name: string;
+  features: string[];
+}
 
 const StructuresSection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  
+  const structuresData = t('structures.products', { returnObjects: true }) as StructureProduct[];
+  const productsTitle = t('structures.productsTitle');
   const selected = structuresData.find(item => item.id === selectedId) || null;
 
   return (
     <section id="structures-section" className="py-12 w-full px-4 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">Estructuras</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">{productsTitle}</h2>
 
       {/* Grid de productos */}
       <div className="grid grid-cols-12 gap-4">

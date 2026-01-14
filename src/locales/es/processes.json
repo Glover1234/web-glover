@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "NUESTROS PROCESOS",
+    "subtitle": "TECNOLÓGICOS",
+    "description": "Innovación y tecnología de vanguardia en cada proceso productivo"
+  },
+  "machinery": {
+    "title": "MAQUINARIAS Y PROCESOS DE VANGUARDIA",
+    "items": [
+      {
+        "title": "Tecnología CNC o Router",
+        "description": "Control numérico por computadora para cortes de alta precisión y repetitividad"
+      },
+      {
+        "title": "Scanner",
+        "description": "Visualización precisa del interior de la madera para detectar imperfecciones"
+      },
+      {
+        "title": "Encuadradora Doble",
+        "description": "Cortes de alta precisión y homogéneas para nuestras piezas de madera"
+      },
+      {
+        "title": "Pintado automatizado y ecológico",
+        "description": "Procesos automatizados con tecnología avanzada"
+      }
+    ]
+  },
+  "technologyDetails": {
+    "title": "DETALLES TECNOLÓGICOS",
+    "items": [
+      {
+        "title": "Tecnología CNC ó Control Numérico por Computadora",
+        "content": "Para realizar cortes, perforaciones, fresados y otros procesos con alta precisión y repetitividad, lo que permite una producción eficiente, exacta y con un mínimo margen de error."
+      },
+      {
+        "title": "Scanner",
+        "content": "Que visualiza de manera precisa llegando al interior de la madera para detectar imperfecciones para posteriormente eliminarlas de esta materia prima."
+      },
+      {
+        "title": "Encuadradora Doble",
+        "content": "Para cortes de alta precisión y homogéneas para nuestras piezas de madera."
+      }
+    ]
+  },
+  "paintTechnology": {
+    "title": "PROCESOS TECNOLÓGICOS",
+    "subtitle": "Pinturas en base a tintas, sellos y lacas en base a agua:",
+    "benefits": [
+      {
+        "title": "Mayor seguridad para la salud",
+        "description": "Al contener baja o nula presencia de solventes tóxicos, reducen la exposición de los trabajadores a compuestos peligrosos y disminuyen los riesgos para la salud."
+      },
+      {
+        "title": "Reducción de impacto ambiental",
+        "description": "Estos productos tienen bajos niveles de Compuestos Orgánicos Volátiles (COV), lo que contribuye a disminuir la contaminación del aire y la huella de carbono."
+      },
+      {
+        "title": "Menor riesgo de inflamabilidad",
+        "description": "A diferencia de los productos a base de solventes, las formulaciones en base agua no son inflamables, lo que mejora la seguridad en las plantas productivas."
+      },
+      {
+        "title": "Durabilidad y resistencia",
+        "description": "Al combinarse con procesos de secado adecuados (como lámparas UV e IR), estos productos ofrecen una excelente resistencia al desgaste, a la decoloración y a factores ambientales."
+      },
+      {
+        "title": "Mejor rendimiento en el proceso",
+        "description": "Tienen buena adherencia, estabilidad y calidad de acabado, lo que mejora la apariencia final del producto y optimiza los tiempos de producción."
+      },
+      {
+        "title": "Tratamiento más sencillo de residuos",
+        "description": "Al no generar residuos peligrosos, estos pueden ser tratados directamente en planta, reduciendo costos y mejorando la sostenibilidad del proceso."
+      }
+    ]
+  },
+  "quality": {
+    "title": "MAYOR RESISTENCIA Y PROTECCIÓN",
+    "description": "Los productos de madera que incorporan tintas, sellos y lacas en base al agua pueden lograr mayor resistencia y protección.",
+    "features": [
+      "Resistencia a la decoloración: Las lacas y tintas en base a agua, combinadas con curado UV, ofrecen mayor estabilidad frente a la luz y los rayos UV, lo que evita el deterioro del color con el tiempo.",
+      "Protección contra humedad y manchas: Los sellos en base a agua forman una capa protectora que reduce la absorción de humedad y facilita la limpieza de la superficie, protegiéndola de líquidos y suciedad.",
+      "Mayor durabilidad mecánica: El curado térmico (con aire caliente o lámparas IR) y final con luz UV endurece la capa aplicada, brindando mayor resistencia al rayado, desgaste y abrasión en el uso diario.",
+      "Estabilidad del acabado: Estas formulaciones tienen buena adherencia y flexibilidad, lo que evita que el acabado se agriete o se desprenda con los cambios de temperatura o humedad."
+    ]
+  },
+  "gallery": {
+    "title": "GALERÍA DE FOTOS",
+    "photos": [
+      {
+        "title": "Tecnología Scanner",
+        "description": "Sistema avanzado para detectar imperfecciones en la madera"
+      },
+      {
+        "title": "Innovación Tecnológica",
+        "description": "Vanguardia en procesos industriales de madera"
+      },
+      {
+        "title": "Tecnología CNC - Router",
+        "description": "Cortes de alta precisión y repetitividad automatizada"
+      },
+      {
+        "title": "Control Numérico Computacional",
+        "description": "Producción eficiente con mínimo margen de error"
+      },
+      {
+        "title": "Encuadradora Doble",
+        "description": "Cortes de alta precisión y homogéneos para piezas de madera"
+      },
+      {
+        "title": "Sistema de Encuadrado",
+        "description": "Tecnología avanzada para cortes perfectos"
+      },
+      {
+        "title": "Pintado Automatizado",
+        "description": "Proceso ecológico con tintas y lacas en base agua"
+      },
+      {
+        "title": "Curado UV e Infrarrojo",
+        "description": "Mayor resistencia y protección con tecnología avanzada"
+      },
+      {
+        "title": "Scanner de Alta Precisión",
+        "description": "Visualización detallada para eliminar defectos de la materia prima"
+      }
+    ]
+  }
+}

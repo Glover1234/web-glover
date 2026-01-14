@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { navigationItems } from '../../routes';
 import { ChevronDown } from 'lucide-react';
-
-const businessLines = [
-  { path: '/business-lines/doors', name: 'Puertas' },
-  { path: '/business-lines/furniture', name: 'Muebles' },
-  { path: '/business-lines/wood', name: 'Maderas de exportación' },
-  { path: '/business-lines/structures', name: 'Estructuras' },
-  { path: '/business-lines/complements', name: 'Complementos' },
-];
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -18,8 +11,17 @@ interface MobileMenuProps {
 }
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
+  const { t } = useTranslation('common');
   const location = useLocation();
   const [expandedItem, setExpandedItem] = React.useState<string | null>(null);
+
+  const businessLines = [
+    { path: '/business-lines/doors', name: t('businessLines.doors') },
+    { path: '/business-lines/furniture', name: t('businessLines.furniture') },
+    { path: '/business-lines/wood', name: t('businessLines.wood') },
+    { path: '/business-lines/structures', name: t('businessLines.structures') },
+    { path: '/business-lines/complements', name: t('businessLines.complements') },
+  ];
 
   const menuVariants = {
     closed: {
@@ -60,7 +62,24 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           variants={menuVariants}
         >
           <motion.ul className="flex flex-col py-4 container">
-            {navigationItems.map((item) => (
+            {navigationItems.map((item) => {
+              const translatedName = item.path === '/' 
+                ? t('nav.home')
+                : item.path === '/business-lines'
+                ? t('nav.businessLines')
+                : item.path === '/certifications-sustainability'
+                ? t('nav.sustainability')
+                : item.path === '/technological-processes'
+                ? t('nav.processes')
+                : item.path === '/sales-room'
+                ? t('nav.salesroom')
+                : item.path === '/about-us'
+                ? t('nav.aboutUs')
+                : item.path === '/contact'
+                ? t('nav.contact')
+                : item.name;
+
+              return (
               <motion.li key={item.path} variants={itemVariants}>
                 {item.path === '/business-lines' ? (
                   <div>
@@ -72,7 +91,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                           : 'text-neutral-900 hover:text-red-900'
                       }`}
                     >
-                      {item.name}
+                      {translatedName}
                       <ChevronDown
                         className={`w-4 h-4 transition-transform ${
                           expandedItem === 'business' ? 'rotate-180' : ''
@@ -115,11 +134,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     }`}
                     onClick={onClose}
                   >
-                    {item.name}
+                    {translatedName}
                   </Link>
                 )}
               </motion.li>
-            ))}
+            );
+            })}
           </motion.ul>
         </motion.div>
       )}

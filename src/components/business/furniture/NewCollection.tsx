@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-import { businessLineFeatures } from '../BusinessLineAttributes';
+import { useTranslation } from 'react-i18next';
 
 // Import local collection images for furniture
 import Collection1 from '../../../assets/furniture/coleccion/coleccion1.jpeg';
 import Collection2 from '../../../assets/furniture/coleccion/coleccion2.jpeg';
 import Collection3 from '../../../assets/furniture/coleccion/coleccion3.jpeg';
 
-// Using the centralized attributes instead of hardcoded ones
-const features = businessLineFeatures.furniture;
-
 const NewCollection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+  
+  const features = t('furniture.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
   return (
     <section className="py-20 bg-white">
@@ -26,10 +26,10 @@ const NewCollection: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-light mb-4">
-                Muebles
+                {t('furniture.sectionTitle')}
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-8">
-                Trabajamos mayoritariamente con la producción de muebles, abasteciendo a grandes empresas de decoración y otros clientes del mercado nacional y exportación. Nuestra experiencia nos permite ofrecer diseños únicos que combinan funcionalidad y estética, adaptándose a las tendencias actuales del mercado.
+                {t('furniture.description')}
               </p>
             </motion.div>
 
@@ -88,7 +88,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection3}
                 alt="Muebles Premium"
-                className="w-full h-[550px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -99,7 +99,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection1}
                 alt="Detalle de muebles"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -110,7 +110,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection2}
                 alt="Acabados de muebles"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
           </div>

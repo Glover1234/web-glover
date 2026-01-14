@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import NewCollection from '../../components/business/complements/NewCollection';
 import ComplementsSection from '../../components/business/complements/ComplementsSection';
 import ComplementsStylesShowcase from '../../components/business/complements/ComplementsStylesShowcase';
@@ -8,6 +9,7 @@ import logo from '../../assets/general/logo-blanco.jpeg';
 import ContactCTA from '../../components/home/ContactCTA';
 
 const ComplementsPage: React.FC = () => {
+  const { t } = useTranslation('business');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -35,7 +37,7 @@ const ComplementsPage: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white uppercase tracking-wider mb-4 sm:mb-6"
             >
-              COMPLEMENTOS
+              {t('complements.hero.title')}
             </motion.h1>
 
             {/* Línea roja */}
@@ -53,7 +55,7 @@ const ComplementsPage: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-light italic mb-12 sm:mb-16 lg:mb-20 max-w-4xl mx-auto px-2 leading-relaxed"
             >
-              Patas para muebles y camas con acabados finos y duraderos.
+              {t('complements.hero.tagline')}
             </motion.p>
 
             {/* Logo */}

@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "OUR PROCESSES",
+    "subtitle": "TECHNOLOGICAL",
+    "description": "Innovation and cutting-edge technology in every production process"
+  },
+  "machinery": {
+    "title": "CUTTING-EDGE MACHINERY AND PROCESSES",
+    "items": [
+      {
+        "title": "CNC Technology or Router",
+        "description": "Computer numerical control for high-precision and repeatable cuts"
+      },
+      {
+        "title": "Scanner",
+        "description": "Precise visualization of wood interior to detect imperfections"
+      },
+      {
+        "title": "Double Squaring Machine",
+        "description": "High-precision and consistent cuts for our wood pieces"
+      },
+      {
+        "title": "Automated and Ecological Painting",
+        "description": "Automated processes with advanced technology"
+      }
+    ]
+  },
+  "technologyDetails": {
+    "title": "TECHNOLOGICAL DETAILS",
+    "items": [
+      {
+        "title": "CNC Technology or Computer Numerical Control",
+        "content": "To perform cuts, drilling, milling, and other processes with high precision and repeatability, enabling efficient, accurate production with minimal margin of error."
+      },
+      {
+        "title": "Scanner",
+        "content": "That accurately visualizes the wood interior to detect imperfections for subsequent elimination from this raw material."
+      },
+      {
+        "title": "Double Squaring Machine",
+        "content": "For high-precision and consistent cuts for our wood pieces."
+      }
+    ]
+  },
+  "paintTechnology": {
+    "title": "TECHNOLOGICAL PROCESSES",
+    "subtitle": "Paints based on water-based inks, sealers, and lacquers:",
+    "benefits": [
+      {
+        "title": "Greater health safety",
+        "description": "By containing low or no toxic solvents, they reduce workers' exposure to hazardous compounds and decrease health risks."
+      },
+      {
+        "title": "Reduced environmental impact",
+        "description": "These products have low levels of Volatile Organic Compounds (VOCs), contributing to reduced air pollution and carbon footprint."
+      },
+      {
+        "title": "Lower flammability risk",
+        "description": "Unlike solvent-based products, water-based formulations are non-flammable, improving safety in production facilities."
+      },
+      {
+        "title": "Durability and resistance",
+        "description": "When combined with proper drying processes (such as UV and IR lamps), these products offer excellent resistance to wear, discoloration, and environmental factors."
+      },
+      {
+        "title": "Better process performance",
+        "description": "They have good adhesion, stability, and finish quality, improving the product's final appearance and optimizing production times."
+      },
+      {
+        "title": "Simpler waste treatment",
+        "description": "By not generating hazardous waste, it can be treated directly on-site, reducing costs and improving process sustainability."
+      }
+    ]
+  },
+  "quality": {
+    "title": "GREATER RESISTANCE AND PROTECTION",
+    "description": "Wood products incorporating water-based inks, sealers, and lacquers can achieve greater resistance and protection.",
+    "features": [
+      "Resistance to discoloration: Water-based lacquers and inks, combined with UV curing, offer greater stability against light and UV rays, preventing color deterioration over time.",
+      "Protection against moisture and stains: Water-based sealers form a protective layer that reduces moisture absorption and facilitates surface cleaning, protecting it from liquids and dirt.",
+      "Greater mechanical durability: Thermal curing (with hot air or IR lamps) and final UV light curing hardens the applied layer, providing greater resistance to scratching, wear, and daily abrasion.",
+      "Finish stability: These formulations have good adhesion and flexibility, preventing the finish from cracking or peeling with temperature or humidity changes."
+    ]
+  },
+  "gallery": {
+    "title": "PHOTO GALLERY",
+    "photos": [
+      {
+        "title": "Scanner Technology",
+        "description": "Advanced system to detect imperfections in wood"
+      },
+      {
+        "title": "Technological Innovation",
+        "description": "Cutting-edge wood industrial processes"
+      },
+      {
+        "title": "CNC Technology - Router",
+        "description": "High-precision cuts and automated repeatability"
+      },
+      {
+        "title": "Computer Numerical Control",
+        "description": "Efficient production with minimal margin of error"
+      },
+      {
+        "title": "Double Squaring Machine",
+        "description": "High-precision and consistent cuts for wood pieces"
+      },
+      {
+        "title": "Squaring System",
+        "description": "Advanced technology for perfect cuts"
+      },
+      {
+        "title": "Automated Painting",
+        "description": "Ecological process with water-based inks and lacquers"
+      },
+      {
+        "title": "UV and Infrared Curing",
+        "description": "Greater resistance and protection with advanced technology"
+      },
+      {
+        "title": "High-Precision Scanner",
+        "description": "Detailed visualization to eliminate raw material defects"
+      }
+    ]
+  }
+}

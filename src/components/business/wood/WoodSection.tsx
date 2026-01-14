@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -13,39 +14,23 @@ const imageMap: Record<string, string> = {
   maderas2: Madera2,
 };
 
-// Wood items data with specific bullet features
-const woodData = [
-  {
-    id: 'maderas1',
-    name: 'Maderas de exportación',
-    features: [
-      'Trabajamos con maderas semielaboradas en formatos de Blanks y Boards para clientes internacionales',
-      'Certificado FSC garantizado para asegurar el uso responsable de las maderas',
-      'Tecnología avanzada para trabajar nuestros bosques y procesos de manera sostenible',
-      'Cuidamos el ecosistema desde la elección de proveedores hasta el producto final'
-    ]
-  },
-  {
-    id: 'maderas2',
-    name: 'Nuestros procesos',
-    features: [
-      'Cancha de trozos: Gestión propia con sistemas automatizados para mantener condiciones óptimas',
-      'Aserradero propio: Dimensiones ideales y reducción de pérdidas de madera',
-      'Unidad térmica y secado: 5 cámaras integradas para garantizar calidad y humedad óptima',
-      'Preparación: Escáner digital para detección de imperfecciones y finger joint para paneles',
-      'Maquinado: Tecnología CNC para seguir exactamente parámetros de diseño industrial',
-      'Armado y pintado: Pinturas a base de agua con línea continua y secado por luz ultravioleta'
-    ]
-  }
-];
+interface WoodProduct {
+  id: string;
+  name: string;
+  features: string[];
+}
 
 const WoodSection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  
+  const woodData = t('wood.products', { returnObjects: true }) as WoodProduct[];
+  const productsTitle = t('wood.productsTitle');
   const selected = woodData.find(item => item.id === selectedId) || null;
 
   return (
     <section id="wood-section" className="py-12 w-full px-4 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">Maderas</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">{productsTitle}</h2>
 
       {/* Grid de productos */}
       <div className="grid grid-cols-12 gap-4">

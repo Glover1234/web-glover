@@ -1,0 +1,339 @@
+{
+  "title": "LÍNEAS DE NEGOCIO",
+  "subtitle": "Soluciones integrales para cada necesidad",
+  "doors": {
+    "title": "PUERTAS",
+    "hero": {
+      "title": "PUERTAS",
+      "tagline": "Madera pino radiata 100% sólida."
+    },
+    "sectionTitle": "Puertas",
+    "description": "Realizamos atractivas puertas en madera 100% sólidas con uso orientado a los accesos principales. En Glover, gestionamos nuestra propia producción de madera para garantizar las dimensiones exactas que necesitamos, lo que nos permite especializarnos aún más en nuestros productos y asegurar un abastecimiento regular.",
+    "models": [
+      {
+        "id": "bari",
+        "name": "Modelo Bari",
+        "features": [
+          { "title": "Madera 100% sólida", "desc": "Pino Radiata con proceso finger joint para máxima resistencia." },
+          { "title": "Alta protección UV", "desc": "Acabado UV que protege contra humedad y rayos solares." },
+          { "title": "Aislamiento térmico y acústico", "desc": "Espesor de 4 cm para confort interior." },
+          { "title": "Certificación FSC", "desc": "Manejo forestal sostenible garantizado." },
+          { "title": "Resistencia al impacto", "desc": "Construcción robusta sin deformación." },
+          { "title": "Instalación rápida", "desc": "Herrajes incluidos para montaje fácil." }
+        ]
+      },
+      {
+        "id": "llaima",
+        "name": "Modelo Llaima",
+        "features": [
+          { "title": "Madera 100% sólida", "desc": "Pino Radiata secado lento en cámara para máxima estabilidad." },
+          { "title": "Alta protección UV", "desc": "Acabado resistente a humedad y exposición moderada a luz solar." },
+          { "title": "Aislamiento térmico y acústico", "desc": "Espesor de 4,5 cm para confort al interior del hogar." },
+          { "title": "Certificación FSC", "desc": "Manejo forestal sostenible garantizado." },
+          { "title": "Resistencia al impacto", "desc": "Sin deformación permanente." },
+          { "title": "Instalación fácil y segura", "desc": "Lista para instalar fácilmente." }
+        ]
+      },
+      {
+        "id": "murano",
+        "name": "Modelo Murano",
+        "features": [
+          { "title": "Madera 100% sólida", "desc": "Pino Radiata secado en cámara con estructura finger joint." },
+          { "title": "Alta protección UV", "desc": "Alta resistencia a humedad y exposición solar." },
+          { "title": "Vidrio Laminado de Seguridad", "desc": "Cristal de 6 mm prácticamente inseparable en caso de rotura." },
+          { "title": "Certificación FSC", "desc": "Manejo forestal sostenible garantizado." },
+          { "title": "Aislamiento superior", "desc": "Espesor de 4,5 cm. Excelente aislamiento térmico y acústico." },
+          { "title": "Instalación fácil y segura", "desc": "Lista para uso inmediato." }
+        ]
+      },
+      {
+        "id": "lascar",
+        "name": "Modelo Lascar",
+        "features": [
+          { "title": "Madera 100% sólida", "desc": "Pino Radiata secado lento en cámara para máxima estabilidad." },
+          { "title": "Alta protección UV", "desc": "Acabado resistente a humedad y exposición moderada a luz solar." },
+          { "title": "Aislamiento térmico y acústico", "desc": "Espesor de 4 cm para confort al interior del hogar." },
+          { "title": "Certificación FSC", "desc": "Manejo forestal sostenible garantizado." },
+          { "title": "Resistencia al impacto", "desc": "Sin deformación permanente." },
+          { "title": "Instalación fácil", "desc": "Lista para uso inmediato." }
+        ]
+      },
+      {
+        "id": "turin",
+        "name": "Modelo Turín",
+        "features": [
+          { "title": "Madera 100% sólida", "desc": "Pino Radiata estructurado con finger joint revestido en enchapado." },
+          { "title": "Protección UV Premium", "desc": "Acabado teñido, sellado y al agua con secado UV, resistente a humedad y rayos solares." },
+          { "title": "Aislamiento térmico y acústico", "desc": "Reduce hasta 21 dB del ruido exterior (ISO 717-1)." },
+          { "title": "Certificación FSC", "desc": "Manejo forestal sostenible garantizado." },
+          { "title": "Transmitancia térmica", "desc": "Aislación eficiente con 1,63 W/m²K." },
+          { "title": "Hermeticidad garantizada", "desc": "Alta resistencia al impacto sin deformación." }
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "AISLACIÓN DE TEMPERATURAS Y RUIDOS. PUERTAS PDA.",
+        "content": "Con 4,5 cms. de espesor de madera sólida, que proporcionan una excelente barrera de aislación térmica y acústica entre el exterior e interior de tu casa. (Con informes de ensayos CITEC UBB) PUERTAS PDA, PROTECCIÓN DEL AMBIENTE. Con ensayos de laboratorio que acreditan la aislación térmica y de ruidos."
+      },
+      {
+        "title": "MADERA ESTABLE Y DURABLE EN EL TIEMPO",
+        "content": "Madera Sólida de Pino Radiata, con Secado lento de 4 a 5 días y a temperaturas entre 65°C a 70°C en cámara, obteniendo a una humedad entre 8% a 12%, lo que permite a una madera natural comportarse de manera estable en el tiempo."
+      },
+      {
+        "title": "PINTURA QUE PROTEGE CONTRA LA HUMEDAD Y DE LA LUZ. SUAVE AL TACTO.",
+        "content": "Puerta con pinturas y lacas italianas en base al agua, con secado UV y acabados de alta calidad, que lo protege contra la humedad, entregando una superficie suave al tacto y muy resistente a una exposición moderada a la luz solar."
+      },
+      {
+        "title": "CERTIFICACIÓN FSC - MANEJO SOSTENIBLE DE BOSQUES",
+        "content": "Maderas Fabricadas con Certificación FSC, que cumplen con los más altos estándares sociales y ambientales del mercado, con un manejo sostenible de los bosques."
+      }
+    ]
+  },
+  "furniture": {
+    "title": "MUEBLES",
+    "hero": {
+      "title": "MUEBLES",
+      "tagline": "soluciones especializadas para clientes locales\ny del extranjero\n\nMuebles para dormitorio, living, estar, terrazas."
+    },
+    "sectionTitle": "Muebles",
+    "description": "Trabajamos mayoritariamente con la producción de muebles, abasteciendo a grandes empresas de decoración y otros clientes del mercado nacional y exportación. Nuestra experiencia nos permite ofrecer diseños únicos que combinan funcionalidad y estética, adaptándose a las tendencias actuales del mercado.",    "productsTitle": "Muebles",
+    "products": [
+      {
+        "id": "muebles1",
+        "name": "Bases para Camas",
+        "features": [
+          { "title": "Estructura robusta", "desc": "Fabricada con madera procesada en nuestro propio aserradero" },
+          { "title": "Acabado homogéneo", "desc": "Resistente a la humedad gracias a nuestras pinturas a base de agua" },
+          { "title": "Diseño preciso", "desc": "Fabricación con precisión CNC garantizando uniformidad en cada producto" },
+          { "title": "Incluye documentación", "desc": "Instructivo de armado y garantía incluidos" }
+        ]
+      },
+      {
+        "id": "muebles6",
+        "name": "Respaldos",
+        "features": [
+          { "title": "Diseño ergonómico", "desc": "Adaptado para mayor comodidad" },
+          { "title": "Acabado suave", "desc": "Al tacto con secado por luz ultravioleta" },
+          { "title": "Maderas estables", "desc": "Fabricados con maderas de tensiones reducidas para evitar deformaciones" },
+          { "title": "Estructura duradera", "desc": "Estructura interna que mantiene la forma a lo largo del tiempo" }
+        ]
+      },
+      {
+        "id": "muebles3",
+        "name": "Veladores",
+        "features": [
+          { "title": "Pinturas eco-amigables", "desc": "De origen italiano a base de agua" },
+          { "title": "Ensamblaje perfecto", "desc": "Gracias a nuestro proceso de maquinado con tecnología CNC" },
+          { "title": "Acabado superior", "desc": "Superficies con acabado suave y color profundo y definido" },
+          { "title": "Sin imperfecciones", "desc": "Estructura interna libre de imperfecciones gracias a nuestro escáner digital" }
+        ]
+      },
+      {
+        "id": "muebles4",
+        "name": "Cómodas",
+        "features": [
+          { "title": "Almacenamiento espacioso", "desc": "Fabricado con madera de alta calidad" },
+          { "title": "Tratamiento especializado", "desc": "Maderas con humedad óptima para evitar deformaciones" },
+          { "title": "Resistente a la luz", "desc": "Acabado resistente a la exposición moderada de luz solar" },
+          { "title": "Uniones perfectas", "desc": "Mediante técnica finger joint para crear paneles de mayor tamaño" }
+        ]
+      },
+      {
+        "id": "muebles5",
+        "name": "Muebles para terraza",
+        "features": [
+          { "title": "Resistente a la intemperie", "desc": "Tratamiento especial para resistir condiciones climáticas adversas" },
+          { "title": "Protección UV", "desc": "Acabado con protección ultravioleta para evitar decoloración" },
+          { "title": "Impermeabilización", "desc": "Sellado especializado que protege contra humedad y lluvia" },
+          { "title": "Madera tratada", "desc": "Maderas seleccionadas y tratadas específicamente para uso exterior" }
+        ]
+      }
+    ],    "attributes": [
+      {
+        "title": "ESPECIALISTA EN DISEÑOS CLÁSICOS Y MODERNOS.",
+        "content": "En nuestra empresa fabricamos muebles de alto diseño que combinan elegancia, ergonomía y funcionalidad. Cada pieza está pensada para brindar comodidad y calidez, con materiales de alta calidad. Creamos ambientes donde el diseño se vive, se siente y se disfruta."
+      },
+      {
+        "title": "MADERA ESTABLE Y DURABLE EN EL TIEMPO",
+        "content": "Madera Sólida de Pino Radiata, con Secado lento de 4 a 5 días y a temperaturas entre 65°C a 70°C en cámara, obteniendo a una humedad entre 8% a 12%, lo que permite a una madera natural comportarse de manera estable en el tiempo."
+      },
+      {
+        "title": "PINTURA QUE PROTEGE CONTRA LA HUMEDAD Y DE LA LUZ. SUAVE AL TACTO.",
+        "content": "Puerta con pinturas y lacas italianas en base al agua, con secado UV y acabados de alta calidad, que lo protege contra la humedad, entregando una superficie suave al tacto y muy resistente a una exposición moderada a la luz solar."
+      },
+      {
+        "title": "CERTIFICACIÓN FSC - MANEJO SOSTENIBLE DE BOSQUES",
+        "content": "Maderas Fabricadas con Certificación FSC, que cumplen con los más altos estándares sociales y ambientales del mercado, con un manejo sostenible de los bosques."
+      }
+    ]
+  },
+  "wood": {
+    "title": "MADERAS DE EXPORTACIÓN",
+    "hero": {
+      "title": "MADERAS",
+      "tagline": "Semielaboradas en formatos Blanks y Boards para\nexportación internacional."
+    },
+    "sectionTitle": "Maderas",
+    "description": "Trabajamos con maderas semielaboradas en formatos de Blanks y Boards para clientes internacionales. Contamos con certificado FSC para asegurar el uso responsable de las maderas, respetando el medio ambiente. De la mano de avanzada tecnología, logramos trabajar nuestros bosques y manejar nuestros procesos de manera correcta, evitando consecuencias ambientales negativas. Por lo tanto, en Glover cuidamos el ecosistema desde la elección de proveedores, hasta el producto que llega a tu hogar.",
+    "productsTitle": "Maderas",
+    "products": [
+      {
+        "id": "maderas1",
+        "name": "Maderas de exportación",
+        "features": [
+          "Trabajamos con maderas semielaboradas en formatos de Blanks y Boards para clientes internacionales",
+          "Certificado FSC garantizado para asegurar el uso responsable de las maderas",
+          "Tecnología avanzada para trabajar nuestros bosques y procesos de manera sostenible",
+          "Cuidamos el ecosistema desde la elección de proveedores hasta el producto final"
+        ]
+      },
+      {
+        "id": "maderas2",
+        "name": "Nuestros procesos",
+        "features": [
+          "Cancha de trozos: Gestión propia con sistemas automatizados para mantener condiciones óptimas",
+          "Aserradero propio: Dimensiones ideales y reducción de pérdidas de madera",
+          "Unidad térmica y secado: 5 cámaras integradas para garantizar calidad y humedad óptima",
+          "Preparación: Escáner digital para detección de imperfecciones y finger joint para paneles",
+          "Maquinado: Tecnología CNC para seguir exactamente parámetros de diseño industrial",
+          "Armado y pintado: Pinturas a base de agua con línea continua y secado por luz ultravioleta"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "MADERA DE EXPORTACIÓN PREMIUM",
+        "content": "Nos especializamos en la fabricación y exportación de productos de madera elaborados a partir de pino radiata de alta calidad. Seleccionamos cuidadosamente la materia prima para asegurar durabilidad, rendimiento y versatilidad. Nuestra madera se adapta a múltiples industrias como muebles, construcción y carpintería. Utilizamos tecnología de punta en nuestros procesos para lograr acabados superiores y estabilidad dimensional. Cada etapa de producción cuenta con un estricto control de calidad. La combinación de buena materia prima y tecnología nos hace competitivos a nivel internacional. Cumplimos con altos estándares de sostenibilidad ambiental y eficiencia en nuestras exportaciones. Ofrecemos un producto confiable y con valor agregado para clientes en todo el mundo."
+      },
+      {
+        "title": "MADERA ESTABLE Y DURABLE EN EL TIEMPO",
+        "content": "Madera Sólida de Pino Radiata, con Secado lento de 4 a 5 días y a temperaturas entre 65°C a 70°C en cámara, obteniendo a una humedad entre 8% a 12%, lo que permite a una madera natural comportarse de manera estable en el tiempo. Estructuradas con procesos de Finger Joint."
+      },
+      {
+        "title": "ALTA CAPACIDAD PRODUCTIVA Y LOGÍSTICA GLOBAL",
+        "content": "Contamos con una alta capacidad productiva de madera de exportación de pino radiata, respaldada por procesos tecnificados que garantizan eficiencia, calidad y sostenibilidad en cada etapa de la producción. Nuestra operación se apoya en mano de obra especializada, lo que nos permite cumplir con los más altos estándares internacionales y responder de manera oportuna a las demandas del mercado global."
+      },
+      {
+        "title": "CERTIFICACIÓN FSC - MANEJO SOSTENIBLE DE BOSQUES",
+        "content": "Maderas Fabricadas con Certificación FSC, que cumplen con los más altos estándares sociales y ambientales del mercado, con un manejo sostenible de los bosques."
+      }
+    ]
+  },
+  "structures": {
+    "title": "ESTRUCTURAS",
+    "hero": {
+      "title": "ESTRUCTURAS",
+      "tagline": "Fabricación de bases de cama, sofá y respaldos."
+    },
+    "sectionTitle": "Estructuras",
+    "description": "Fabricamos bases de cama, sofá y respaldos. Gracias a nuestra tecnología de control numérico computacional (CNC), seguimos exactamente los parámetros establecidos por un diseño industrial, asegurando una uniformidad en la fabricación de cada estructura. Esta precisión garantiza que cada pieza sea fabricada con la misma calidad y acabado, evitando cualquier desviación que pueda provocar defectos en el producto final.",
+    "productsTitle": "Estructuras",
+    "products": [
+      {
+        "id": "estructuras1",
+        "name": "Base de Cama",
+        "features": [
+          "Estructura sólida con soporte para diversos tipos de colchón",
+          "Diseño optimizado para maximizar espacio de almacenamiento",
+          "Material tratado para resistir humedad y desgaste",
+          "Sistemas de ventilación para mantener el colchón en óptimas condiciones"
+        ]
+      },
+      {
+        "id": "estructuras2",
+        "name": "Estructura de Sofá",
+        "features": [
+          "Armazón reforzado para uso intensivo diario",
+          "Construcción desmontable para facilitar envíos y montaje",
+          "Zonas de alta presión reforzadas con maderas nobles",
+          "Compatible con diversos sistemas de suspensión y acolchado"
+        ]
+      },
+      {
+        "id": "estructuras3",
+        "name": "Respaldos",
+        "features": [
+          "Diseños ergonómicos adaptados a diferentes necesidades",
+          "Estructura interna que mantiene la forma a lo largo del tiempo",
+          "Sistemas de fijación seguros para bases de cama y sofás",
+          "Versiones fijas o modulares según requerimientos del cliente"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "ESTRUCTURAS PARA MUEBLES RESISTENTES Y DURABLES",
+        "content": "Fabricamos estructuras de madera de alta calidad para muebles, tales como sofás, respaldos de cama y bases para camas. Nuestras piezas se distinguen por ser resistentes y duraderas, ideales para garantizar la estabilidad y el confort en el uso diario. Empleamos tecnología finger joint, lo que permite una mejor unión de las piezas de madera, con adhesivos altamente resistentes al agua, humedad y cambios de temperatura; para condiciones ambientales exigentes; genera una unión fuerte y duradera. Todo esto permite de manera óptima el aprovechamiento del material y aumentando la resistencia estructural. Gracias a nuestros procesos precisos y controlados, ofrecemos soluciones confiables para la industria del mueble."
+      },
+      {
+        "title": "VERSATILIDAD",
+        "content": "Nuestras estructuras de madera son diseñadas y armadas cuidadosamente según las especificaciones de cada línea de producto y los requerimientos de los procesos de ensamble. Este enfoque nos permite garantizar una adaptación precisa a cada modelo de mueble, optimizando tanto la funcionalidad como la resistencia. Además, una de sus principales ventajas es que estas estructuras pueden ser desarmadas con facilidad, lo que facilita su almacenamiento o transporte en caso de ser necesario, sin comprometer la integridad ni la durabilidad del producto."
+      },
+      {
+        "title": "MADERA ESTABLE EN EL TIEMPO",
+        "content": "Madera Sólida de Pino Radiata, con Secado lento de 4 a 5 días y a temperaturas entre 65°C a 70°C en cámara, obteniendo a una humedad entre 8% a 12%, lo que permite a una madera natural comportarse de manera estable en el tiempo."
+      },
+      {
+        "title": "CERTIFICACIÓN FSC - MANEJO SOSTENIBLE DE BOSQUES",
+        "content": "Maderas Fabricadas con Certificación FSC, que cumplen con los más altos estándares sociales y ambientales del mercado, con un manejo sostenible de los bosques."
+      }
+    ]
+  },
+  "complements": {
+    "title": "COMPLEMENTOS",
+    "hero": {
+      "title": "COMPLEMENTOS",
+      "tagline": "Patas para muebles y camas con acabados finos y duraderos."
+    },
+    "sectionTitle": "Complementos",
+    "description": "Fabricamos aplicaciones, una amplia línea de patas con finos acabados para uso en muebles y camas. Nuestro proceso de preparación incluye una revisión minuciosa de la madera mediante tecnología avanzada. Gracias a esta precisión, cada pieza que fabricamos será idéntica a la anterior, con la misma atención al detalle y calidad que garantizan durabilidad y elegancia.",
+    "productsTitle": "Complementos",
+    "products": [
+      {
+        "id": "complement1",
+        "name": "Patas para cama",
+        "features": [
+          "Diseños exclusivos con finos acabados",
+          "Fabricación a medida según especificaciones",
+          "Materiales de alta calidad y durabilidad",
+          "Acabados personalizables para integrarse con cualquier estilo"
+        ]
+      },
+      {
+        "id": "complement2",
+        "name": "Patas para muebles",
+        "features": [
+          "Amplia variedad de diseños y alturas",
+          "Gran capacidad de carga y estabilidad",
+          "Acabados premium en madera y metal",
+          "Soluciones adaptables a diferentes tipos de muebles"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "PATAS PARA MUEBLES Y CAMAS CON VARIADOS DISEÑOS",
+        "content": "También fabricamos patas de madera para camas y diversos tipos de muebles como veladores, cómodas, sillones y más. Contamos con una amplia variedad de diseños y estilos, adaptables a diferentes líneas estéticas y funcionales. Ofrecemos opciones en distintos colores y acabados, lo que permite personalizar cada pieza según las necesidades del cliente. Estas patas se elaboran con materiales de alta calidad, garantizando resistencia y durabilidad."
+      },
+      {
+        "title": "PINTURA QUE PROTEGE CONTRA LA HUMEDAD Y DE LA LUZ. SUAVE AL TACTO.",
+        "content": "Puerta con pinturas y lacas italianas en base al agua, con secado UV y acabados de alta calidad, que lo protege contra la humedad, entregando una superficie suave al tacto y muy resistente a una exposición moderada a la luz solar."
+      },
+      {
+        "title": "MADERA ESTABLE Y DURABLE EN EL TIEMPO",
+        "content": "Madera Sólida de Pino Radiata, con Secado lento de 4 a 5 días y a temperaturas entre 65°C a 70°C en cámara, obteniendo a una humedad entre 8% a 12%, lo que permite a una madera natural comportarse de manera estable en el tiempo."
+      },
+      {
+        "title": "CERTIFICACIÓN FSC - MANEJO SOSTENIBLE DE BOSQUES",
+        "content": "Maderas Fabricadas con Certificación FSC, que cumplen con los más altos estándares sociales y ambientales del mercado, con un manejo sostenible de los bosques."
+      }
+    ]
+  },
+  "attributes": {
+    "innovation": "Innovación",
+    "quality": "Calidad",
+    "sustainability": "Sustentabilidad",
+    "experience": "Experiencia"
+  }
+}

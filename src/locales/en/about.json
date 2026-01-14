@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "ABOUT US",
+    "subtitle": "Commitment, quality and innovation since 1995"
+  },
+  "stats": {
+    "years": {
+      "value": "29",
+      "label": "Years of experience"
+    },
+    "employees": {
+      "value": "500+",
+      "label": "Employees"
+    },
+    "exports": {
+      "value": "20+",
+      "label": "Export countries"
+    },
+    "products": {
+      "value": "5",
+      "label": "Product lines"
+    }
+  },
+  "quality": {
+    "title": "GLOVER, QUALITY YOU CAN FEEL",
+    "description": "Our commitment to excellence"
+  },
+  "mission": {
+    "title": "OUR MISSION",
+    "description": "Create high-quality products that exceed our customers' expectations",
+    "visionTitle": "OUR VISION",
+    "visionDescription": "Be leaders in innovation and sustainability in the industry"
+  },
+  "productionAreas": {
+    "title": "PRODUCTION AREAS",
+    "subtitle": "State-of-the-art facilities"
+  },
+  "advantages": {
+    "title": "COMPETITIVE ADVANTAGES",
+    "subtitle": "What makes us unique"
+  },
+  "laborTopics": {
+    "title": "LABOR COMMITMENT",
+    "subtitle": "Our team, our strength"
+  },
+  "dna": {
+    "title": "GLOVER'S DNA",
+    "mission": {
+      "title": "MISSION",
+      "content": "Deliver excellence solutions in wood-derived products, achieve sustainable development, harmonizing economic growth, social inclusion and environmental protection, creating value for our shareholders, employees and customers."
+    },
+    "vision": {
+      "title": "VISION",
+      "content": "Position Glover in Chile and internationally as a leading company in the manufacturing of wood-derived products, be a benchmark of quality, innovation and trust for its consumers."
+    },
+    "values": {
+      "title": "VALUES",
+      "items": [
+        "Excellence in quality",
+        "Constant innovation",
+        "Environmental commitment"
+      ]
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "title": "SUSTENTABILIDAD",
+  "subtitle": "Compromiso con el medio ambiente",
+  "hero": {
+    "title": "SUSTENTABILIDAD",
+    "subtitle": "Calidad garantizada y responsabilidad ambiental"
+  },
+  "nav": {
+    "sustainability": "Sustentabilidad"
+  },
+  "intro": {
+    "description": "Desde sus inicios Glover se ha caracterizado por la innovación de sus colaboradores, conectarse y respeto con el entorno.",
+    "stats": [
+      {
+        "value": "430",
+        "label": "trabajadores comprometidos"
+      },
+      {
+        "value": "1992",
+        "label": "año de fundación"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "Nuestra Filosofía",
+    "description": "Creemos que solo a través de prácticas responsables podemos garantizar la calidad y durabilidad de nuestros productos. Desde la selección de madera certificada hasta cada etapa de secado y ensamblaje, nuestro enfoque prioriza la salud de los bosques y el bienestar de las comunidades."
+  },
+  "banner": {
+    "text": "Innovación y sostenibilidad en cada proceso"
+  },
+  "certifications": {
+    "title": "Certificaciones y acreditaciones",
+    "subtitle": "Comprometidos con la excelencia",
+    "description": "Nuestras certificaciones respaldan nuestro compromiso con la calidad y la sostenibilidad en todos nuestros procesos.",
+    "benefits": "Beneficios principales",
+    "items": [
+      {
+        "id": "fsc",
+        "title": "FSC: Forest Stewardship Council®",
+        "description": "El certificado FSC (Forest Stewardship Council) es un sello de garantía que asegura que los productos de origen forestal provienen de bosques gestionados de manera sostenible y responsable.",
+        "benefits": [
+          "Gestión sostenible",
+          "Garantía ambiental",
+          "Reconocimiento internacional"
+        ]
+      },
+      {
+        "id": "pda",
+        "title": "Productos PDA: Protección del Ambiente",
+        "description": "Nuestros productos están certificados para la protección del ambiente, garantizando que cumplen con los más altos estándares de sostenibilidad y responsabilidad ambiental.",
+        "benefits": [
+          "Protección ambiental",
+          "Productos sostenibles",
+          "Responsabilidad ecológica"
+        ]
+      },
+      {
+        "id": "citec",
+        "title": "CITEC UBB (Universidad del Bío Bío)",
+        "description": "Este informe de ensayos acredita que nuestras puertas cuentan con aislamiento térmico, acústico y otros beneficios importantes.",
+        "benefits": [
+          "Aislamiento térmico",
+          "Aislamiento acústico",
+          "Calidad certificada"
+        ]
+      }
+    ]
+  },
+  "impact": {
+    "title": "Nuestro Impacto Ambiental",
+    "items": [
+      {
+        "title": "Reducción de Emisiones",
+        "description": "Optimización de procesos y uso de energías limpias para minimizar nuestra huella de carbono."
+      },
+      {
+        "title": "Reforestación Continua",
+        "description": "Colaboramos con comunidades locales para reforestar áreas afectadas y proteger la biodiversidad."
+      },
+      {
+        "title": "Valorización de Residuos",
+        "description": "Reciclamos y reutilizamos subproductos de aserrío y pulido reduciendo el desperdicio."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Nuestros Procesos Sustentables",
+    "subtitle": "Iniciativas que marcan la diferencia",
+    "items": [
+      {
+        "title": "Gestión Forestal Responsable",
+        "shortTitle": "Gestión Forestal Responsable",
+        "description": "En nuestra empresa asumimos un compromiso firme con la sostenibilidad, trabajando con responsabilidad a través de una gestión forestal responsable y certificada por la FSC® (Forest Stewardship Council®). Esta certificación garantiza que la madera utilizada proviene de bosques gestionados de forma ambientalmente adecuada, socialmente beneficiosa y económicamente viable. De esta manera, contribuimos activamente a la conservación de los recursos naturales y al desarrollo de una industria forestal sostenible."
+      },
+      {
+        "title": "Tecnología",
+        "shortTitle": "Tecnología",
+        "description": "En nuestra empresa trabajamos con tecnología avanzada y maquinaria de última generación que permite optimizar los procesos industriales, haciendo un uso eficiente de los recursos y minimizando el desperdicio de materiales. Nos enfocamos en la sostenibilidad, por lo que reprocesamos los residuos generados durante la producción, dándoles una nueva vida útil cuando es posible. Además, los residuos que no pueden ser reutilizados son descartados de manera responsable, cumpliendo estrictamente con las normas ambientales establecidas, reafirmando así nuestro compromiso con el cuidado del medio ambiente."
+      },
+      {
+        "title": "Pinturas al Agua Amigables con las Personas y el Medio Ambiente",
+        "shortTitle": "Pinturas al Agua",
+        "description": "Uno de los principales desafíos en la industria manufacturera es eliminar el uso de solventes por su impacto ambiental y riesgos para la salud. Desde 2017, la Planta Glover implementó tintas, sellos y lacas en base a agua en el 90% de sus productos, y en el 100% de la línea de muebles y patas para camas y sofás. Este cambio mejoró el proceso de pintura, eliminando riesgos de inflamabilidad, reduciendo la toxicidad y la exposición de los trabajadores a sustancias peligrosas. El sistema incluye secado con aire caliente, lámparas IR y UV, lo que aumenta la durabilidad de las tintas. Entre los beneficios destacan la reducción de emisiones contaminantes, menor huella de carbono, y residuos más seguros y fáciles de tratar."
+      }
+    ]
+  }
+}

@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from '../components/home/Banner';
-import CorporatePresentation from '../components/home/CorporatePresentation';
-import Mission from '../components/about/Mission';
+import CombinedSection from '../components/home/CombinedSection';
 import AnimatedSlogan from '../components/home/AnimatedSlogan';
 import BusinessLines from '../components/home/BusinessLines';
 import Certifications from '../components/home/Certifications';
@@ -14,8 +13,7 @@ const HomePage: React.FC = () => {
       <Banner />
       <BusinessLines />
       <AnimatedSlogan />
-      <CorporatePresentation />
-      <Mission />
+      <CombinedSection />
       <Certifications />
       <UVPaintBanner />
       <ContactCTA />

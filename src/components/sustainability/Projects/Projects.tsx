@@ -1,100 +1,92 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-const projects = [
-	{
-		title: 'Gestión Forestal Responsable',
-		description:
-			'En nuestra empresa asumimos un compromiso firme con la sostenibilidad, trabajando con responsabilidad a través de una gestión forestal responsable y certificada por la FSC® (Forest Stewardship Council®). Esta certificación garantiza que la madera utilizada proviene de bosques gestionados de forma ambientalmente adecuada, socialmente beneficiosa y económicamente viable. De esta manera, contribuimos activamente a la conservación de los recursos naturales y al desarrollo de una industria forestal sostenible.',
-	},
-	{
-		title: 'Tecnología',
-		description:
-			'En nuestra empresa trabajamos con tecnología avanzada y maquinaria de última generación que permite optimizar los procesos industriales, haciendo un uso eficiente de los recursos y minimizando el desperdicio de materiales. Nos enfocamos en la sostenibilidad, por lo que reprocesamos los residuos generados durante la producción, dándoles una nueva vida útil cuando es posible. Además, los residuos que no pueden ser reutilizados son descartados de manera responsable, cumpliendo estrictamente con las normas ambientales establecidas, reafirmando así nuestro compromiso con el cuidado del medio ambiente.',
-	},
-	{
-		title: 'Pinturas al Agua Amigables con las Personas y el Medio Ambiente',
-		description:
-			'Uno de los principales desafíos en la industria manufacturera es eliminar el uso de solventes por su impacto ambiental y riesgos para la salud. Desde 2017, la Planta Glover implementó tintas, sellos y lacas en base a agua en el 90% de sus productos, y en el 100% de la línea de muebles y patas para camas y sofás. Este cambio mejoró el proceso de pintura, eliminando riesgos de inflamabilidad, reduciendo la toxicidad y la exposición de los trabajadores a sustancias peligrosas. El sistema incluye secado con aire caliente, lámparas IR y UV, lo que aumenta la durabilidad de las tintas. Entre los beneficios destacan la reducción de emisiones contaminantes, menor huella de carbono, y residuos más seguros y fáciles de tratar.',
-	},
-];
+// Import process images
+import processImg1 from '../../../assets/sustainability/sostenibilidad.jpeg';
+import processImg2 from '../../../assets/processes/photos/cnc1.JPG';
+import processImg3 from '../../../assets/processes/photos/pintura.JPG';
+
+interface Project {
+  title: string;
+  shortTitle: string;
+  description: string;
+}
 
 const Projects: React.FC = () => {
-	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const { t } = useTranslation('sustainability');
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
-	const toggleExpanded = (index: number) => {
-		setExpandedIndex(expandedIndex === index ? null : index);
-	};
+  const projects = t('projects.items', { returnObjects: true }) as Project[];
+  
+  // Map images to each project
+  const projectImages = [processImg1, processImg2, processImg3];
 
-	return (
-		<section className="py-20 bg-gray-50">
-			<div className="container mx-auto px-4">
-				<motion.h2
-					initial={{ opacity: 0, y: 20 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					className="text-4xl font-bold text-center mb-8"
-				>
-					Nuestros Procesos Sustentables
-				</motion.h2>
-				<div className="max-w-4xl mx-auto space-y-4">
-					{projects.map((proj, i) => (
-						<motion.div
-							key={proj.title}
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							viewport={{ once: true }}
-							transition={{ delay: i * 0.1 }}
-							className="bg-white rounded-lg shadow overflow-hidden"
-						>
-							<button
-								onClick={() => toggleExpanded(i)}
-								className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
-							>
-								<h3 className="text-xl font-semibold">{proj.title}</h3>
-								<motion.div
-									animate={{ rotate: expandedIndex === i ? 180 : 0 }}
-									transition={{ duration: 0.2 }}
-									className="w-5 h-5 flex items-center justify-center"
-								>
-									<svg
-										className="w-4 h-4 text-gray-500"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth={2}
-											d="M19 9l-7 7-7-7"
-										/>
-									</svg>
-								</motion.div>
-							</button>
-							<AnimatePresence>
-								{expandedIndex === i && (
-									<motion.div
-										initial={{ height: 0, opacity: 0 }}
-										animate={{ height: 'auto', opacity: 1 }}
-										exit={{ height: 0, opacity: 0 }}
-										transition={{ duration: 0.3 }}
-										className="overflow-hidden"
-									>
-										<div className="px-6 pb-4">
-											<p className="text-neutral-700 leading-relaxed">
-												{proj.description}
-											</p>
-										</div>
-									</motion.div>
-								)}
-							</AnimatePresence>
-						</motion.div>
-					))}
-				</div>
-			</div>
-		</section>
-	);
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold uppercase mb-2 text-neutral-900">
+            {t('projects.title')}
+          </h2>
+          <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
+        </motion.div>
+        
+        <div className="max-w-4xl mx-auto">
+          {/* Tab Selector - File Style */}
+          <div className="flex border-b border-gray-300">
+            {projects.map((proj, i) => (
+              <button
+                key={i}
+                onClick={() => setSelectedIndex(i)}
+                className={`flex-1 px-6 py-4 font-semibold transition-all duration-300 border-b-2 ${
+                  selectedIndex === i
+                    ? 'border-neutral-800 text-neutral-800 bg-white'
+                    : 'border-transparent text-neutral-500 hover:text-neutral-700 bg-gray-50 hover:bg-gray-100'
+                }`}
+              >
+                {proj.shortTitle}
+              </button>
+            ))}
+          </div>
+
+          {/* Content Box */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white shadow-lg p-8"
+            >
+              <h3 className="text-2xl font-bold mb-6 text-neutral-800">
+                {projects[selectedIndex].title}
+              </h3>
+              
+              {/* Image */}
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <img
+                  src={projectImages[selectedIndex]}
+                  alt={projects[selectedIndex].title}
+                  className="w-full h-[400px] object-cover"
+                />
+              </div>
+              
+              <p className="text-neutral-700 leading-relaxed">
+                {projects[selectedIndex].description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Projects;

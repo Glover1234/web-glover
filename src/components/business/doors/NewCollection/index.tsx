@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-import { businessLineFeatures } from '../../BusinessLineAttributes';
+import { useTranslation } from 'react-i18next';
 
 // Import local collection images
 import Collection1 from '../../../../assets/doors/coleccion/coleccion1.jpg';
 import Collection2 from '../../../../assets/doors/coleccion/coleccion2.jpg';
 import Collection3 from '../../../../assets/doors/coleccion/coleccion3.jpeg';
 
-// Using the centralized attributes instead of hardcoded ones
-const features = businessLineFeatures.doors;
-
 const NewCollection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+
+  const features = t('doors.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
   return (
     <section className="py-20 bg-white">
@@ -26,10 +26,10 @@ const NewCollection: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-light mb-4">
-                Puertas
+                {t('doors.sectionTitle')}
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-8">
-                Realizamos atractivas puertas en madera 100% sólidas con uso orientado a los accesos principales. En Glover, gestionamos nuestra propia producción de madera para garantizar las dimensiones exactas que necesitamos, lo que nos permite especializarnos aún más en nuestros productos y asegurar un abastecimiento regular.
+                {t('doors.description')}
               </p>
               
               {/* Desplegable de atributos */}
@@ -79,7 +79,7 @@ const NewCollection: React.FC = () => {
           </div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 h-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection3}
                 alt="Puerta Premium"
-                className="w-full h-[550px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -100,7 +100,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection1}
                 alt="Detalle de la puerta"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -111,7 +111,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection2}
                 alt="Acabado de la puerta"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
           </div>

@@ -1,0 +1,29 @@
+{
+  "title": "CONTACT",
+  "subtitle": "We are here to help you",
+  "form": {
+    "name": "Full name",
+    "email": "Email address",
+    "phone": "Phone",
+    "company": "Company",
+    "message": "Message",
+    "subject": "Subject",
+    "send": "SEND MESSAGE",
+    "success": "Message sent successfully",
+    "error": "Error sending message"
+  },
+  "info": {
+    "title": "CONTACT INFORMATION",
+    "address": "Address",
+    "addressValue": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Araucanía Region, Chile",
+    "phone": "Phone",
+    "phoneValue": "+56 45 2 967500",
+    "email": "Email",
+    "emailValue": "contacto@glover.cl",
+    "hours": "Business hours",
+    "hoursValue": "Monday to Friday: 8:00 AM - 6:00 PM"
+  },
+  "map": {
+    "title": "LOCATION"
+  }
+}

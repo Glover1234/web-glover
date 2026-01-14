@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -17,40 +18,41 @@ import bannerPuertas from '../../../assets/home_banner/Banner_Puertas.jpeg';
 
 interface BusinessLine {
   image: string;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
-const businessLines: BusinessLine[] = [
-  {
-    image: bannerMuebles,
-    title: 'Muebles',
-    description: 'Diseños únicos con la más alta calidad'
-  },
-  {
-    image: bannerPuertas,
-    title: 'Puertas',
-    description: 'Elegancia y funcionalidad en cada diseño'
-  },
-  {
-    image: bannerMaderas,
-    title: 'Maderas',
-    description: 'Materia prima de primera calidad'
-  },
-  {
-    image: bannerEstructuras,
-    title: 'Estructuras',
-    description: 'Solidez y durabilidad garantizada'
-  },
-  {
-    image: bannerComplementos,
-    title: 'Complementos',
-    description: 'El toque final perfecto'
-  }
-];
-
 const Banner: React.FC = () => {
+  const { t } = useTranslation('home');
   const [activeSlide, setActiveSlide] = useState(0);
+
+  const businessLines: BusinessLine[] = [
+    {
+      image: bannerMuebles,
+      titleKey: 'banner.furniture.title',
+      descriptionKey: 'banner.furniture.description'
+    },
+    {
+      image: bannerPuertas,
+      titleKey: 'banner.doors.title',
+      descriptionKey: 'banner.doors.description'
+    },
+    {
+      image: bannerMaderas,
+      titleKey: 'banner.wood.title',
+      descriptionKey: 'banner.wood.description'
+    },
+    {
+      image: bannerEstructuras,
+      titleKey: 'banner.structures.title',
+      descriptionKey: 'banner.structures.description'
+    },
+    {
+      image: bannerComplementos,
+      titleKey: 'banner.complements.title',
+      descriptionKey: 'banner.complements.description'
+    }
+  ];
 
   return (
     <section className="relative w-full pt-20">
@@ -123,10 +125,10 @@ const Banner: React.FC = () => {
                         </h1>
                         <div className="w-20 h-0.5 bg-red-600 mx-auto mb-3"></div>
                         <p className="text-lg md:text-xl lg:text-2xl text-white italic font-light mb-4">
-                          Calidad que se siente
+                          {t('companyIntro.tagline')}
                         </p>
                         <p className="text-xl md:text-2xl lg:text-3xl text-white font-light uppercase tracking-wide">
-                          {line.title}
+                          {t(line.titleKey)}
                         </p>
                       </div>
                     </motion.div>

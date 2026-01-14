@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -13,37 +14,23 @@ const imageMap: Record<string, string> = {
   complement2: C2
 };
 
-// Complementos data with features
-const complementsData = [
-  {
-    id: 'complement1',
-    name: 'Patas para cama',
-    features: [
-      'Diseños exclusivos con finos acabados',
-      'Fabricación a medida según especificaciones',
-      'Materiales de alta calidad y durabilidad',
-      'Acabados personalizables para integrarse con cualquier estilo'
-    ]
-  },
-  {
-    id: 'complement2',
-    name: 'Patas para muebles',
-    features: [
-      'Amplia variedad de diseños y alturas',
-      'Gran capacidad de carga y estabilidad',
-      'Acabados premium en madera y metal',
-      'Soluciones adaptables a diferentes tipos de muebles'
-    ]
-  }
-];
+interface ComplementProduct {
+  id: string;
+  name: string;
+  features: string[];
+}
 
 const ComplementsSection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  
+  const complementsData = t('complements.products', { returnObjects: true }) as ComplementProduct[];
+  const productsTitle = t('complements.productsTitle');
   const selected = complementsData.find(item => item.id === selectedId) || null;
 
   return (
     <section id="complements-section" className="py-12 w-full px-4 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">Complementos</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">{productsTitle}</h2>
 
       {/* Grid de complementos */}
       <div className="grid grid-cols-12 gap-4">

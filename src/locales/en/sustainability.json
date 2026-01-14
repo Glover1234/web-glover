@@ -1,0 +1,107 @@
+{
+  "title": "SUSTAINABILITY",
+  "subtitle": "Commitment to the environment",
+  "hero": {
+    "title": "SUSTAINABILITY",
+    "subtitle": "Guaranteed quality and environmental responsibility"
+  },
+  "nav": {
+    "sustainability": "Sustainability"
+  },
+  "intro": {
+    "description": "Since its inception, Glover has been characterized by the innovation of its collaborators, connection and respect for the environment.",
+    "stats": [
+      {
+        "value": "430",
+        "label": "committed workers"
+      },
+      {
+        "value": "1992",
+        "label": "year of foundation"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "Our Philosophy",
+    "description": "We believe that only through responsible practices can we guarantee the quality and durability of our products. From the selection of certified wood to each stage of drying and assembly, our approach prioritizes the health of forests and the well-being of communities."
+  },
+  "banner": {
+    "text": "Innovation and sustainability in every process"
+  },
+  "certifications": {
+    "title": "Certifications and accreditations",
+    "subtitle": "Committed to excellence",
+    "description": "Our certifications support our commitment to quality and sustainability in all our processes.",
+    "benefits": "Main benefits",
+    "items": [
+      {
+        "id": "fsc",
+        "title": "FSC: Forest Stewardship Council®",
+        "description": "The FSC (Forest Stewardship Council) certificate is a guarantee seal that ensures that forest products come from sustainably and responsibly managed forests.",
+        "benefits": [
+          "Sustainable management",
+          "Environmental guarantee",
+          "International recognition"
+        ]
+      },
+      {
+        "id": "pda",
+        "title": "PDA Products: Environmental Protection",
+        "description": "Our products are certified for environmental protection, guaranteeing that they meet the highest standards of sustainability and environmental responsibility.",
+        "benefits": [
+          "Environmental protection",
+          "Sustainable products",
+          "Ecological responsibility"
+        ]
+      },
+      {
+        "id": "citec",
+        "title": "CITEC UBB (Universidad del Bío Bío)",
+        "description": "This test report certifies that our doors have thermal, acoustic insulation and other important benefits.",
+        "benefits": [
+          "Thermal insulation",
+          "Acoustic insulation",
+          "Certified quality"
+        ]
+      }
+    ]
+  },
+  "impact": {
+    "title": "Our Environmental Impact",
+    "items": [
+      {
+        "title": "Emissions Reduction",
+        "description": "Process optimization and use of clean energy to minimize our carbon footprint."
+      },
+      {
+        "title": "Continuous Reforestation",
+        "description": "We collaborate with local communities to reforest affected areas and protect biodiversity."
+      },
+      {
+        "title": "Waste Recovery",
+        "description": "We recycle and reuse sawmill and polishing by-products, reducing waste."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Our Sustainable Processes",
+    "subtitle": "Initiatives that make a difference",
+    "items": [
+      {
+        "title": "Responsible Forest Management",
+        "shortTitle": "Responsible Forest Management",
+        "description": "In our company we assume a firm commitment to sustainability, working responsibly through responsible forest management certified by FSC® (Forest Stewardship Council®). This certification guarantees that the wood used comes from forests managed in an environmentally appropriate, socially beneficial and economically viable way. In this way, we actively contribute to the conservation of natural resources and the development of a sustainable forest industry."
+      },
+      {
+        "title": "Technology",
+        "shortTitle": "Technology",
+        "description": "In our company we work with advanced technology and state-of-the-art machinery that allows us to optimize industrial processes, making efficient use of resources and minimizing material waste. We focus on sustainability, so we reprocess waste generated during production, giving it a new useful life when possible. In addition, waste that cannot be reused is disposed of responsibly, strictly complying with established environmental standards, thus reaffirming our commitment to caring for the environment."
+      },
+      {
+        "title": "Water-Based Paints Friendly to People and the Environment",
+        "shortTitle": "Water-Based Paints",
+        "description": "One of the main challenges in the manufacturing industry is eliminating the use of solvents due to their environmental impact and health risks. Since 2017, Glover Plant has implemented water-based inks, sealers and lacquers in 90% of its products, and 100% of the furniture line and bed and sofa legs. This change improved the painting process, eliminating flammability risks, reducing toxicity and worker exposure to hazardous substances. The system includes drying with hot air, IR and UV lamps, which increases the durability of the inks. Benefits include reduction of polluting emissions, lower carbon footprint, and safer and easier to treat waste."
+      }
+    ]
+  }
+}

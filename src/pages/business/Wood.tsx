@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import NewCollection from '../../components/business/wood/NewCollection';
 import WoodSection from '../../components/business/wood/WoodSection';
 import WoodStylesShowcase from '../../components/business/wood/WoodStylesShowcase';
@@ -9,6 +10,7 @@ import logo from '../../assets/general/logo-blanco.jpeg';
 import ContactCTA from '../../components/home/ContactCTA';
 
 const WoodPage: React.FC = () => {
+  const { t } = useTranslation('business');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -36,7 +38,7 @@ const WoodPage: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-6xl md:text-7xl lg:text-8xl font-bold text-white uppercase tracking-wider mb-6"
             >
-              MADERAS
+              {t('wood.hero.title')}
             </motion.h1>
 
             {/* Línea roja */}
@@ -53,10 +55,9 @@ const WoodPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-xl md:text-2xl lg:text-3xl text-white font-light italic mb-20"
+              style={{ whiteSpace: 'pre-line' }}
             >
-              Semielaboradas en formatos Blanks y Boards para
-              <br />
-              exportación internacional.
+              {t('wood.hero.tagline')}
             </motion.p>
 
             {/* Logo */}

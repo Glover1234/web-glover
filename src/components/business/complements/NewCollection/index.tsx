@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-import { businessLineFeatures } from '../../BusinessLineAttributes';
+import { useTranslation } from 'react-i18next';
 import Collection1 from '../../../../assets/complements/coleccion/coleccion1.jpg';
 import Collection2 from '../../../../assets/complements/coleccion/coleccion2.jpg';
 import Collection3 from '../../../../assets/complements/coleccion/coleccion3.jpeg';
 
-// Using the centralized attributes instead of hardcoded ones
-const features = businessLineFeatures.complements;
-
 const NewCollection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+  
+  const features = t('complements.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
   return (
     <section className="py-20 bg-white">
@@ -24,10 +24,10 @@ const NewCollection: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-light mb-4">
-                Complementos
+                {t('complements.sectionTitle')}
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-8">
-                Fabricamos aplicaciones, una amplia línea de patas con finos acabados para uso en muebles y camas. Nuestro proceso de preparación incluye una revisión minuciosa de la madera mediante tecnología avanzada. Gracias a esta precisión, cada pieza que fabricamos será idéntica a la anterior, con la misma atención al detalle y calidad que garantizan durabilidad y elegancia.
+                {t('complements.description')}
               </p>
               
               {/* Desplegable de atributos */}
@@ -87,7 +87,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection1}
                 alt="Complemento Premium"
-                className="w-full h-[550px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -98,7 +98,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection3}
                 alt="Detalle del complemento"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -109,7 +109,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection2}
                 alt="Acabado del complemento"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
           </div>

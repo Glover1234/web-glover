@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import NewCollection from '../../components/business/structures/NewCollection';
 import StructuresSection from '../../components/business/structures/StructuresSection';
 import StructureStylesShowcase from '../../components/business/structures/StructuresStylesShowcase';
@@ -8,6 +9,7 @@ import logo from '../../assets/general/logo-blanco.jpeg';
 import ContactCTA from '../../components/home/ContactCTA';
 
 const StructuresPage: React.FC = () => {
+  const { t } = useTranslation('business');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -35,7 +37,7 @@ const StructuresPage: React.FC = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white uppercase tracking-wider mb-4 sm:mb-6"
             >
-              ESTRUCTURAS
+              {t('structures.hero.title')}
             </motion.h1>
 
             {/* Línea roja */}
@@ -53,7 +55,7 @@ const StructuresPage: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white font-light italic mb-12 sm:mb-16 lg:mb-20 max-w-4xl mx-auto px-2 leading-relaxed"
             >
-              Fabricación de bases de cama, sofá y respaldos.
+              {t('structures.hero.tagline')}
             </motion.p>
 
             {/* Logo */}

@@ -2,25 +2,28 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { navigationItems } from '../../routes';
 import MobileMenu from './MobileMenu';
+import LanguageSwitcher from '../LanguageSwitcher';
 import logo from '../../assets/general/logo.jpeg';
 
-const businessLines = [
-  { path: '/business-lines/doors', name: 'Puertas' },
-  { path: '/business-lines/furniture', name: 'Muebles' },
-  { path: '/business-lines/wood', name: 'Maderas de exportación' },
-  { path: '/business-lines/structures', name: 'Estructuras' },
-  { path: '/business-lines/complements', name: 'Complementos' },
-];
-
 const Header: React.FC = () => {
+  const { t } = useTranslation('common');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
   const dropdownTimeoutRef = useRef<number | null>(null);
   const dropdownRef = useRef<HTMLLIElement>(null);
+
+  const businessLines = [
+    { path: '/business-lines/doors', name: t('businessLines.doors') },
+    { path: '/business-lines/furniture', name: t('businessLines.furniture') },
+    { path: '/business-lines/wood', name: t('businessLines.wood') },
+    { path: '/business-lines/structures', name: t('businessLines.structures') },
+    { path: '/business-lines/complements', name: t('businessLines.complements') },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,6 +97,22 @@ const Header: React.FC = () => {
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-8">
             {navigationItems.map((item) => {
+              const translatedName = item.path === '/' 
+                ? t('nav.home')
+                : item.path === '/business-lines'
+                ? t('nav.businessLines')
+                : item.path === '/certifications-sustainability'
+                ? t('nav.sustainability')
+                : item.path === '/technological-processes'
+                ? t('nav.processes')
+                : item.path === '/sales-room'
+                ? t('nav.salesroom')
+                : item.path === '/about-us'
+                ? t('nav.aboutUs')
+                : item.path === '/contact'
+                ? t('nav.contact')
+                : item.name;
+
               if (item.path === '/business-lines') {
                 return (
                   <li key={item.path} className="relative" ref={dropdownRef}>
@@ -107,7 +126,7 @@ const Header: React.FC = () => {
                       onMouseLeave={handleDropdownClose}
                       onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     >
-                      {item.name}
+                      {translatedName}
                       <ChevronDown className="ml-1 w-4 h-4" />
                     </button>
                     <AnimatePresence>
@@ -151,7 +170,7 @@ const Header: React.FC = () => {
                         : 'text-neutral-900 hover:text-red-900'
                     }`}
                   >
-                    {item.name}
+                    {translatedName}
                     {location.pathname === item.path && (
                       <motion.div
                         className="absolute bottom-0 left-0 h-0.5 bg-red-900"
@@ -168,18 +187,21 @@ const Header: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="p-2 text-neutral-900 md:hidden"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? (
-            <X className="w-6 h-6" />
-          ) : (
-            <Menu className="w-6 h-6" />
-          )}
-        </button>
+        {/* Language Switcher & Mobile Menu Button */}
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            className="p-2 text-neutral-900 md:hidden"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

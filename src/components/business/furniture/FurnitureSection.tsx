@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -21,67 +22,28 @@ const imageMap: Record<string, string> = {
   muebles6: Mueble6,
 };
 
-// Furniture items data with specific bullet features
-const furnitureData = [
-  {
-    id: 'muebles1',
-    name: 'Bases para Camas',
-    features: [
-      { title: 'Estructura robusta', desc: 'Fabricada con madera procesada en nuestro propio aserradero' },
-      { title: 'Acabado homogéneo', desc: 'Resistente a la humedad gracias a nuestras pinturas a base de agua' },
-      { title: 'Diseño preciso', desc: 'Fabricación con precisión CNC garantizando uniformidad en cada producto' },
-      { title: 'Incluye documentación', desc: 'Instructivo de armado y garantía incluidos' }
-    ]
-  },
-  {
-    id: 'muebles6',
-    name: 'Respaldos',
-    features: [
-      { title: 'Diseño ergonómico', desc: 'Adaptado para mayor comodidad' },
-      { title: 'Acabado suave', desc: 'Al tacto con secado por luz ultravioleta' },
-      { title: 'Maderas estables', desc: 'Fabricados con maderas de tensiones reducidas para evitar deformaciones' },
-      { title: 'Estructura duradera', desc: 'Estructura interna que mantiene la forma a lo largo del tiempo' }
-    ]
-  },
-  {
-    id: 'muebles3',
-    name: 'Veladores',
-    features: [
-      { title: 'Pinturas eco-amigables', desc: 'De origen italiano a base de agua' },
-      { title: 'Ensamblaje perfecto', desc: 'Gracias a nuestro proceso de maquinado con tecnología CNC' },
-      { title: 'Acabado superior', desc: 'Superficies con acabado suave y color profundo y definido' },
-      { title: 'Sin imperfecciones', desc: 'Estructura interna libre de imperfecciones gracias a nuestro escáner digital' }
-    ]
-  },
-  {
-    id: 'muebles4',
-    name: 'Cómodas',
-    features: [
-      { title: 'Almacenamiento espacioso', desc: 'Fabricado con madera de alta calidad' },
-      { title: 'Tratamiento especializado', desc: 'Maderas con humedad óptima para evitar deformaciones' },
-      { title: 'Resistente a la luz', desc: 'Acabado resistente a la exposición moderada de luz solar' },
-      { title: 'Uniones perfectas', desc: 'Mediante técnica finger joint para crear paneles de mayor tamaño' }
-    ]
-  },
-  {
-    id: 'muebles5',
-    name: 'Muebles para terraza',
-    features: [
-      { title: 'Resistente a la intemperie', desc: 'Tratamiento especial para resistir condiciones climáticas adversas' },
-      { title: 'Protección UV', desc: 'Acabado con protección ultravioleta para evitar decoloración' },
-      { title: 'Impermeabilización', desc: 'Sellado especializado que protege contra humedad y lluvia' },
-      { title: 'Madera tratada', desc: 'Maderas seleccionadas y tratadas específicamente para uso exterior' }
-    ]
-  }
-];
+interface FurnitureFeature {
+  title: string;
+  desc: string;
+}
+
+interface FurnitureProduct {
+  id: string;
+  name: string;
+  features: FurnitureFeature[];
+}
 
 const FurnitureSection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  
+  const furnitureData = t('furniture.products', { returnObjects: true }) as FurnitureProduct[];
+  const productsTitle = t('furniture.productsTitle');
   const selected = furnitureData.find(item => item.id === selectedId);
 
   return (
     <section id="furniture-section" className="py-12 w-full px-4 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">Muebles</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 uppercase text-neutral-900">{productsTitle}</h2>
 
       {/* Grid de productos */}
       <div className="grid grid-cols-12 gap-4">

@@ -1,0 +1,19 @@
+{
+  "title": "SHOWROOM",
+  "subtitle": "Visit our showroom",
+  "welcome": {
+    "title": "WELCOME TO OUR SHOWROOM",
+    "description": "Discover our products and experience GLOVER quality"
+  },
+  "visit": {
+    "title": "VISIT US",
+    "description": "We invite you to visit our facilities",
+    "schedule": "Schedule your visit",
+    "address": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro",
+    "hours": "Hours: Monday to Friday 8:00 AM - 6:00 PM"
+  },
+  "catalog": {
+    "title": "PRODUCT CATALOG",
+    "description": "Explore our wide range of products"
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "title": "BUSINESS LINES",
+  "subtitle": "Comprehensive solutions for every need",
+  "doors": {
+    "title": "DOORS",
+    "hero": {
+      "title": "DOORS",
+      "tagline": "100% solid radiata pine wood."
+    },
+    "sectionTitle": "Doors",
+    "description": "We make attractive doors in 100% solid wood designed for main entrances. At Glover, we manage our own wood production to guarantee the exact dimensions we need, which allows us to further specialize in our products and ensure a regular supply.",
+    "models": [
+      {
+        "id": "bari",
+        "name": "Bari Model",
+        "features": [
+          { "title": "100% solid wood", "desc": "Radiata Pine with finger joint process for maximum strength." },
+          { "title": "High UV protection", "desc": "UV finish that protects against humidity and solar rays." },
+          { "title": "Thermal and acoustic insulation", "desc": "4 cm thickness for interior comfort." },
+          { "title": "FSC Certification", "desc": "Guaranteed sustainable forest management." },
+          { "title": "Impact resistance", "desc": "Robust construction without deformation." },
+          { "title": "Quick installation", "desc": "Hardware included for easy mounting." }
+        ]
+      },
+      {
+        "id": "llaima",
+        "name": "Llaima Model",
+        "features": [
+          { "title": "100% solid wood", "desc": "Radiata Pine slow chamber-dried for maximum stability." },
+          { "title": "High UV protection", "desc": "Finish resistant to humidity and moderate sun exposure." },
+          { "title": "Thermal and acoustic insulation", "desc": "4.5 cm thickness for home interior comfort." },
+          { "title": "FSC Certification", "desc": "Guaranteed sustainable forest management." },
+          { "title": "Impact resistance", "desc": "No permanent deformation." },
+          { "title": "Easy and safe installation", "desc": "Ready to install easily." }
+        ]
+      },
+      {
+        "id": "murano",
+        "name": "Murano Model",
+        "features": [
+          { "title": "100% solid wood", "desc": "Chamber-dried Radiata Pine with finger joint structure." },
+          { "title": "High UV protection", "desc": "High resistance to humidity and sun exposure." },
+          { "title": "Laminated Safety Glass", "desc": "6 mm glass practically inseparable in case of breakage." },
+          { "title": "FSC Certification", "desc": "Guaranteed sustainable forest management." },
+          { "title": "Superior insulation", "desc": "4.5 cm thickness. Excellent thermal and acoustic insulation." },
+          { "title": "Easy and safe installation", "desc": "Ready for immediate use." }
+        ]
+      },
+      {
+        "id": "lascar",
+        "name": "Lascar Model",
+        "features": [
+          { "title": "100% solid wood", "desc": "Radiata Pine slow chamber-dried for maximum stability." },
+          { "title": "High UV protection", "desc": "Finish resistant to humidity and moderate sun exposure." },
+          { "title": "Thermal and acoustic insulation", "desc": "4 cm thickness for home interior comfort." },
+          { "title": "FSC Certification", "desc": "Guaranteed sustainable forest management." },
+          { "title": "Impact resistance", "desc": "No permanent deformation." },
+          { "title": "Easy installation", "desc": "Ready for immediate use." }
+        ]
+      },
+      {
+        "id": "turin",
+        "name": "Turin Model",
+        "features": [
+          { "title": "100% solid wood", "desc": "Radiata Pine structured with finger joint covered in veneer." },
+          { "title": "Premium UV protection", "desc": "Stained, sealed and water finish with UV drying, resistant to humidity and solar rays." },
+          { "title": "Thermal and acoustic insulation", "desc": "Reduces up to 21 dB of exterior noise (ISO 717-1)." },
+          { "title": "FSC Certification", "desc": "Guaranteed sustainable forest management." },
+          { "title": "Thermal transmittance", "desc": "Efficient insulation with 1.63 W/m²K." },
+          { "title": "Guaranteed airtightness", "desc": "High impact resistance without deformation." }
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "TEMPERATURE AND NOISE INSULATION. PDA DOORS.",
+        "content": "With 4.5 cm thickness of solid wood, providing an excellent thermal and acoustic insulation barrier between the exterior and interior of your home. (With CITEC UBB test reports) PDA DOORS, ENVIRONMENTAL PROTECTION. With laboratory tests that certify thermal and noise insulation."
+      },
+      {
+        "title": "STABLE AND DURABLE WOOD OVER TIME",
+        "content": "Solid Radiata Pine Wood, with slow drying for 4 to 5 days at temperatures between 65°C to 70°C in a chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time."
+      },
+      {
+        "title": "PAINT THAT PROTECTS AGAINST HUMIDITY AND LIGHT. SOFT TO THE TOUCH.",
+        "content": "Door with Italian water-based paints and lacquers, with UV drying and high-quality finishes, which protects against humidity, delivering a soft surface to the touch and very resistant to moderate sun exposure."
+      },
+      {
+        "title": "FSC CERTIFICATION - SUSTAINABLE FOREST MANAGEMENT",
+        "content": "Wood manufactured with FSC Certification, which complies with the highest social and environmental standards in the market, with sustainable forest management."
+      }
+    ]
+  },
+  "furniture": {
+    "title": "FURNITURE",
+    "hero": {
+      "title": "FURNITURE",
+      "tagline": "Specialized solutions for local\nand international clients\n\nFurniture for bedrooms, living rooms, patios, and terraces."
+    },
+    "sectionTitle": "Furniture",
+    "description": "We work mainly with furniture production, supplying major decoration companies and other clients in the national and export markets. Our experience allows us to offer unique designs that combine functionality and aesthetics, adapting to current market trends.",
+    "productsTitle": "Furniture",
+    "products": [
+      {
+        "id": "muebles1",
+        "name": "Bed Bases",
+        "features": [
+          { "title": "Robust structure", "desc": "Made with wood processed in our own sawmill" },
+          { "title": "Homogeneous finish", "desc": "Moisture resistant thanks to our water-based paints" },
+          { "title": "Precise design", "desc": "CNC precision manufacturing guaranteeing uniformity in each product" },
+          { "title": "Includes documentation", "desc": "Assembly instructions and warranty included" }
+        ]
+      },
+      {
+        "id": "muebles6",
+        "name": "Headboards",
+        "features": [
+          { "title": "Ergonomic design", "desc": "Adapted for greater comfort" },
+          { "title": "Smooth finish", "desc": "To the touch with ultraviolet light drying" },
+          { "title": "Stable woods", "desc": "Made with reduced tension woods to avoid deformations" },
+          { "title": "Durable structure", "desc": "Internal structure that maintains shape over time" }
+        ]
+      },
+      {
+        "id": "muebles3",
+        "name": "Nightstands",
+        "features": [
+          { "title": "Eco-friendly paints", "desc": "Italian water-based origin" },
+          { "title": "Perfect assembly", "desc": "Thanks to our machining process with CNC technology" },
+          { "title": "Superior finish", "desc": "Surfaces with smooth finish and deep and defined color" },
+          { "title": "No imperfections", "desc": "Internal structure free of imperfections thanks to our digital scanner" }
+        ]
+      },
+      {
+        "id": "muebles4",
+        "name": "Dressers",
+        "features": [
+          { "title": "Spacious storage", "desc": "Made with high-quality wood" },
+          { "title": "Specialized treatment", "desc": "Woods with optimal humidity to avoid deformations" },
+          { "title": "Light resistant", "desc": "Finish resistant to moderate sun exposure" },
+          { "title": "Perfect joints", "desc": "Using finger joint technique to create larger panels" }
+        ]
+      },
+      {
+        "id": "muebles5",
+        "name": "Patio furniture",
+        "features": [
+          { "title": "Weather resistant", "desc": "Special treatment to resist adverse weather conditions" },
+          { "title": "UV protection", "desc": "Finish with ultraviolet protection to prevent discoloration" },
+          { "title": "Waterproofing", "desc": "Specialized sealing that protects against moisture and rain" },
+          { "title": "Treated wood", "desc": "Woods selected and treated specifically for outdoor use" }
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "SPECIALIST IN CLASSIC AND MODERN DESIGNS.",
+        "content": "In our company we manufacture high-design furniture that combines elegance, ergonomics, and functionality. Each piece is designed to provide comfort and warmth, with high-quality materials. We create environments where design is lived, felt, and enjoyed."
+      },
+      {
+        "title": "STABLE AND DURABLE WOOD OVER TIME",
+        "content": "Solid Radiata Pine Wood, with slow drying for 4 to 5 days at temperatures between 65°C to 70°C in a chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time."
+      },
+      {
+        "title": "PAINT THAT PROTECTS AGAINST HUMIDITY AND LIGHT. SOFT TO THE TOUCH.",
+        "content": "Door with Italian water-based paints and lacquers, with UV drying and high-quality finishes, which protects against humidity, delivering a soft surface to the touch and very resistant to moderate sun exposure."
+      },
+      {
+        "title": "FSC CERTIFICATION - SUSTAINABLE FOREST MANAGEMENT",
+        "content": "Wood manufactured with FSC Certification, which complies with the highest social and environmental standards in the market, with sustainable forest management."
+      }
+    ]
+  },
+  "wood": {
+    "title": "EXPORT WOOD",
+    "hero": {
+      "title": "WOOD",
+      "tagline": "Semi-finished in Blanks and Boards formats for\ninternational export."
+    },
+    "sectionTitle": "Wood",
+    "description": "We work with semi-finished woods in Blanks and Boards formats for international clients. We have FSC certification to ensure responsible use of wood, respecting the environment. With advanced technology, we manage to work our forests and handle our processes correctly, avoiding negative environmental consequences. Therefore, at Glover we care for the ecosystem from the selection of suppliers to the product that reaches your home.",
+    "productsTitle": "Wood",
+    "products": [
+      {
+        "id": "maderas1",
+        "name": "Export wood",
+        "features": [
+          "We work with semi-finished woods in Blanks and Boards formats for international clients",
+          "Guaranteed FSC certification to ensure responsible use of woods",
+          "Advanced technology to work our forests and processes sustainably",
+          "We care for the ecosystem from supplier selection to the final product"
+        ]
+      },
+      {
+        "id": "maderas2",
+        "name": "Our processes",
+        "features": [
+          "Log yard: Own management with automated systems to maintain optimal conditions",
+          "Own sawmill: Ideal dimensions and reduction of wood losses",
+          "Thermal unit and drying: 5 integrated chambers to guarantee quality and optimal humidity",
+          "Preparation: Digital scanner for imperfection detection and finger joint for panels",
+          "Machining: CNC technology to exactly follow industrial design parameters",
+          "Assembly and painting: Water-based paints with continuous line and ultraviolet light drying"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "PREMIUM EXPORT WOOD",
+        "content": "We specialize in the manufacturing and export of wood products made from high-quality radiata pine. We carefully select raw materials to ensure durability, performance, and versatility. Our wood adapts to multiple industries such as furniture, construction, and carpentry. We use cutting-edge technology in our processes to achieve superior finishes and dimensional stability. Each production stage has strict quality control. The combination of good raw materials and technology makes us competitive internationally. We comply with high standards of environmental sustainability and efficiency in our exports. We offer a reliable product with added value for clients worldwide."
+      },
+      {
+        "title": "STABLE AND DURABLE WOOD OVER TIME",
+        "content": "Solid Radiata Pine Wood, with slow drying for 4 to 5 days at temperatures between 65°C to 70°C in a chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time. Structured with Finger Joint processes."
+      },
+      {
+        "title": "HIGH PRODUCTIVE CAPACITY AND GLOBAL LOGISTICS",
+        "content": "We have a high productive capacity for radiata pine export wood, supported by technified processes that guarantee efficiency, quality, and sustainability at each stage of production. Our operation is supported by specialized labor, which allows us to meet the highest international standards and respond timely to global market demands."
+      },
+      {
+        "title": "FSC CERTIFICATION - SUSTAINABLE FOREST MANAGEMENT",
+        "content": "Wood manufactured with FSC Certification, which complies with the highest social and environmental standards in the market, with sustainable forest management."
+      }
+    ]
+  },
+  "structures": {
+    "title": "STRUCTURES",
+    "hero": {
+      "title": "STRUCTURES",
+      "tagline": "Manufacturing of bed bases, sofas and backboards."
+    },
+    "sectionTitle": "Structures",
+    "description": "We manufacture bed bases, sofa frames and backboards. Thanks to our computer numerical control (CNC) technology, we follow exactly the parameters established by an industrial design, ensuring uniformity in the manufacture of each structure. This precision guarantees that each piece is manufactured with the same quality and finish, avoiding any deviation that could cause defects in the final product.",
+    "productsTitle": "Structures",
+    "products": [
+      {
+        "id": "estructuras1",
+        "name": "Bed Base",
+        "features": [
+          "Solid structure with support for various types of mattresses",
+          "Optimized design to maximize storage space",
+          "Treated material to resist moisture and wear",
+          "Ventilation systems to keep the mattress in optimal conditions"
+        ]
+      },
+      {
+        "id": "estructuras2",
+        "name": "Sofa Frame",
+        "features": [
+          "Reinforced frame for intensive daily use",
+          "Detachable construction to facilitate shipping and assembly",
+          "High pressure zones reinforced with noble woods",
+          "Compatible with various suspension and padding systems"
+        ]
+      },
+      {
+        "id": "estructuras3",
+        "name": "Backboards",
+        "features": [
+          "Ergonomic designs adapted to different needs",
+          "Internal structure that maintains shape over time",
+          "Safe fixing systems for bed bases and sofas",
+          "Fixed or modular versions according to customer requirements"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "RESISTANT AND DURABLE FURNITURE STRUCTURES",
+        "content": "We manufacture high-quality wooden structures for furniture, such as sofas, bed headboards, and bed bases. Our pieces are distinguished by being resistant and durable, ideal for guaranteeing stability and comfort in daily use. We employ finger joint technology, which allows a better union of wood pieces, with highly water, humidity, and temperature-change resistant adhesives; for demanding environmental conditions; generating a strong and durable union. All this optimally allows material utilization and increases structural resistance. Thanks to our precise and controlled processes, we offer reliable solutions for the furniture industry."
+      },
+      {
+        "title": "VERSATILITY",
+        "content": "Our wooden structures are carefully designed and assembled according to the specifications of each product line and the requirements of assembly processes. This approach allows us to guarantee precise adaptation to each furniture model, optimizing both functionality and resistance. Additionally, one of its main advantages is that these structures can be easily disassembled, which facilitates their storage or transportation if necessary, without compromising the integrity or durability of the product."
+      },
+      {
+        "title": "STABLE WOOD OVER TIME",
+        "content": "Solid Radiata Pine Wood, with slow drying for 4 to 5 days at temperatures between 65°C to 70°C in a chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time."
+      },
+      {
+        "title": "FSC CERTIFICATION - SUSTAINABLE FOREST MANAGEMENT",
+        "content": "Wood manufactured with FSC Certification, which complies with the highest social and environmental standards in the market, with sustainable forest management."
+      }
+    ]
+  },
+  "complements": {
+    "title": "COMPLEMENTS",
+    "hero": {
+      "title": "COMPLEMENTS",
+      "tagline": "Furniture and bed legs with fine and durable finishes."
+    },
+    "sectionTitle": "Complements",
+    "description": "We manufacture applications, a wide line of legs with fine finishes for use in furniture and beds. Our preparation process includes a thorough review of the wood using advanced technology. Thanks to this precision, each piece we manufacture will be identical to the previous one, with the same attention to detail and quality that guarantee durability and elegance.",
+    "productsTitle": "Complements",
+    "products": [
+      {
+        "id": "complement1",
+        "name": "Bed legs",
+        "features": [
+          "Exclusive designs with fine finishes",
+          "Custom manufacturing according to specifications",
+          "High quality and durable materials",
+          "Customizable finishes to integrate with any style"
+        ]
+      },
+      {
+        "id": "complement2",
+        "name": "Furniture legs",
+        "features": [
+          "Wide variety of designs and heights",
+          "Great load capacity and stability",
+          "Premium finishes in wood and metal",
+          "Adaptable solutions for different types of furniture"
+        ]
+      }
+    ],
+    "attributes": [
+      {
+        "title": "FURNITURE AND BED LEGS WITH VARIOUS DESIGNS",
+        "content": "We also manufacture wooden legs for beds and various types of furniture such as nightstands, dressers, armchairs, and more. We have a wide variety of designs and styles, adaptable to different aesthetic and functional lines. We offer options in different colors and finishes, which allows personalizing each piece according to customer needs. These legs are made with high-quality materials, guaranteeing resistance and durability."
+      },
+      {
+        "title": "PAINT THAT PROTECTS AGAINST HUMIDITY AND LIGHT. SOFT TO THE TOUCH.",
+        "content": "Door with Italian water-based paints and lacquers, with UV drying and high-quality finishes, which protects against humidity, delivering a soft surface to the touch and very resistant to moderate sun exposure."
+      },
+      {
+        "title": "STABLE AND DURABLE WOOD OVER TIME",
+        "content": "Solid Radiata Pine Wood, with slow drying for 4 to 5 days at temperatures between 65°C to 70°C in a chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time."
+      },
+      {
+        "title": "FSC CERTIFICATION - SUSTAINABLE FOREST MANAGEMENT",
+        "content": "Wood manufactured with FSC Certification, which complies with the highest social and environmental standards in the market, with sustainable forest management."
+      }
+    ]
+  },
+  "attributes": {
+    "innovation": "Innovation",
+    "quality": "Quality",
+    "sustainability": "Sustainability",
+    "experience": "Experience"
+  }
+}

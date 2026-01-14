@@ -2,8 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Certifications: React.FC = () => {
+  const { t } = useTranslation('home');
+
   return (
     <section 
       className="relative py-32 text-neutral-900"
@@ -20,11 +23,11 @@ const Certifications: React.FC = () => {
       <div className="container relative">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold uppercase mb-2">
-            CERTIFICACIONES DE SOSTENIBILIDAD
+            {t('certifications.title')}
           </h2>
           <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
           <p className="text-neutral-900 mt-4 text-xl">
-            Comprometidos con la calidad y el medio ambiente
+            {t('certifications.subtitle')}
           </p>
         </div>
 
@@ -33,7 +36,7 @@ const Certifications: React.FC = () => {
             to="/certifications-sustainability"
             className="group inline-flex items-center gap-2 text-neutral-900 border-2 border-neutral-900 px-8 py-3 hover:bg-neutral-900 hover:text-white transition-colors"
           >
-            <span className="font-bold">SABER MÁS</span>
+            <span className="font-bold">{t('certifications.button')}</span>
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

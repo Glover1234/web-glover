@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -19,77 +20,22 @@ const imageMap: Record<string, string> = {
   turin: TurinImg,
 };
 
-// Door models data with specific features
-const doorsData = [
-  {
-    id: 'bari',
-    name: 'Modelo Bari',
-    features: [
-      { title: 'Madera 100% sólida', desc: 'Pino Radiata con proceso finger joint para máxima resistencia.' },
-      { title: 'Alta protección UV', desc: 'Acabado UV que protege contra humedad y rayos solares.' },
-      { title: 'Aislamiento térmico y acústico', desc: 'Espesor de 4 cm para confort interior.' },
-      { title: 'Certificación FSC', desc: 'Manejo forestal sostenible garantizado.' },
-      { title: 'Resistencia al impacto', desc: 'Construcción robusta sin deformación.' },
-      { title: 'Instalación rápida', desc: 'Herrajes incluidos para montaje fácil.' }
-    ]
-  },
-  {
-    id: 'llaima',
-    name: 'Modelo Llaima',
-    features: [
-      { title: 'Madera 100% sólida', desc: 'Pino Radiata secado lento en cámara para máxima estabilidad.' },
-      { title: 'Alta protección UV', desc: 'Acabado resistente a humedad y exposición moderada a luz solar.' },
-      { title: 'Aislamiento térmico y acústico', desc: 'Espesor de 4,5 cm para confort al interior del hogar.' },
-      { title: 'Certificación FSC', desc: 'Manejo forestal sostenible garantizado.' },
-      { title: 'Resistencia al impacto', desc: 'Sin deformación permanente.' },
-      { title: 'Instalación fácil y segura', desc: 'Lista para instalar fácilmente.' }
-    ]
-  },
-  {
-    id: 'murano',
-    name: 'Modelo Murano',
-    features: [
-      { title: 'Madera 100% sólida', desc: 'Pino Radiata secado en cámara con estructura finger joint.' },
-      { title: 'Alta protección UV', desc: 'Alta resistencia a humedad y exposición solar.' },
-      { title: 'Vidrio Laminado de Seguridad', desc: 'Cristal de 6 mm prácticamente inseparable en caso de rotura.' },
-      { title: 'Certificación FSC', desc: 'Manejo forestal sostenible garantizado.' },
-      { title: 'Aislamiento superior', desc: 'Espesor de 4,5 cm. Excelente aislamiento térmico y acústico.' },
-      { title: 'Instalación fácil y segura', desc: 'Lista para uso inmediato.' }
-    ]
-  },
-  {
-    id: 'lascar',
-    name: 'Modelo Lascar',
-    features: [
-      { title: 'Madera 100% sólida', desc: 'Pino Radiata secado lento en cámara para máxima estabilidad.' },
-      { title: 'Alta protección UV', desc: 'Acabado resistente a humedad y exposición moderada a luz solar.' },
-      { title: 'Aislamiento térmico y acústico', desc: 'Espesor de 4 cm para confort al interior del hogar.' },
-      { title: 'Certificación FSC', desc: 'Manejo forestal sostenible garantizado.' },
-      { title: 'Resistencia al impacto', desc: 'Sin deformación permanente.' },
-      { title: 'Instalación fácil', desc: 'Lista para uso inmediato.' }
-    ]
-  },
-  {
-    id: 'turin',
-    name: 'Modelo Turín',
-    features: [
-      { title: 'Madera 100% sólida', desc: 'Pino Radiata estructurado con finger joint revestido en enchapado.' },
-      { title: 'Protección UV Premium', desc: 'Acabado teñido, sellado y al agua con secado UV, resistente a humedad y rayos solares.' },
-      { title: 'Aislamiento térmico y acústico', desc: 'Reduce hasta 21 dB del ruido exterior (ISO 717-1).' },
-      { title: 'Certificación FSC', desc: 'Manejo forestal sostenible garantizado.' },
-      { title: 'Transmitancia térmica', desc: 'Aislación eficiente con 1,63 W/m²K.' },
-      { title: 'Hermeticidad garantizada', desc: 'Alta resistencia al impacto sin deformación.' }
-    ]
-  }
-];
+interface DoorModel {
+  id: string;
+  name: string;
+  features: Array<{ title: string; desc: string }>;
+}
 
 const DoorsSection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  
+  const doorsData = t('doors.models', { returnObjects: true }) as DoorModel[];
   const selected = doorsData.find(d => d.id === selectedId) || null;
 
   return (
     <section id="doors-section" className="py-12 w-full px-4 lg:px-8">
-      <h2 className="text-3xl font-bold text-center mb-12 uppercase">Puertas</h2>
+      <h2 className="text-3xl font-bold text-center mb-12 uppercase">{t('doors.sectionTitle')}</h2>
 
       {/* Grid de modelos */}
       <div className="grid grid-cols-12 gap-4">

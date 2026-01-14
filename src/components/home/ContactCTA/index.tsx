@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useGoogleAnalytics } from '../../../hooks/useGoogleAnalytics';
 
 const ContactCTA: React.FC = () => {
+  const { t } = useTranslation('home');
   const { trackEvent } = useGoogleAnalytics();
 
   const handleContactClick = () => {
@@ -36,7 +38,7 @@ const ContactCTA: React.FC = () => {
             className="mb-8"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">
-              Contáctanos
+              {t('contactCTA.title')}
             </h2>
             <motion.div 
               className="w-24 h-0.5 bg-red-600 mx-auto"
@@ -54,7 +56,7 @@ const ContactCTA: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="text-lg md:text-xl text-white/80 mb-12"
           >
-            Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu proyecto.
+            {t('contactCTA.subtitle')}
           </motion.p>
           
           <motion.div
@@ -68,7 +70,7 @@ const ContactCTA: React.FC = () => {
               onClick={handleContactClick}
               className="group inline-flex items-center gap-2 text-white border-2 border-white px-6 md:px-8 py-3 hover:bg-white hover:text-neutral-900 transition-all duration-300 relative overflow-hidden"
             >
-              <span className="relative z-10 font-bold">CONTÁCTANOS</span>
+              <span className="relative z-10 font-bold">{t('contactCTA.button')}</span>
               <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform relative z-10" />
               <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300" />
             </Link>

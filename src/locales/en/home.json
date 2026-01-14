@@ -1,0 +1,68 @@
+{
+  "banner": {
+    "furniture": {
+      "title": "Furniture",
+      "description": "Unique designs with the highest quality"
+    },
+    "doors": {
+      "title": "Doors",
+      "description": "Elegance and functionality in every design"
+    },
+    "wood": {
+      "title": "Wood",
+      "description": "Top-quality raw materials"
+    },
+    "structures": {
+      "title": "Structures",
+      "description": "Guaranteed solidity and durability"
+    },
+    "complements": {
+      "title": "Complements",
+      "description": "The perfect finishing touch"
+    }
+  },
+  "companyIntro": {
+    "title": "CORPORATE PRESENTATION",
+    "tagline": "GLOVER, QUALITY YOU CAN FEEL",
+    "paragraph1": "Since 1995, we have been at the forefront of developing high-quality products, always committed to innovation and sustainability.",
+    "paragraph2": "With an international presence and a highly qualified team, GLOVER has become a benchmark in the furniture and high-quality finishes sector.",
+    "button": "LEARN MORE"
+  },
+  "businessLines": {
+    "title": "BUSINESS LINES",
+    "subtitle": "Our main business lines.",
+    "goTo": "Go"
+  },
+  "certifications": {
+    "title": "SUSTAINABILITY CERTIFICATIONS",
+    "subtitle": "Committed to quality and the environment",
+    "button": "LEARN MORE"
+  },
+  "contactCTA": {
+    "title": "Contact Us",
+    "subtitle": "Our team is ready to help you find the perfect solution for your project.",
+    "button": "CONTACT US"
+  },
+  "uvPaintBanner": {
+    "title": "UV Painting",
+    "subtitle": "Water-based",
+    "features": {
+      "1": {
+        "title": "Homogeneous finish",
+        "description": "All surfaces present a uniform finish, without irregularities or tone differences."
+      },
+      "2": {
+        "title": "Moisture resistance",
+        "description": "The furniture offers additional protection against humid environments, extending its lifespan."
+      },
+      "3": {
+        "title": "Sunlight tolerance",
+        "description": "Withstands moderate sun exposure without deteriorating easily."
+      },
+      "4": {
+        "title": "Deep and defined color",
+        "description": "The finish achieves consistent and well-saturated tones that enhance the furniture's design."
+      }
+    }
+  }
+}

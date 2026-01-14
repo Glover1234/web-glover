@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-import { businessLineFeatures } from '../../BusinessLineAttributes';
+import { useTranslation } from 'react-i18next';
 
 // Import local collection images for estructuras
 import Collection1 from '../../../../assets/structures/coleccion/coleccion1.jpeg';
 import Collection2 from '../../../../assets/structures/coleccion/coleccion2.jpeg';
 import Collection3 from '../../../../assets/structures/coleccion/coleccion3.jpeg';
 
-// Using the centralized attributes instead of hardcoded ones
-const features = businessLineFeatures.structures;
-
-const NewCollectionStructures: React.FC = () => {
+const NewCollection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+  
+  const features = t('structures.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
   return (
     <section className="py-20 bg-white">
@@ -26,10 +26,10 @@ const NewCollectionStructures: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-light mb-4">
-                Estructuras
+                {t('structures.sectionTitle')}
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-8">
-                Fabricamos bases de cama, sofá y respaldos. Gracias a nuestra tecnología de control numérico computacional (CNC), seguimos exactamente los parámetros establecidos por un diseño industrial, asegurando una uniformidad en la fabricación de cada estructura. Esta precisión garantiza que cada pieza sea fabricada con la misma calidad y acabado, evitando cualquier desviación que pueda provocar defectos en el producto final.
+                {t('structures.description')}
               </p>
               
               {/* Desplegable de atributos */}
@@ -89,7 +89,7 @@ const NewCollectionStructures: React.FC = () => {
               <img
                 src={Collection3}
                 alt="Estructura Premium"
-                className="w-full h-[550px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -100,7 +100,7 @@ const NewCollectionStructures: React.FC = () => {
               <img
                 src={Collection1}
                 alt="Detalle de base de cama"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -111,7 +111,7 @@ const NewCollectionStructures: React.FC = () => {
               <img
                 src={Collection2}
                 alt="Detalle de respaldo"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
           </div>
@@ -121,4 +121,4 @@ const NewCollectionStructures: React.FC = () => {
   );
 };
 
-export default NewCollectionStructures;
+export default NewCollection;

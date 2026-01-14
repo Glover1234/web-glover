@@ -1,8 +1,10 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, FileText } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import logo from '../assets/general/logo.jpeg';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation('common');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -22,7 +24,7 @@ const Footer: React.FC = () => {
               <img src={logo} alt="Glover Logo" className="w-32 h-auto" />
             </div>
             <p className="text-neutral-600 mb-4">
-              Calidad que se siente.
+              {t('footer.tagline')}
             </p>
             <div className="flex space-x-3">
               <a href="https://cl.linkedin.com/company/industrial-glover-spa" target="_blank" rel="noopener noreferrer" className="text-neutral-900 hover:text-red-600 transition-colors">
@@ -32,56 +34,56 @@ const Footer: React.FC = () => {
           </div>
           {/* Page Links */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-2">Glover</h4>
+            <h4 className="text-lg font-bold uppercase mb-2">{t('footer.companyTitle')}</h4>
             <div className="w-12 h-0.5 bg-red-600 mb-4"></div>
             <ul className="space-y-3">
               <li>
-                <a href="/" className="text-neutral-600 hover:text-neutral-900">Home</a>
+                <a href="/" className="text-neutral-600 hover:text-neutral-900">{t('nav.home')}</a>
               </li>
               <li>
-                <a href="/business-lines" className="text-neutral-600 hover:text-neutral-900">Líneas de negocio</a>
+                <a href="/business-lines" className="text-neutral-600 hover:text-neutral-900">{t('nav.businessLines')}</a>
               </li>
               <li>
-                <a href="/certifications-sustainability" className="text-neutral-600 hover:text-neutral-900">Sustentabilidad</a>
+                <a href="/certifications-sustainability" className="text-neutral-600 hover:text-neutral-900">{t('nav.sustainability')}</a>
               </li>
               <li>
-                <a href="/technological-processes" className="text-neutral-600 hover:text-neutral-900">Nuestros Procesos Tecnológicos</a>
+                <a href="/technological-processes" className="text-neutral-600 hover:text-neutral-900">{t('nav.processes')}</a>
               </li>
               <li>
-                <a href="/sales-room" className="text-neutral-600 hover:text-neutral-900">Sala de ventas</a>
+                <a href="/sales-room" className="text-neutral-600 hover:text-neutral-900">{t('nav.salesroom')}</a>
               </li>
               <li>
-                <a href="/about-us" className="text-neutral-600 hover:text-neutral-900">Nosotros</a>
+                <a href="/about-us" className="text-neutral-600 hover:text-neutral-900">{t('nav.aboutUs')}</a>
               </li>
               <li>
-                <a href="/contact" className="text-neutral-600 hover:text-neutral-900">Contacto</a>
+                <a href="/contact" className="text-neutral-600 hover:text-neutral-900">{t('nav.contact')}</a>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-2">CONTACTO</h4>
+            <h4 className="text-lg font-bold uppercase mb-2">{t('footer.contactTitle')}</h4>
             <div className="w-12 h-0.5 bg-red-600 mb-4"></div>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-neutral-900 mr-2 mt-0.5" />
                 <span className="text-neutral-600">
-                Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Región de la Araucanía, Chile
+                {t('footer.address')}
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-neutral-900 mr-2" />
-                <span className="text-neutral-600">+56 45 2 967500</span>
+                <span className="text-neutral-600">{t('footer.phone')}</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-neutral-900 mr-2" />
-                <span className="text-neutral-600">contacto@glover.cl</span>
+                <span className="text-neutral-600">{t('footer.email')}</span>
               </li>
             </ul>
 
             <div className="mt-4">
-              <h5 className="text-sm font-semibold mb-2">Enlaces útiles</h5>
+              <h5 className="text-sm font-semibold mb-2">{t('footer.usefulLinks')}</h5>
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
@@ -90,7 +92,7 @@ const Footer: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-neutral-600 hover:text-red-600 flex items-center"
                   >
-                    <MapPin className="w-4 h-4 mr-2" /> Canal de Denuncias
+                    <MapPin className="w-4 h-4 mr-2" /> {t('footer.complaintChannel')}
                   </a>
                 </li>
                 <li>
@@ -100,7 +102,7 @@ const Footer: React.FC = () => {
                     rel="noopener noreferrer"
                     className="text-neutral-600 hover:text-red-600 flex items-center"
                   >
-                    <FileText className="w-4 h-4 mr-2" /> Código de Ética Glover (PDF)
+                    <FileText className="w-4 h-4 mr-2" /> {t('footer.ethicsCode')}
                   </a>
                 </li>
                 <li>
@@ -125,14 +127,14 @@ const Footer: React.FC = () => {
           </svg>
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-sm text-neutral-600">
-              &copy; {currentYear} Glover. Todos los derechos reservados - Desarrollado por{' '}
+              {t('footer.rights', { year: currentYear })} - Desarrollado por{' '}
               <a 
-                href="https://gostudio.cl" 
+                href="https://zaas.cl/servicios" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-red-600 hover:text-red-700 transition-colors"
               >
-                gostudio
+                Zaas
               </a>
             </p>
           </div>

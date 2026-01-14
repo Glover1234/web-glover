@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-import { businessLineFeatures } from '../../BusinessLineAttributes';
+import { useTranslation } from 'react-i18next';
 
 // Import local collection images for wood
 import Collection1 from '../../../../assets/wood/coleccion/coleccion1.jpeg';
 import Collection2 from '../../../../assets/wood/coleccion/coleccion2.jpeg';
 import Collection3 from '../../../../assets/wood/coleccion/coleccion3.jpeg';
 
-// Using the centralized attributes instead of hardcoded ones
-const features = businessLineFeatures.wood;
-
 const NewCollection: React.FC = () => {
+  const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+  
+  const features = t('wood.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
   return (
     <section className="py-20 bg-white">
@@ -26,10 +26,10 @@ const NewCollection: React.FC = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-light mb-4">
-                Maderas de<br />Exportación Premium
+                {t('wood.sectionTitle')}
               </h2>
               <p className="text-neutral-600 leading-relaxed mb-8">
-                Trabajamos con maderas semielaboradas en formatos de Blanks y Boards para clientes internacionales. Contamos con certificado FSC para asegurar el uso responsable de las maderas, respetando el medio ambiente. De la mano de avanzada tecnología, logramos trabajar nuestros bosques y manejar nuestros procesos de manera correcta, evitando consecuencias ambientales negativas. Por lo tanto, en Glover cuidamos el ecosistema desde la elección de proveedores, hasta el producto que llega a tu hogar.
+                {t('wood.description')}
               </p>
             </motion.div>
 
@@ -78,7 +78,7 @@ const NewCollection: React.FC = () => {
           </div>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 h-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection3}
                 alt="Madera Premium"
-                className="w-full h-[550px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -99,7 +99,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection1}
                 alt="Detalle de la madera"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
             <motion.div
@@ -110,7 +110,7 @@ const NewCollection: React.FC = () => {
               <img
                 src={Collection2}
                 alt="Acabado de la madera"
-                className="w-full h-[300px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg"
               />
             </motion.div>
           </div>

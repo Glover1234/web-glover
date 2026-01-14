@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const CompanyIntro: React.FC = () => {
+  const { t } = useTranslation('home');
   const [isTypingDone, setIsTypingDone] = useState(false);
   const [text] = useTypewriter({
-    words: ['GLOVER, CALIDAD QUE SE SIENTE'],
+    words: [t('companyIntro.tagline')],
     loop: 1,
     typeSpeed: 70,
     deleteSpeed: 50,
@@ -22,7 +24,7 @@ const CompanyIntro: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 text-neutral-900">
-                PRESENTACIÓN CORPORATIVA
+                {t('companyIntro.title')}
               </h3>
               <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
             </div>
@@ -34,14 +36,10 @@ const CompanyIntro: React.FC = () => {
             >
               <div className="space-y-4 text-neutral-600">
                 <p className="text-base md:text-lg">
-                  Desde 1995, hemos estado a la vanguardia en el desarrollo de
-                  productos de alta calidad, siempre comprometidos con la
-                  innovación y la sostenibilidad.
+                  {t('companyIntro.paragraph1')}
                 </p>
                 <p className="text-base md:text-lg">
-                  Con presencia internacional y un equipo altamente calificado,
-                  GLOVER se ha convertido en un referente en el sector de
-                  mobiliario y acabados de alta calidad.
+                  {t('companyIntro.paragraph2')}
                 </p>
               </div>
               <div className="flex justify-center mt-8">
@@ -49,7 +47,7 @@ const CompanyIntro: React.FC = () => {
                   to="/about-us"
                   className="group inline-flex items-center gap-2 text-neutral-900 border-2 border-neutral-900 px-6 md:px-8 py-3 hover:bg-neutral-900 hover:text-white transition-colors"
                 >
-                  <span className="font-bold">SABER MÁS</span>
+                  <span className="font-bold">{t('companyIntro.button')}</span>
                   <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

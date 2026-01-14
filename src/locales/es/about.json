@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "NOSOTROS",
+    "subtitle": "Compromiso, calidad e innovación desde 1995"
+  },
+  "stats": {
+    "years": {
+      "value": "29",
+      "label": "Años de experiencia"
+    },
+    "employees": {
+      "value": "500+",
+      "label": "Colaboradores"
+    },
+    "exports": {
+      "value": "20+",
+      "label": "Países de exportación"
+    },
+    "products": {
+      "value": "5",
+      "label": "Líneas de productos"
+    }
+  },
+  "quality": {
+    "title": "GLOVER, CALIDAD QUE SE SIENTE",
+    "description": "Nuestro compromiso con la excelencia"
+  },
+  "mission": {
+    "title": "NUESTRA MISIÓN",
+    "description": "Crear productos de alta calidad que superen las expectativas de nuestros clientes",
+    "visionTitle": "NUESTRA VISIÓN",
+    "visionDescription": "Ser líderes en innovación y sostenibilidad en la industria"
+  },
+  "productionAreas": {
+    "title": "ÁREAS DE PRODUCCIÓN",
+    "subtitle": "Instalaciones de última generación"
+  },
+  "advantages": {
+    "title": "VENTAJAS COMPETITIVAS",
+    "subtitle": "Lo que nos hace únicos"
+  },
+  "laborTopics": {
+    "title": "COMPROMISO LABORAL",
+    "subtitle": "Nuestro equipo, nuestra fortaleza"
+  },
+  "dna": {
+    "title": "EL ADN DE GLOVER",
+    "mission": {
+      "title": "MISIÓN",
+      "content": "Entregar soluciones de excelencia en productos derivados de la madera, lograr un desarrollo sostenible, armonizando el crecimiento económico, la inclusión social y protección ambiental, creando valor para nuestros accionistas, colaboradores y clientes."
+    },
+    "vision": {
+      "title": "VISIÓN",
+      "content": "Posicionar Glover en Chile e internacionalmente como una empresa líder en la fabricación de productos derivados de la madera, ser un referente de calidad, innovación y confianza para sus consumidores."
+    },
+    "values": {
+      "title": "VALORES",
+      "items": [
+        "Excelencia en calidad",
+        "Innovación constante",
+        "Compromiso ambiental"
+      ]
+    }
+  }
+}

@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Philosophy from '../components/sustainability/Philosophy';
 import Projects from '../components/sustainability/Projects/Projects.tsx';
 import Impact from '../components/sustainability/Impact/Impact.tsx';
@@ -9,7 +10,36 @@ import ContactCTA from '../components/home/ContactCTA';
 // Import local image for parallax
 import SostenibilidadImg from '../assets/sustainability/sostenibilidad.jpeg';
 
+const TypewriterText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 80);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, text]);
+
+  return (
+    <span className={className}>
+      {displayedText}
+      {currentIndex < text.length && (
+        <motion.span
+          animate={{ opacity: [1, 0] }}
+          transition={{ duration: 0.5, repeat: Infinity }}
+          className="inline-block w-0.5 h-8 bg-white ml-1"
+        />
+      )}
+    </span>
+  );
+};
+
 const CertificationsSustainability: React.FC = () => {
+  const { t } = useTranslation('sustainability');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -42,7 +72,7 @@ const CertificationsSustainability: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white uppercase tracking-wider"
             >
-              SUSTENTABILIDAD
+              {t('hero.title')}
             </motion.h1>
           </div>
         </div>
@@ -70,7 +100,7 @@ const CertificationsSustainability: React.FC = () => {
             <button 
               className="px-6 py-4 border-b-2 border-black font-light"
             >
-              Sustentabilidad
+              {t('nav.sustainability')}
             </button>
           </div>
         </div>
@@ -79,21 +109,19 @@ const CertificationsSustainability: React.FC = () => {
       {/* Introduction */}
       <div className="container mx-auto py-20 text-center max-w-2xl">
         <p className="text-gray-700 mb-12">
-          Desde sus inicios Glover se ha caracterizado por la innovación de sus colaboradores, conectarse y respeto con el entorno.
+          {t('intro.description')}
         </p>
         
         <hr className="my-12 border-t border-gray-300" />
 
         {/* Stats Section */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-12">
-          <div className="text-center">
-            <h3 className="text-4xl font-light text-gray-800">430</h3>
-            <p className="text-sm text-gray-600 mt-2">trabajadores comprometidos</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-light text-gray-800">1992</h3>
-            <p className="text-sm text-gray-600 mt-2">año de fundación</p>
-          </div>
+          {(t('intro.stats', { returnObjects: true }) as Array<{value: string; label: string}>).map((stat, index) => (
+            <div key={index} className="text-center">
+              <h3 className="text-4xl font-light text-gray-800">{stat.value}</h3>
+              <p className="text-sm text-gray-600 mt-2">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -111,8 +139,23 @@ const CertificationsSustainability: React.FC = () => {
             alt="Procesos sostenibles"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/40" />
         </motion.div>
+        
+        {/* Typewriter Text Overlay */}
+        <div className="relative h-full flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center px-4"
+          >
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white uppercase tracking-wide">
+              <TypewriterText text={t('banner.text')} />
+            </h2>
+          </motion.div>
+        </div>
       </section>
 
       {/* Projects Component */}

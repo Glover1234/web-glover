@@ -1,0 +1,68 @@
+{
+  "banner": {
+    "furniture": {
+      "title": "Muebles",
+      "description": "Diseños únicos con la más alta calidad"
+    },
+    "doors": {
+      "title": "Puertas",
+      "description": "Elegancia y funcionalidad en cada diseño"
+    },
+    "wood": {
+      "title": "Maderas",
+      "description": "Materia prima de primera calidad"
+    },
+    "structures": {
+      "title": "Estructuras",
+      "description": "Solidez y durabilidad garantizada"
+    },
+    "complements": {
+      "title": "Complementos",
+      "description": "El toque final perfecto"
+    }
+  },
+  "companyIntro": {
+    "title": "PRESENTACIÓN CORPORATIVA",
+    "tagline": "GLOVER, CALIDAD QUE SE SIENTE",
+    "paragraph1": "Desde 1995, hemos estado a la vanguardia en el desarrollo de productos de alta calidad, siempre comprometidos con la innovación y la sostenibilidad.",
+    "paragraph2": "Con presencia internacional y un equipo altamente calificado, GLOVER se ha convertido en un referente en el sector de mobiliario y acabados de alta calidad.",
+    "button": "SABER MÁS"
+  },
+  "businessLines": {
+    "title": "LÍNEAS DE NEGOCIO",
+    "subtitle": "Nuestras líneas principales de negocio",
+    "goTo": "Ir"
+  },
+  "certifications": {
+    "title": "CERTIFICACIONES DE SOSTENIBILIDAD",
+    "subtitle": "Comprometidos con la calidad y el medio ambiente",
+    "button": "SABER MÁS"
+  },
+  "contactCTA": {
+    "title": "Contáctanos",
+    "subtitle": "Nuestro equipo está listo para ayudarte a encontrar la solución perfecta para tu proyecto.",
+    "button": "CONTÁCTANOS"
+  },
+  "uvPaintBanner": {
+    "title": "Pintura UV",
+    "subtitle": "En base al agua",
+    "features": {
+      "1": {
+        "title": "Acabado homogéneo",
+        "description": "Todas las superficies presentan una terminación uniforme, sin irregularidades ni diferencias de tono."
+      },
+      "2": {
+        "title": "Resistencia a la humedad",
+        "description": "El mueble ofrece protección adicional frente a ambientes húmedos, prolongando su vida útil."
+      },
+      "3": {
+        "title": "Tolerancia a la luz solar",
+        "description": "Soporta una exposición moderada al sol sin deteriorarse fácilmente."
+      },
+      "4": {
+        "title": "Color profundo y definido",
+        "description": "El acabado logra tonalidades consistentes y bien saturadas que realzan el diseño del mueble."
+      }
+    }
+  }
+}

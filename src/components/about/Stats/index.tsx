@@ -16,8 +16,8 @@ const stats = [
   },
   {
     image: 'https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg',
-    value: '20.000',
-    label: 'Unidades mensuales',
+    value: '+3.000 m3/mes',
+    label: 'Madera Procesada',
     delay: 0.4,
   },
 ];

@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "businessLines": "Líneas de negocio",
+    "sustainability": "Sustentabilidad",
+    "processes": "Nuestros Procesos Tecnológicos",
+    "salesroom": "Sala de ventas",
+    "aboutUs": "Nosotros",
+    "contact": "Contacto"
+  },
+  "businessLines": {
+    "doors": "Puertas",
+    "furniture": "Muebles",
+    "wood": "Maderas de exportación",
+    "structures": "Estructuras",
+    "complements": "Complementos"
+  },
+  "footer": {
+    "tagline": "Calidad que se siente.",
+    "companyTitle": "Glover",
+    "contactTitle": "CONTACTO",
+    "address": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Región de la Araucanía, Chile",
+    "phone": "+56 45 2 967500",
+    "email": "contacto@glover.cl",
+    "usefulLinks": "Enlaces útiles",
+    "complaintChannel": "Canal de Denuncias",
+    "ethicsCode": "Código de Ética",
+    "rights": "© {{year}} Industrial Glover. Todos los derechos reservados."
+  },
+  "buttons": {
+    "learnMore": "Conocer más",
+    "contactUs": "Contáctanos",
+    "viewMore": "Ver más",
+    "send": "Enviar",
+    "download": "Descargar",
+    "back": "Volver",
+    "close": "Cerrar",
+    "go": "IR"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "noResults": "No se encontraron resultados"
+  }
+}
