@@ -1,5 +1,9 @@
 {
   "banner": {
+    "enterprise": {
+      "title": "Respaldos",
+      "description": "Catálogo empresarial con nuestras últimas innovaciones"
+    },
     "furniture": {
       "title": "Muebles",
       "description": "Diseños únicos con la más alta calidad"

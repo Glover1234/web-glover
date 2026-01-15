@@ -91,7 +91,7 @@ const BusinessLines: React.FC = () => {
                       <h3 className="text-lg font-bold text-neutral-900 group-hover:text-red-600 transition-colors">
                         {t(`common:${line.titleKey}`)}
                       </h3>
-                      <button className="px-4 py-2 bg-gray-600 text-white text-sm font-semibold rounded hover:bg-gray-700 transition-colors">
+                      <button className="px-4 py-2 bg-white border-2 border-gray-400 text-gray-700 text-sm font-semibold rounded hover:bg-gray-50 hover:border-gray-600 transition-colors">
                         {t('common:buttons.go')}
                       </button>
                     </div>
@@ -131,7 +131,7 @@ const BusinessLines: React.FC = () => {
                       <h3 className="text-lg font-bold text-neutral-900 group-hover:text-red-600 transition-colors">
                         {t(`common:${line.titleKey}`)}
                       </h3>
-                      <button className="px-4 py-2 bg-gray-600 text-white text-sm font-semibold rounded hover:bg-gray-700 transition-colors">
+                      <button className="px-4 py-2 bg-white border-2 border-gray-400 text-gray-700 text-sm font-semibold rounded hover:bg-gray-50 hover:border-gray-600 transition-colors">
                         {t('common:buttons.go')}
                       </button>
                     </div>

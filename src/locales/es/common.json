@@ -42,5 +42,8 @@
     "error": "Error",
     "success": "Éxito",
     "noResults": "No se encontraron resultados"
+  },
+  "floatingButton": {
+    "contact": "Contáctanos"
   }
 }

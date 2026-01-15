@@ -10,7 +10,7 @@ import ContactCTA from '../../components/home/ContactCTA';
 
 const StructuresPage: React.FC = () => {
   const { t } = useTranslation('business');
-  const { scrollY } = useScroll();
+  const { scrollY } = useScroll({ layoutEffect: false });
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (

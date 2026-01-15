@@ -10,6 +10,7 @@ import 'swiper/css/effect-fade';
 import logo from '../../../assets/general/logo-blanco.jpeg';
 
 // Banner images
+import bannerEnterprise from '../../../assets/home_banner/respaldos.svg';
 import bannerComplementos from '../../../assets/home_banner/Banner_Complementos.jpeg';
 import bannerEstructuras from '../../../assets/home_banner/Banner_Estructuras.jpeg';
 import bannerMaderas from '../../../assets/home_banner/Banner_Maderas.jpeg';
@@ -27,6 +28,11 @@ const Banner: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const businessLines: BusinessLine[] = [
+    {
+      image: bannerEnterprise,
+      titleKey: 'banner.enterprise.title',
+      descriptionKey: 'banner.enterprise.description'
+    },
     {
       image: bannerMuebles,
       titleKey: 'banner.furniture.title',

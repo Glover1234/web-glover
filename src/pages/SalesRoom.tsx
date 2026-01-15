@@ -13,7 +13,7 @@ const salesroomImages = [salesroom3, salesroom4, salesroom5];
 
 const SalesRoom: React.FC = () => {
 	const { t } = useTranslation('salesroom');
-	const { scrollY } = useScroll();
+	const { scrollY } = useScroll({ layoutEffect: false });
 	const y = useTransform(scrollY, [0, 500], [0, 150]);
 	const [isCarouselOpen, setIsCarouselOpen] = useState(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);

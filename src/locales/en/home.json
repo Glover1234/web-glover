@@ -1,5 +1,9 @@
 {
   "banner": {
+    "enterprise": {
+      "title": "Respaldos",
+      "description": "Enterprise catalog with our latest innovations"
+    },
     "furniture": {
       "title": "Furniture",
       "description": "Unique designs with the highest quality"

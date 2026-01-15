@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import { Briefcase, Users, Award, Leaf, DollarSign } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import laborImage4 from '../../assets/sustainability/sostenibilidad.jpeg';
+import sordomudoImage from '../../assets/home_banner/sordomudo.svg';
 
 const icons = [Briefcase, Users, Award, Leaf, DollarSign];
 const images = [
 	'https://plus.unsplash.com/premium_photo-1661963959582-e53ff1ad22f5?w=1200&h=800&fit=crop&q=80',
-	'https://plus.unsplash.com/premium_photo-1663091481217-c0fdd5804130?w=1200&h=800&fit=crop&q=80',
+	sordomudoImage,
 	'https://plus.unsplash.com/premium_photo-1674730949906-f02cd80763b6?w=1200&h=800&fit=crop&q=80', 
 	laborImage4, 
 	'https://images.unsplash.com/photo-1595714004311-8a4ca448c20e?w=1200&h=800&fit=crop&q=80'

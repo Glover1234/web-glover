@@ -4,12 +4,13 @@ import { useTranslation } from 'react-i18next';
 import ContactInfo from '../components/contact/ContactInfo';
 import Map from '../components/contact/Map';
 import salesroomImage from '../assets/salesroom/salesroom3.jpeg';
+import factoryImage from '../assets/us/nosotros_banner.jpeg';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation('contact');
   
   return (
-    <div className="py-12 md:py-20 bg-gray-50 min-h-screen">
+    <div className="py-12 md:py-20 bg-white min-h-screen">
       <div className="container mx-auto px-4 md:px-6">
         {/* Título principal mejorado */}
         <div className="text-center mb-12">
@@ -23,8 +24,23 @@ const Contact: React.FC = () => {
         </div>
 
         {/* Información de contacto mejorada */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12 p-6 md:p-10">
-          <ContactInfo />
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+            {/* Imagen de la fábrica a la izquierda */}
+            <div className="relative h-[400px] lg:h-auto overflow-hidden">
+              <img 
+                src={factoryImage}
+                alt="Industrial Glover Factory"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+            </div>
+            
+            {/* Información de contacto a la derecha */}
+            <div className="p-6 md:p-10">
+              <ContactInfo />
+            </div>
+          </div>
         </div>
         
         {/* Sección de mapa y sala de ventas */}

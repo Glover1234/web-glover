@@ -40,7 +40,7 @@ const TypewriterText: React.FC<{ text: string; className?: string }> = ({ text, 
 
 const CertificationsSustainability: React.FC = () => {
   const { t } = useTranslation('sustainability');
-  const { scrollY } = useScroll();
+  const { scrollY } = useScroll({ layoutEffect: false });
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   // Parallax scroll ref and animation

@@ -36,49 +36,87 @@ import Pintura2 from '../assets/processes/photos/pintura2.JPG';
 import Process3 from '../assets/processes/photos/process3.jpeg';
 import ComplementPainting from '../assets/complements/carrusel/carrusel4.jpeg';
 
+// Static arrays outside component to prevent recreation
+const processPhotosImages = [Scanner2, Scanner3, CNC1, CNC2, Scanner, Encuadradora1, Encuadradora2, Pintura1, Pintura2, Process3];
+const machineryIcons = [Cpu, Scan, Grid3x3, Droplet];
+const paintIcons = [Shield, Leaf, Zap, CheckCircle, Settings, Cog];
+const machineryImages = [CNC1, Scanner2, Encuadradora1, Pintura1];
+
 const TechnologicalProcesses: React.FC = () => {
-  const { t } = useTranslation('processes');
+  const { t, i18n } = useTranslation('processes');
   const { scrollY } = useScroll({ layoutEffect: false });
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const [expandedSection, setExpandedSection] = useState<string | null>(null);
   const [selectedMachineryIndex, setSelectedMachineryIndex] = useState<number>(0);
   const [paintCarouselPage, setPaintCarouselPage] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handle loading state
+  useEffect(() => {
+    // Check if translations are available
+    const checkTranslations = () => {
+      const heroTitle = t('hero.title', { defaultValue: '' });
+      if (heroTitle) {
+        setIsLoading(false);
+      }
+    };
+
+    // Small delay to ensure translations are loaded
+    const timer = setTimeout(checkTranslations, 100);
+    
+    // Also set a max timeout to prevent infinite loading
+    const maxTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(maxTimer);
+    };
+  }, [t, i18n.language]);
 
   // Auto-rotate paint carousel
   useEffect(() => {
+    if (isLoading) return;
+    
     const interval = setInterval(() => {
       setPaintCarouselPage((prev) => (prev === 0 ? 1 : 0));
-    }, 5000); // Change every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Process photos array for the gallery - images are static, only text is translated
-  const processPhotosImages = [Scanner2, Scanner3, CNC1, CNC2, Scanner, Encuadradora1, Encuadradora2, Pintura1, Pintura2, Process3];
-  const processPhotos = (t('gallery.photos', { returnObjects: true }) as Array<{title: string; description: string}>).map((photo, index) => ({
-    url: processPhotosImages[index],
-    alt: photo.title,
-    title: photo.title,
-    description: photo.description
-  }));
-
-  const machineryProcesses = t('machinery.items', { returnObjects: true }) as Array<{title: string; description: string}>;
-  const technologyDetails = t('technologyDetails.items', { returnObjects: true }) as Array<{title: string; content: string}>;
-  const paintBenefits = t('paintTechnology.benefits', { returnObjects: true }) as Array<{title: string; description: string}>;
-  const qualityFeatures = t('quality.features', { returnObjects: true }) as string[];
-
-  const machineryIcons = [Cpu, Scan, Grid3x3, Droplet];
-  const paintIcons = [Shield, Leaf, Zap, CheckCircle, Settings, Cog];
-  
-  // Machinery images
-  const machineryImages = [CNC1, Scanner2, Encuadradora1, Pintura1];
+  }, [isLoading]);
 
   const toggleSection = (title: string) => {
     setExpandedSection(expandedSection === title ? null : title);
   };
 
+  // Get translations
+  const processPhotos = (t('gallery.photos', { returnObjects: true, defaultValue: [] }) as Array<{title: string; description: string}>).map((photo, index) => ({
+    url: processPhotosImages[index],
+    alt: photo?.title || 'Process Image',
+    title: photo?.title || 'Process',
+    description: photo?.description || ''
+  }));
+
+  const machineryProcesses = t('machinery.items', { returnObjects: true, defaultValue: [] }) as Array<{title: string; description: string}>;
+  const technologyDetails = t('technologyDetails.items', { returnObjects: true, defaultValue: [] }) as Array<{title: string; content: string}>;
+  const paintBenefits = t('paintTechnology.benefits', { returnObjects: true, defaultValue: [] }) as Array<{title: string; description: string}>;
+  const qualityFeatures = t('quality.features', { returnObjects: true, defaultValue: [] }) as string[];
+
+  // Show loading state
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-red-600"></div>
+          <p className="mt-4 text-gray-600">Cargando...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-white">
       {/* Hero Banner */}
       <div className="relative h-[75vh] overflow-hidden pt-20">
         <motion.div style={{ y }} className="absolute inset-0">
@@ -86,6 +124,8 @@ const TechnologicalProcesses: React.FC = () => {
             src={ProcessBanner}
             alt="Procesos Tecnológicos"
             className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/60" />
         </motion.div>
@@ -249,8 +289,10 @@ const TechnologicalProcesses: React.FC = () => {
                     >
                       <img 
                         src={machineryImages[selectedMachineryIndex]} 
-                        alt={machineryProcesses[selectedMachineryIndex].title}
+                        alt={machineryProcesses[selectedMachineryIndex]?.title || 'Machinery'}
                         className="w-full h-[240px] object-cover"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </motion.div>
                     
@@ -403,6 +445,8 @@ const TechnologicalProcesses: React.FC = () => {
                 src={ComplementPainting}
                 alt="Pintado de patas de complemento"
                 className="w-full h-[500px] object-cover rounded-xl shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -488,6 +532,8 @@ const TechnologicalProcesses: React.FC = () => {
                     src={photo.url}
                     alt={photo.alt}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
                   
                   {/* Gradient Overlay */}
