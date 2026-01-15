@@ -1,112 +1,119 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Briefcase, Users, Award, Leaf, DollarSign } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import laborImage4 from '../../assets/sustainability/sostenibilidad.jpeg';
 
-const cards = [
-	{
-		icon: Briefcase,
-		title: 'Jornada laboral de 40 horas',
-		content:
-			'Respetamos y promovemos una jornada laboral de 40 horas semanales, buscando siempre el equilibrio óptimo entre la productividad y la calidad de vida de quienes forman parte de Industrial Glover.',
-	},
-	{
-		icon: Users,
-		title: 'Inclusión laboral',
-		content:
-			'Nos comprometemos con la diversidad y la inclusión, creando oportunidades laborales para personas de distintos perfiles y condiciones. Estamos convencidos de que un equipo diverso enriquece nuestra cultura y potencia la innovación.',
-	},
-	{
-		icon: Award,
-		title: 'Great Place to Work',
-		content:
-			'Trabajamos para ser reconocidos como un "Great Place to Work", brindando un ambiente laboral seguro, colaborativo y motivador que inspira a cada integrante a dar lo mejor de sí.',
-	},
-	{
-		icon: Leaf,
-		title: 'Compromiso con energías limpias',
-		content:
-			'Industrial Glover impulsa prácticas sostenibles y el uso de energías limpias en sus procesos productivos, contribuyendo activamente al cuidado del medio ambiente y a un futuro más sustentable.',
-	},
-	{
-		icon: DollarSign,
-		title: 'Rentas mínimas competitivas',
-		content:
-			'Valoramos el esfuerzo y dedicación de nuestro equipo con rentas mínimas desde 22 UF, garantizando una remuneración justa y competitiva acorde al mercado regional y al compromiso de nuestros colaboradores.',
-	},
+const icons = [Briefcase, Users, Award, Leaf, DollarSign];
+const images = [
+	'https://plus.unsplash.com/premium_photo-1661963959582-e53ff1ad22f5?w=1200&h=800&fit=crop&q=80',
+	'https://plus.unsplash.com/premium_photo-1663091481217-c0fdd5804130?w=1200&h=800&fit=crop&q=80',
+	'https://plus.unsplash.com/premium_photo-1674730949906-f02cd80763b6?w=1200&h=800&fit=crop&q=80', 
+	laborImage4, 
+	'https://images.unsplash.com/photo-1595714004311-8a4ca448c20e?w=1200&h=800&fit=crop&q=80'
 ];
 
 const LaborTopicsCards: React.FC = () => {
-	const [openIndex, setOpenIndex] = useState<number | null>(null);
-	const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
+	const { t } = useTranslation('about');
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	
+	const cards = t('laborTopics.items', { returnObjects: true }) as Array<{
+		title: string;
+		content: string;
+	}>;
 
 	return (
 		<div className="container mx-auto px-4 mb-16">
 			<motion.div
-				className="text-center mb-8 py-8"
+				className="text-center mb-10"
 				initial={{ opacity: 0, y: 10 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 			>
-				<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase mb-4 text-red-600 tracking-wide">
-                Nuestro Compromiso Laboral
+				<h2 className="text-2xl md:text-3xl font-bold uppercase mb-3 text-neutral-900">
+					{t('laborTopics.title')}
 				</h2>
-				<motion.div
-					className="h-1 bg-gradient-to-r from-red-600 to-red-500 mx-auto w-24 rounded-full"
-					initial={{ width: 0 }}
-					whileInView={{ width: '6rem' }}
-					transition={{ delay: 0.3, duration: 0.6 }}
-					viewport={{ once: true }}
-				/>
+				<div className="w-20 h-0.5 bg-red-600 mx-auto"></div>
 			</motion.div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{cards.map((card, i) => (
-					<motion.div
-						key={card.title}
-						className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border-l-4 border-red-600 hover:border-red-500 transform hover:-translate-y-1"
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ delay: i * 0.1 }}
-						viewport={{ once: true }}
-					>
-						<button
-							className="w-full flex items-center justify-between group"
-							onClick={() => toggle(i)}
-						>
-							<div className="flex items-center gap-3">
-								<div className="p-2 bg-red-100 rounded-lg group-hover:bg-red-200 transition-colors">
-									<card.icon className="w-6 h-6 text-red-600" />
-								</div>
-								<span className="text-lg sm:text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors">
-									{card.title}
-								</span>
-							</div>
-							<motion.span
-								className="text-red-600 font-bold text-xl bg-red-100 w-8 h-8 rounded-full flex items-center justify-center"
-								animate={{ rotate: openIndex === i ? 45 : 0 }}
-								transition={{ duration: 0.2 }}
+
+			<div className="flex flex-col md:flex-row gap-6 max-w-6xl mx-auto">
+				{/* Left sidebar with icons */}
+				<div className="flex md:flex-col gap-2 md:w-24 flex-shrink-0">
+					{cards.map((card, index) => {
+						const Icon = icons[index];
+						return (
+							<motion.button
+								key={card.title}
+								onClick={() => setSelectedIndex(index)}
+								className={`relative p-3 rounded-lg transition-all duration-300 ${
+									selectedIndex === index 
+										? 'bg-white shadow-lg' 
+										: 'bg-white/50 hover:bg-white/80 shadow-md'
+								}`}
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
 							>
-								+
-							</motion.span>
-						</button>
-						<AnimatePresence initial={false}>
-							{openIndex === i && (
-								<motion.div
-									className="overflow-hidden mt-4 text-gray-700 text-base leading-relaxed"
-									initial={{ height: 0, opacity: 0 }}
-									animate={{ height: 'auto', opacity: 1 }}
-									exit={{ height: 0, opacity: 0 }}
-									transition={{ duration: 0.3 }}
-								>
-									<div className="pt-4 border-t border-gray-100">
-										<p className="leading-relaxed font-medium">
-											{card.content}
-										</p>
+								{selectedIndex === index && (
+									<motion.div
+										layoutId="activeLaborIndicator"
+										className="absolute left-0 top-0 bottom-0 w-1 rounded-r-full bg-red-600"
+									/>
+								)}
+								
+								<div className="flex items-center justify-center w-10 h-10">
+									<Icon className={`w-5 h-5 transition-colors duration-300 ${
+										selectedIndex === index ? 'text-gray-700' : 'text-gray-500'
+									}`} />
+								</div>
+							</motion.button>
+						);
+					})}
+				</div>
+
+				{/* Right content area */}
+				<div className="flex-1 bg-white rounded-xl shadow-lg overflow-hidden">
+					<motion.div
+						key={selectedIndex}
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.3 }}
+						className="p-6 md:p-8"
+					>
+						{/* Title with gradient */}
+						<div className="h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full mb-6"></div>
+						
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							{/* Left: Content */}
+							<div>
+								<div className="flex items-start gap-4 mb-6">
+									<div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										{React.createElement(icons[selectedIndex], { 
+											className: "w-6 h-6 text-red-600" 
+										})}
 									</div>
-								</motion.div>
-							)}
-						</AnimatePresence>
+									<h3 className="text-xl md:text-2xl font-bold text-neutral-900">
+										{cards[selectedIndex].title}
+									</h3>
+								</div>
+
+								<div className="prose max-w-none">
+									<p className="text-gray-600 leading-relaxed text-base md:text-lg">
+										{cards[selectedIndex].content}
+									</p>
+								</div>
+							</div>
+							
+							{/* Right: Image */}
+							<div className="relative h-64 md:h-full min-h-[300px] rounded-lg overflow-hidden shadow-md">
+								<img
+									src={images[selectedIndex]}
+									alt={cards[selectedIndex].title}
+									className="w-full h-full object-cover"
+								/>
+							</div>
+						</div>
 					</motion.div>
-				))}
+				</div>
 			</div>
 		</div>
 	);

@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion, useTransform, useScroll } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import bannerImage from '../../../assets/us/nosotros_banner.jpeg';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation('about');
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
@@ -28,13 +30,10 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">INDUSTRIAL GLOVER</h1>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">{t('hero.title')}</h1>
             <div className="w-24 h-0.5 bg-red-600 mx-auto mb-8"></div>
             <p className="text-xl text-white/90">
-              Una empresa consolidada en la fabricación y comercialización de muebles de dormitorio 
-              y productos de madera 100% natural. Desde nuestra fundación en 1992, hemos evolucionado 
-              para convertirnos en un referente del sector, con operaciones estratégicas en la comuna 
-              de Lautaro y un fuerte compromiso con la innovación, el desarrollo sostenible y el empleo local.
+              {t('hero.subtitle')}
             </p>
           </motion.div>
         </div>

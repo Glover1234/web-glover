@@ -15,7 +15,7 @@ const WoodPage: React.FC = () => {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
       {/* Banner Hero */}
       <div className="relative h-[75vh] overflow-hidden pt-20">
         <motion.div style={{ y }} className="absolute inset-0">

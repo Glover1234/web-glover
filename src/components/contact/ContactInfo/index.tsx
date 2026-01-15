@@ -1,17 +1,20 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import InfoItem from './InfoItem';
 import { MapPin, Phone, Mail, Clock, Store } from 'lucide-react';
 
 const ContactInfo: React.FC = () => {
+  const { t } = useTranslation('contact');
+  
   return (
     <div className="space-y-8">
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-          Información de Contacto
+          {t('info.title')}
         </h2>
         <div className="w-24 h-1 bg-red-600 mx-auto mb-4"></div>
         <p className="text-gray-600 max-w-md mx-auto">
-          Ponte en contacto con nosotros a través de cualquiera de estos medios
+          {t('info.description')}
         </p>
       </div>
       
@@ -19,29 +22,29 @@ const ContactInfo: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
         <InfoItem
           icon={MapPin}
-          title="DIRECCIÓN"
-          content="Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Región de la Araucanía, Chile"
+          title={t('info.address')}
+          content={t('info.addressValue')}
           link="https://maps.google.com"
         />
         
         <InfoItem
           icon={Phone}
-          title="TELÉFONO"
-          content="+56 45 2 967500"
+          title={t('info.phone')}
+          content={t('info.phoneValue')}
           link="tel:+56452967500"
         />
         
         <InfoItem
           icon={Mail}
-          title="EMAIL"
-          content="contacto@glover.cl"
+          title={t('info.email')}
+          content={t('info.emailValue')}
           link="mailto:contacto@glover.cl"
         />
         
         <InfoItem
           icon={Clock}
-          title="HORARIO DE ATENCIÓN"
-          content="Lunes a Viernes: 9:00 - 16:30"
+          title={t('info.hours')}
+          content={t('info.hoursValue')}
         />
       </div>
       
@@ -50,8 +53,8 @@ const ContactInfo: React.FC = () => {
         <div className="bg-red-50 rounded-xl p-6">
           <InfoItem
             icon={Store}
-            title="SALA DE VENTAS"
-            content="Visita nuestra sala de ventas y descubre nuestros productos"
+            title={t('info.salesroom')}
+            content={t('info.salesroomValue')}
             link="/sales-room"
           />
         </div>

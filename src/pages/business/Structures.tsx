@@ -14,7 +14,7 @@ const StructuresPage: React.FC = () => {
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
   return (
-    <div className="min-h-screen bg-white w-full overflow-x-hidden">
+    <div className="min-h-screen bg-white w-full overflow-x-hidden relative">
       {/* Hero Banner */}
       <div className="relative h-[75vh] overflow-hidden w-full pt-20">
         <motion.div style={{ y }} className="absolute inset-0">

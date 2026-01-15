@@ -1,25 +1,24 @@
 {
   "hero": {
-    "title": "NOSOTROS",
-    "subtitle": "Compromiso, calidad e innovación desde 1995"
+    "title": "INDUSTRIAL GLOVER",
+    "subtitle": "Una empresa consolidada en la fabricación y comercialización de muebles de dormitorio y productos de madera 100% natural. Desde nuestra fundación en 1992, hemos evolucionado para convertirnos en un referente del sector, con operaciones estratégicas en la comuna de Lautaro y un fuerte compromiso con la innovación, el desarrollo sostenible y el empleo local."
   },
   "stats": {
-    "years": {
-      "value": "29",
-      "label": "Años de experiencia"
-    },
-    "employees": {
-      "value": "500+",
-      "label": "Colaboradores"
-    },
-    "exports": {
-      "value": "20+",
-      "label": "Países de exportación"
-    },
-    "products": {
-      "value": "5",
-      "label": "Líneas de productos"
-    }
+    "title": "NUESTRA CAPACIDAD",
+    "items": [
+      {
+        "value": "30.000m²",
+        "label": "Infraestructura"
+      },
+      {
+        "value": "450+",
+        "label": "Colaboradores"
+      },
+      {
+        "value": "+3.000 m3/mes",
+        "label": "Madera Procesada"
+      }
+    ]
   },
   "quality": {
     "title": "GLOVER, CALIDAD QUE SE SIENTE",
@@ -37,11 +36,58 @@
   },
   "advantages": {
     "title": "VENTAJAS COMPETITIVAS",
-    "subtitle": "Lo que nos hace únicos"
+    "items": [
+      {
+        "title": "Producción integrada",
+        "description": "Desde el abastecimiento de trozos de madera y aserradero hasta la pintura y el acabado final.",
+        "details": "Nuestro proceso de producción integrado garantiza un control total de la calidad en cada etapa, desde la selección de la materia prima hasta el producto final. Contamos con gestión forestal responsable certificada por FSC® (Forest Stewardship Council®), que garantiza que la madera proviene de bosques gestionados de forma ambientalmente adecuada, socialmente beneficiosa y económicamente viable. Nuestro proceso incluye secado lento de 4 a 5 días a temperaturas entre 65°C a 70°C en cámara, obteniendo una humedad entre 8% a 12%, lo que permite que la madera natural se comporte de manera estable en el tiempo."
+      },
+      {
+        "title": "Tecnología de última generación",
+        "description": "Implementamos procesos automatizados y avanzados para garantizar calidad y eficiencia.",
+        "details": "Contamos con maquinaria de última generación incluyendo tecnología CNC o Control Numérico por Computadora para realizar cortes, perforaciones y fresados con alta precisión y repetitividad, scanner, encuadradora doble, y sistemas de pintado automatizado y ecológico. Desde 2017, implementamos tintas, sellos y lacas en base a agua en el 90% de nuestros productos y 100% en la línea de muebles y patas. Esta tecnología incluye secado con aire caliente, lámparas IR y UV, eliminando riesgos de inflamabilidad y reduciendo la exposición a sustancias peligrosas."
+      },
+      {
+        "title": "Alta capacidad productiva",
+        "description": "Nuestra infraestructura logística y tecnológica nos permite expandir operaciones según demanda.",
+        "details": "Contamos con una alta capacidad productiva de madera de exportación de pino radiata, respaldada por procesos tecnificados que garantizan eficiencia, calidad y sostenibilidad. Nuestra operación se apoya en mano de obra especializada y utiliza tecnología finger joint para optimizar el aprovechamiento del material y aumentar la resistencia estructural. Empleamos adhesivos altamente resistentes al agua, humedad y cambios de temperatura, generando uniones fuertes y duraderas que nos permiten responder oportunamente a las demandas del mercado global."
+      },
+      {
+        "title": "Liderazgo en el mercado",
+        "description": "Somos el proveedor clave de muebles de madera sólida para Rosen y otros clientes estratégicos.",
+        "details": "Nuestra posición de liderazgo se basa en la fabricación de muebles de alto diseño que combinan elegancia, ergonomía y funcionalidad. Nos especializamos en estructuras de madera para sofás, respaldos de cama, bases para camas, patas de madera y diversos tipos de muebles como veladores, cómodas y sillones. Ofrecemos una amplia variedad de diseños, estilos y acabados personalizables, adaptables a diferentes líneas estéticas. Nuestras estructuras pueden ser desarmadas con facilidad para facilitar almacenamiento y transporte sin comprometer la integridad del producto."
+      },
+      {
+        "title": "Sostenibilidad y compromiso social",
+        "description": "Nos enfocamos en un desarrollo armónico que equilibre crecimiento económico, inclusión social y protección ambiental.",
+        "details": "Asumimos un compromiso firme con la sostenibilidad a través de nuestra gestión forestal responsable certificada FSC®. Desde 2017, utilizamos pinturas en base a agua que reducen emisiones contaminantes, menor huella de carbono y residuos más seguros. Nuestras pinturas en base a agua mejoran la seguridad para la salud al reducir la exposición a compuestos peligrosos, contribuyen a disminuir la contaminación del aire y ofrecen mayor durabilidad y resistencia a la decoloración."
+      }
+    ]
   },
   "laborTopics": {
-    "title": "COMPROMISO LABORAL",
-    "subtitle": "Nuestro equipo, nuestra fortaleza"
+    "title": "Nuestro Compromiso Laboral",
+    "items": [
+      {
+        "title": "Jornada laboral de 40 horas",
+        "content": "Respetamos y promovemos una jornada laboral de 40 horas semanales, buscando siempre el equilibrio óptimo entre la productividad y la calidad de vida de quienes forman parte de Industrial Glover."
+      },
+      {
+        "title": "Inclusión laboral",
+        "content": "Nos comprometemos con la diversidad y la inclusión, creando oportunidades laborales para personas de distintos perfiles y condiciones. Estamos convencidos de que un equipo diverso enriquece nuestra cultura y potencia la innovación."
+      },
+      {
+        "title": "Great Place to Work",
+        "content": "Trabajamos para ser reconocidos como un \"Great Place to Work\", brindando un ambiente laboral seguro, colaborativo y motivador que inspira a cada integrante a dar lo mejor de sí."
+      },
+      {
+        "title": "Compromiso con energías limpias",
+        "content": "Industrial Glover impulsa prácticas sostenibles y el uso de energías limpias en sus procesos productivos, contribuyendo activamente al cuidado del medio ambiente y a un futuro más sustentable."
+      },
+      {
+        "title": "Rentas mínimas competitivas",
+        "content": "Valoramos el esfuerzo y dedicación de nuestro equipo con rentas mínimas desde 22 UF, garantizando una remuneración justa y competitiva acorde al mercado regional y al compromiso de nuestros colaboradores."
+      }
+    ]
   },
   "dna": {
     "title": "EL ADN DE GLOVER",

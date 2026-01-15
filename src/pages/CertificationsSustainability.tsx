@@ -52,7 +52,7 @@ const CertificationsSustainability: React.FC = () => {
   const parallaxY = useTransform(scrollYProgress, [0, 1], [0, -150]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white relative">
       {/* Banner Hero */}
       <div className="relative h-[75vh] overflow-hidden pt-20">
         <motion.div style={{ y }} className="absolute inset-0">

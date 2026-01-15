@@ -9,19 +9,19 @@
     "items": [
       {
         "title": "Tecnología CNC o Router",
-        "description": "Control numérico por computadora para cortes de alta precisión y repetitividad"
+        "description": "Nuestro sistema de Control Numérico Computarizado (CNC) representa la vanguardia en precisión industrial. Esta tecnología permite realizar cortes, perforaciones, fresados y otros procesos con exactitud milimétrica y perfecta repetitividad. El sistema automatizado garantiza una producción eficiente, consistente y con un mínimo margen de error, optimizando tanto los tiempos de fabricación como el aprovechamiento del material. La programación digital permite diseños complejos y personalizados manteniendo los más altos estándares de calidad."
       },
       {
         "title": "Scanner",
-        "description": "Visualización precisa del interior de la madera para detectar imperfecciones"
+        "description": "Tecnología de escaneo avanzada que visualiza con precisión el interior de la madera, identificando imperfecciones, nudos, grietas y defectos ocultos. Este sistema permite una selección óptima del material antes del procesamiento, eliminando defectos y maximizando el aprovechamiento de la materia prima. El scanner detecta características internas que son invisibles a simple vista, garantizando que solo madera de la más alta calidad llegue a las etapas posteriores de producción, reduciendo desperdicios y asegurando productos finales superiores."
       },
       {
         "title": "Encuadradora Doble",
-        "description": "Cortes de alta precisión y homogéneas para nuestras piezas de madera"
+        "description": "Máquina especializada de alta precisión diseñada para realizar cortes perfectamente escuadrados y homogéneos en nuestras piezas de madera. Con doble cabezal de corte, este equipo garantiza cantos perpendiculares y dimensiones exactas en cada pieza procesada. La encuadradora asegura que todas las piezas mantengan ángulos perfectos de 90 grados y medidas consistentes, fundamentales para el ensamblaje posterior y la calidad estructural de nuestros productos. Su precisión elimina variaciones y garantiza un acabado profesional en cada corte."
       },
       {
         "title": "Pintado automatizado y ecológico",
-        "description": "Procesos automatizados con tecnología avanzada"
+        "description": "Sistema automatizado de pintado que utiliza tintas, sellos y lacas en base agua, representando nuestro compromiso con la sustentabilidad y la salud. Este proceso ecológico elimina el uso de solventes tóxicos, reduciendo significativamente las emisiones de compuestos orgánicos volátiles (COV). La tecnología combina aplicación automatizada uniforme con sistemas de curado UV e infrarrojo, logrando acabados duraderos, resistentes y de alta calidad. El proceso mejora la seguridad de nuestros trabajadores, reduce el impacto ambiental y produce acabados superiores con excelente adherencia y protección."
       }
     ]
   },
@@ -39,6 +39,10 @@
       {
         "title": "Encuadradora Doble",
         "content": "Para cortes de alta precisión y homogéneas para nuestras piezas de madera."
+      },
+      {
+        "title": "Pintado Automatizado",
+        "content": "Sistema de pintado ecológico con tintas en base agua que elimina solventes tóxicos. Combina aplicación automatizada con curado UV e IR para acabados duraderos, reduciendo emisiones contaminantes y mejorando la seguridad laboral mientras garantiza resultados superiores."
       }
     ]
   },
@@ -100,6 +104,10 @@
       {
         "title": "Control Numérico Computacional",
         "description": "Producción eficiente con mínimo margen de error"
+      },
+      {
+        "title": "Tecnología CNC Avanzada",
+        "description": "Automatización total para máxima precisión"
       },
       {
         "title": "Encuadradora Doble",

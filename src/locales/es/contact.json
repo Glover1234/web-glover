@@ -1,29 +1,31 @@
 {
-  "title": "CONTACTO",
-  "subtitle": "Estamos aquí para ayudarte",
-  "form": {
-    "name": "Nombre completo",
-    "email": "Correo electrónico",
-    "phone": "Teléfono",
-    "company": "Empresa",
-    "message": "Mensaje",
-    "subject": "Asunto",
-    "send": "ENVIAR MENSAJE",
-    "success": "Mensaje enviado exitosamente",
-    "error": "Error al enviar el mensaje"
-  },
+  "title": "Contáctanos",
+  "subtitle": "Estamos aquí para ayudarte. Contáctanos para cualquier consulta o visita nuestra sala de ventas.",
   "info": {
-    "title": "INFORMACIÓN DE CONTACTO",
-    "address": "Dirección",
+    "title": "Información de Contacto",
+    "description": "Ponte en contacto con nosotros a través de cualquiera de estos medios",
+    "address": "DIRECCIÓN",
     "addressValue": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Región de la Araucanía, Chile",
-    "phone": "Teléfono",
+    "phone": "TELÉFONO",
     "phoneValue": "+56 45 2 967500",
-    "email": "Correo",
+    "email": "EMAIL",
     "emailValue": "contacto@glover.cl",
-    "hours": "Horario de atención",
-    "hoursValue": "Lunes a Viernes: 8:00 - 18:00"
+    "hours": "HORARIO DE ATENCIÓN",
+    "hoursValue": "Lunes a Viernes: 9:00 - 16:30",
+    "salesroom": "SALA DE VENTAS",
+    "salesroomValue": "Visita nuestra sala de ventas y descubre nuestros productos"
   },
   "map": {
-    "title": "UBICACIÓN"
+    "title": "Nuestra Ubicación",
+    "subtitle": "Encuéntranos en el mapa"
+  },
+  "salesroomSection": {
+    "title": "Sala de Ventas",
+    "subtitle": "Visita nuestro showroom",
+    "imageAlt": "Sala de Ventas Glover",
+    "overlayButton": "Ver Sala de Ventas",
+    "cardTitle": "Visita Nuestro Showroom",
+    "cardDescription": "Descubre todos nuestros productos y soluciones en madera",
+    "cardLink": "Explorar Sala de Ventas"
   }
 }

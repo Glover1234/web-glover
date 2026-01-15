@@ -9,7 +9,16 @@ function App() {
     // Initialize Google Analytics 4
     initializeGA4();
   }, []);
-  return <RouterProvider router={router} />;
+  return (
+    <div className="relative">
+      <RouterProvider 
+        router={router} 
+        future={{
+          v7_startTransition: true,
+        }}
+      />
+    </div>
+  );
 }
 
 export default App;

@@ -1,29 +1,31 @@
 {
-  "title": "CONTACT",
-  "subtitle": "We are here to help you",
-  "form": {
-    "name": "Full name",
-    "email": "Email address",
-    "phone": "Phone",
-    "company": "Company",
-    "message": "Message",
-    "subject": "Subject",
-    "send": "SEND MESSAGE",
-    "success": "Message sent successfully",
-    "error": "Error sending message"
-  },
+  "title": "Contact Us",
+  "subtitle": "We are here to help you. Contact us for any inquiry or visit our showroom.",
   "info": {
-    "title": "CONTACT INFORMATION",
-    "address": "Address",
+    "title": "Contact Information",
+    "description": "Get in touch with us through any of these channels",
+    "address": "ADDRESS",
     "addressValue": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro, Araucanía Region, Chile",
-    "phone": "Phone",
+    "phone": "PHONE",
     "phoneValue": "+56 45 2 967500",
-    "email": "Email",
+    "email": "EMAIL",
     "emailValue": "contacto@glover.cl",
-    "hours": "Business hours",
-    "hoursValue": "Monday to Friday: 8:00 AM - 6:00 PM"
+    "hours": "BUSINESS HOURS",
+    "hoursValue": "Monday to Friday: 9:00 AM - 4:30 PM",
+    "salesroom": "SHOWROOM",
+    "salesroomValue": "Visit our showroom and discover our products"
   },
   "map": {
-    "title": "LOCATION"
+    "title": "Our Location",
+    "subtitle": "Find us on the map"
+  },
+  "salesroomSection": {
+    "title": "Showroom",
+    "subtitle": "Visit our showroom",
+    "imageAlt": "Glover Showroom",
+    "overlayButton": "View Showroom",
+    "cardTitle": "Visit Our Showroom",
+    "cardDescription": "Discover all our wood products and solutions",
+    "cardLink": "Explore Showroom"
   }
 }

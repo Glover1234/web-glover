@@ -1,25 +1,24 @@
 {
   "hero": {
-    "title": "ABOUT US",
-    "subtitle": "Commitment, quality and innovation since 1995"
+    "title": "INDUSTRIAL GLOVER",
+    "subtitle": "A consolidated company in the manufacture and commercialization of bedroom furniture and 100% natural wood products. Since our foundation in 1992, we have evolved to become a reference in the sector, with strategic operations in the commune of Lautaro and a strong commitment to innovation, sustainable development and local employment."
   },
   "stats": {
-    "years": {
-      "value": "29",
-      "label": "Years of experience"
-    },
-    "employees": {
-      "value": "500+",
-      "label": "Employees"
-    },
-    "exports": {
-      "value": "20+",
-      "label": "Export countries"
-    },
-    "products": {
-      "value": "5",
-      "label": "Product lines"
-    }
+    "title": "OUR CAPACITY",
+    "items": [
+      {
+        "value": "30,000m²",
+        "label": "Infrastructure"
+      },
+      {
+        "value": "450+",
+        "label": "Employees"
+      },
+      {
+        "value": "+3,000 m3/month",
+        "label": "Processed Wood"
+      }
+    ]
   },
   "quality": {
     "title": "GLOVER, QUALITY YOU CAN FEEL",
@@ -37,11 +36,58 @@
   },
   "advantages": {
     "title": "COMPETITIVE ADVANTAGES",
-    "subtitle": "What makes us unique"
+    "items": [
+      {
+        "title": "Integrated production",
+        "description": "From the supply of wood logs and sawmill to painting and final finishing.",
+        "details": "Our integrated production process guarantees total quality control at every stage, from the selection of raw materials to the final product. We have responsible forest management certified by FSC® (Forest Stewardship Council®), which guarantees that the wood comes from forests managed in an environmentally appropriate, socially beneficial and economically viable way. Our process includes slow drying for 4 to 5 days at temperatures between 65°C to 70°C in the chamber, obtaining a humidity between 8% to 12%, which allows natural wood to behave stably over time."
+      },
+      {
+        "title": "State-of-the-art technology",
+        "description": "We implement automated and advanced processes to guarantee quality and efficiency.",
+        "details": "We have state-of-the-art machinery including CNC technology or Computer Numerical Control to perform cuts, drilling and milling with high precision and repeatability, scanner, double squaring machine, and automated and ecological painting systems. Since 2017, we implement water-based inks, sealers and lacquers in 90% of our products and 100% in the furniture and legs line. This technology includes drying with hot air, IR and UV lamps, eliminating fire risks and reducing exposure to hazardous substances."
+      },
+      {
+        "title": "High production capacity",
+        "description": "Our logistics and technological infrastructure allows us to expand operations according to demand.",
+        "details": "We have a high production capacity of radiata pine export wood, backed by technical processes that guarantee efficiency, quality and sustainability. Our operation is supported by specialized labor and uses finger joint technology to optimize material use and increase structural strength. We use adhesives highly resistant to water, moisture and temperature changes, generating strong and durable joints that allow us to respond promptly to the demands of the global market."
+      },
+      {
+        "title": "Market leadership",
+        "description": "We are the key supplier of solid wood furniture for Rosen and other strategic clients.",
+        "details": "Our leadership position is based on the manufacture of high design furniture that combines elegance, ergonomics and functionality. We specialize in wooden structures for sofas, bed headboards, bed bases, wooden legs and various types of furniture such as nightstands, dressers and armchairs. We offer a wide variety of customizable designs, styles and finishes, adaptable to different aesthetic lines. Our structures can be easily disassembled to facilitate storage and transport without compromising product integrity."
+      },
+      {
+        "title": "Sustainability and social commitment",
+        "description": "We focus on harmonious development that balances economic growth, social inclusion and environmental protection.",
+        "details": "We assume a firm commitment to sustainability through our FSC® certified responsible forest management. Since 2017, we use water-based paints that reduce polluting emissions, lower carbon footprint and safer waste. Our water-based paints improve health safety by reducing exposure to hazardous compounds, contribute to reducing air pollution and offer greater durability and fade resistance."
+      }
+    ]
   },
   "laborTopics": {
-    "title": "LABOR COMMITMENT",
-    "subtitle": "Our team, our strength"
+    "title": "Our Labor Commitment",
+    "items": [
+      {
+        "title": "40-hour work week",
+        "content": "We respect and promote a 40-hour weekly work schedule, always seeking the optimal balance between productivity and quality of life for those who are part of Industrial Glover."
+      },
+      {
+        "title": "Labor inclusion",
+        "content": "We are committed to diversity and inclusion, creating job opportunities for people of different profiles and conditions. We are convinced that a diverse team enriches our culture and enhances innovation."
+      },
+      {
+        "title": "Great Place to Work",
+        "content": "We work to be recognized as a \"Great Place to Work\", providing a safe, collaborative and motivating work environment that inspires each member to give their best."
+      },
+      {
+        "title": "Commitment to clean energy",
+        "content": "Industrial Glover promotes sustainable practices and the use of clean energy in its production processes, actively contributing to environmental care and a more sustainable future."
+      },
+      {
+        "title": "Competitive minimum wages",
+        "content": "We value the effort and dedication of our team with minimum wages from 22 UF, guaranteeing fair and competitive remuneration according to the regional market and the commitment of our employees."
+      }
+    ]
   },
   "dna": {
     "title": "GLOVER'S DNA",

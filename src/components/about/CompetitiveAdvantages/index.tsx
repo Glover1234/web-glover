@@ -1,47 +1,24 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Factory, Cog, TrendingUp, Award, Leaf } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import advantageImage1 from '../../../assets/processes/photos/pintura2.JPG';
+import advantageImage2 from '../../../assets/processes/photos/cnc2.JPG';
+import advantageImage3 from '../../../assets/processes/photos/encuadradora2.JPG';
+import advantageImage4 from '../../../assets/furniture/muebles/muebles4.jpeg';
+import advantageImage5 from '../../../assets/sustainability/sostenibilidad.jpeg';
 
-const advantages = [
-	{
-		title: 'Producción integrada',
-		description:
-			'Desde el abastecimiento de trozos de madera y aserradero hasta la pintura y el acabado final.',
-		details:
-			'Nuestro proceso de producción integrado garantiza un control total de la calidad en cada etapa, desde la selección de la materia prima hasta el producto final. Contamos con gestión forestal responsable certificada por FSC® (Forest Stewardship Council®), que garantiza que la madera proviene de bosques gestionados de forma ambientalmente adecuada, socialmente beneficiosa y económicamente viable. Nuestro proceso incluye secado lento de 4 a 5 días a temperaturas entre 65°C a 70°C en cámara, obteniendo una humedad entre 8% a 12%, lo que permite que la madera natural se comporte de manera estable en el tiempo.',
-	},
-	{
-		title: 'Tecnología de última generación',
-		description:
-			'Implementamos procesos automatizados y avanzados para garantizar calidad y eficiencia.',
-		details:
-			'Contamos con maquinaria de última generación incluyendo tecnología CNC o Control Numérico por Computadora para realizar cortes, perforaciones y fresados con alta precisión y repetitividad, scanner, encuadradora doble, y sistemas de pintado automatizado y ecológico. Desde 2017, implementamos tintas, sellos y lacas en base a agua en el 90% de nuestros productos y 100% en la línea de muebles y patas. Esta tecnología incluye secado con aire caliente, lámparas IR y UV, eliminando riesgos de inflamabilidad y reduciendo la exposición a sustancias peligrosas.',
-	},
-	{
-		title: 'Alta capacidad productiva',
-		description:
-			'Nuestra infraestructura logística y tecnológica nos permite expandir operaciones según demanda.',
-		details:
-			'Contamos con una alta capacidad productiva de madera de exportación de pino radiata, respaldada por procesos tecnificados que garantizan eficiencia, calidad y sostenibilidad. Nuestra operación se apoya en mano de obra especializada y utiliza tecnología finger joint para optimizar el aprovechamiento del material y aumentar la resistencia estructural. Empleamos adhesivos altamente resistentes al agua, humedad y cambios de temperatura, generando uniones fuertes y duraderas que nos permiten responder oportunamente a las demandas del mercado global.',
-	},
-	{
-		title: 'Liderazgo en el mercado',
-		description:
-			'Somos el proveedor clave de muebles de madera sólida para Rosen y otros clientes estratégicos.',
-		details:
-			'Nuestra posición de liderazgo se basa en la fabricación de muebles de alto diseño que combinan elegancia, ergonomía y funcionalidad. Nos especializamos en estructuras de madera para sofás, respaldos de cama, bases para camas, patas de madera y diversos tipos de muebles como veladores, cómodas y sillones. Ofrecemos una amplia variedad de diseños, estilos y acabados personalizables, adaptables a diferentes líneas estéticas. Nuestras estructuras pueden ser desarmadas con facilidad para facilitar almacenamiento y transporte sin comprometer la integridad del producto.',
-	},
-	{
-		title: 'Sostenibilidad y compromiso social',
-		description:
-			'Nos enfocamos en un desarrollo armónico que equilibre crecimiento económico, inclusión social y protección ambiental.',
-		details:
-			'Asumimos un compromiso firme con la sostenibilidad a través de nuestra gestión forestal responsable certificada FSC®. Desde 2017, utilizamos pinturas en base a agua que reducen emisiones contaminantes, menor huella de carbono y residuos más seguros. Nuestras pinturas en base a agua mejoran la seguridad para la salud al reducir la exposición a compuestos peligrosos, contribuyen a disminuir la contaminación del aire y ofrecen mayor durabilidad y resistencia a la decoloración.',
-	},
-];
+const icons = [Factory, Cog, TrendingUp, Award, Leaf];
+const images = [advantageImage1, advantageImage2, advantageImage3, advantageImage4, advantageImage5];
 
 const CompetitiveAdvantages: React.FC = () => {
-	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+	const { t } = useTranslation('about');
+	const [selectedIndex, setSelectedIndex] = useState(0);
+	const advantages = t('advantages.items', { returnObjects: true }) as Array<{
+		title: string;
+		description: string;
+		details: string;
+	}>;
 
 	return (
 		<motion.div
@@ -50,63 +27,99 @@ const CompetitiveAdvantages: React.FC = () => {
 			viewport={{ once: true }}
 			className="mb-20 pt-16"
 		>
-			<h2 className="text-3xl font-bold text-center mb-2">
-				VENTAJAS COMPETITIVAS
-			</h2>
-			<div className="w-24 h-0.5 bg-red-600 mx-auto mb-12"></div>
+			<motion.div
+				className="text-center mb-10"
+				initial={{ opacity: 0, y: 10 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true }}
+			>
+				<h2 className="text-2xl md:text-3xl font-bold uppercase mb-3 text-neutral-900">
+					{t('advantages.title')}
+				</h2>
+				<div className="w-20 h-0.5 bg-red-600 mx-auto"></div>
+			</motion.div>
 
-			<div className="space-y-4">
-				{advantages.map((advantage, index) => (
-					<motion.div
-						key={index}
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						viewport={{ once: true }}
-						transition={{ delay: index * 0.1 }}
-						className="bg-white rounded-lg shadow-lg overflow-hidden"
-					>
-						<motion.button
-							whileHover={{ scale: 1.01 }}
-							onClick={() =>
-								setExpandedIndex(
-									expandedIndex === index ? null : index
-								)
-							}
-							className="w-full p-6 flex items-center justify-between text-left group"
-						>
-							<div className="flex items-center gap-4">
-								<CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0" />
-								<span className="font-semibold text-lg text-neutral-900 group-hover:text-red-600 transition-colors">
-									{advantage.title}
-								</span>
-							</div>
-							<ChevronDown
-								className={`w-6 h-6 text-neutral-400 transition-transform duration-300 ${
-									expandedIndex === index ? 'rotate-180' : ''
+			<div className="max-w-6xl mx-auto">
+				{/* Top icons bar */}
+				<div className="flex gap-2 mb-6 justify-center flex-wrap">
+					{advantages.map((advantage, index) => {
+						const Icon = icons[index];
+						return (
+							<motion.button
+								key={advantage.title}
+								onClick={() => setSelectedIndex(index)}
+								className={`relative p-3 rounded-lg transition-all duration-300 ${
+									selectedIndex === index 
+										? 'bg-white shadow-lg' 
+										: 'bg-white/50 hover:bg-white/80 shadow-md'
 								}`}
-							/>
-						</motion.button>
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+							>
+								{selectedIndex === index && (
+									<motion.div
+										layoutId="activeAdvantageIndicator"
+										className="absolute top-0 left-0 right-0 h-1 rounded-b-full bg-red-600"
+									/>
+								)}
+								
+								<div className="flex items-center justify-center w-10 h-10">
+									<Icon className={`w-5 h-5 transition-colors duration-300 ${
+										selectedIndex === index ? 'text-gray-700' : 'text-gray-500'
+									}`} />
+								</div>
+							</motion.button>
+						);
+					})}
+				</div>
 
-						<AnimatePresence>
-							{expandedIndex === index && (
-								<motion.div
-									initial={{ height: 0, opacity: 0 }}
-									animate={{ height: 'auto', opacity: 1 }}
-									exit={{ height: 0, opacity: 0 }}
-									transition={{ duration: 0.3 }}
-									className="px-16 pb-6"
-								>
-									<p className="text-neutral-600 mb-4">
-										{advantage.description}
+				{/* Content area */}
+				<div className="bg-white rounded-xl shadow-lg overflow-hidden">
+					<motion.div
+						key={selectedIndex}
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.3 }}
+						className="p-6 md:p-8"
+					>
+						{/* Title with gradient */}
+						<div className="h-1 bg-gradient-to-r from-red-600 to-red-400 rounded-full mb-6"></div>
+						
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+							{/* Left: Content */}
+							<div>
+								<div className="flex items-start gap-4 mb-6">
+									<div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+										{React.createElement(icons[selectedIndex], { 
+											className: "w-6 h-6 text-red-600" 
+										})}
+									</div>
+									<h3 className="text-xl md:text-2xl font-bold text-neutral-900">
+										{advantages[selectedIndex].title}
+									</h3>
+								</div>
+
+								<div className="space-y-4">
+									<p className="text-gray-700 leading-relaxed text-base md:text-lg font-medium">
+										{advantages[selectedIndex].description}
 									</p>
-									<p className="text-neutral-500">
-										{advantage.details}
+									<p className="text-gray-600 leading-relaxed text-sm md:text-base">
+										{advantages[selectedIndex].details}
 									</p>
-								</motion.div>
-							)}
-						</AnimatePresence>
+								</div>
+							</div>
+							
+							{/* Right: Image */}
+							<div className="relative h-64 md:h-full min-h-[300px] rounded-lg overflow-hidden shadow-md">
+								<img
+									src={images[selectedIndex]}
+									alt={advantages[selectedIndex].title}
+									className="w-full h-full object-cover"
+								/>
+							</div>
+						</div>
 					</motion.div>
-				))}
+				</div>
 			</div>
 		</motion.div>
 	);

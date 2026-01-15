@@ -1,19 +1,15 @@
 {
-  "title": "SALA DE VENTAS",
-  "subtitle": "Visita nuestro showroom",
-  "welcome": {
-    "title": "BIENVENIDO A NUESTRA SALA DE VENTAS",
-    "description": "Descubre nuestros productos y experimenta la calidad GLOVER"
+  "hero": {
+    "title": "SALA DE VENTAS",
+    "subtitle": "Visita nuestras salas de venta y conoce nuestros productos"
   },
-  "visit": {
-    "title": "VISÍTANOS",
-    "description": "Te invitamos a conocer nuestras instalaciones",
-    "schedule": "Agenda tu visita",
-    "address": "Ruta 5 Sur Km 655 Pillanlelbun, Lautaro",
-    "hours": "Horario: Lunes a Viernes 8:00 - 18:00"
-  },
-  "catalog": {
-    "title": "CATÁLOGO DE PRODUCTOS",
-    "description": "Explora nuestra amplia gama de productos"
+  "location": {
+    "name": "Sala de Ventas Principal",
+    "address": "Kilómetro 655, Pillanlelbún",
+    "phone": "+56 45 2 967500",
+    "email": "contacto@glover.com",
+    "schedule": "Lunes a Viernes: 9:00 - 16:30",
+    "viewImages": "Ver imágenes",
+    "imageAlt": "Sala de ventas"
   }
 }

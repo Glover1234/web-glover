@@ -25,61 +25,61 @@ export const navigationItems = [
   { path: '/contact', name: 'Contacto' },
 ];
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <MainLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: 'business-lines',
-        element: <BusinessLines />,
-      },
-      {
-        path: 'business-lines/doors',
-        element: <Doors />,
-      },
-      {
-        path: 'business-lines/furniture',
-        element: <Furniture />,
-      },
-      {
-        path: 'business-lines/wood',
-        element: <Wood />,
-      },
-      {
-        path: 'business-lines/structures',
-        element: <Structures />,
-      },
-      {
-        path: 'business-lines/complements',
-        element: <Complements />,
-      },
-      {
-        path: 'certifications-sustainability',
-        element: <CertificationsSustainability />,
-      },
-      {
-        path: 'technological-processes',
-        element: <TechnologicalProcesses />,
-      },
-      {
-        path: 'about-us',
-        element: <AboutUs />,
-      },
-      {
-        path: 'contact',
-        element: <Contact />,
-      },
-      {
-        path: 'sales-room',
-        element: <SalesRoom />,
-      },
-    ],
-  },
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <MainLayout />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: 'business-lines',
+          element: <BusinessLines />,
+        },
+        {
+          path: 'business-lines/doors',
+          element: <Doors />,
+        },
+        {
+          path: 'business-lines/furniture',
+          element: <Furniture />,
+        },
+        {
+          path: 'business-lines/wood',
+          element: <Wood />,
+        },
+        {
+          path: 'business-lines/structures',
+          element: <Structures />,
+        },
+        {
+          path: 'business-lines/complements',
+          element: <Complements />,
+        },
+        {
+          path: 'certifications-sustainability',
+          element: <CertificationsSustainability />,
+        },
+        {
+          path: 'technological-processes',
+          element: <TechnologicalProcesses />,
+        },
+        {
+          path: 'about-us',
+          element: <AboutUs />,
+        },
+        {
+          path: 'contact',
+          element: <Contact />,
+        },
+        {
+          path: 'sales-room',
+          element: <SalesRoom />,
+        },
+      ],
+    },
 ]);
-
 export default router;

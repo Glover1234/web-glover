@@ -9,19 +9,19 @@
     "items": [
       {
         "title": "CNC Technology or Router",
-        "description": "Computer numerical control for high-precision and repeatable cuts"
+        "description": "Our Computer Numerical Control (CNC) system represents the forefront of industrial precision. This technology enables cuts, drilling, milling, and other processes with millimetric accuracy and perfect repeatability. The automated system guarantees efficient, consistent production with minimal margin of error, optimizing both manufacturing times and material utilization. Digital programming allows for complex and customized designs while maintaining the highest quality standards."
       },
       {
         "title": "Scanner",
-        "description": "Precise visualization of wood interior to detect imperfections"
+        "description": "Advanced scanning technology that precisely visualizes the wood interior, identifying imperfections, knots, cracks, and hidden defects. This system enables optimal material selection before processing, eliminating defects and maximizing raw material utilization. The scanner detects internal characteristics invisible to the naked eye, ensuring only the highest quality wood reaches subsequent production stages, reducing waste and guaranteeing superior final products."
       },
       {
         "title": "Double Squaring Machine",
-        "description": "High-precision and consistent cuts for our wood pieces"
+        "description": "High-precision specialized machine designed to make perfectly squared and consistent cuts in our wood pieces. With dual cutting heads, this equipment guarantees perpendicular edges and exact dimensions in every processed piece. The squaring machine ensures all pieces maintain perfect 90-degree angles and consistent measurements, fundamental for subsequent assembly and structural quality of our products. Its precision eliminates variations and guarantees professional finishing in every cut."
       },
       {
         "title": "Automated and Ecological Painting",
-        "description": "Automated processes with advanced technology"
+        "description": "Automated painting system using water-based inks, sealers, and lacquers, representing our commitment to sustainability and health. This ecological process eliminates toxic solvent use, significantly reducing volatile organic compound (VOC) emissions. The technology combines uniform automated application with UV and infrared curing systems, achieving durable, resistant, high-quality finishes. The process improves worker safety, reduces environmental impact, and produces superior finishes with excellent adhesion and protection."
       }
     ]
   },
@@ -38,8 +38,10 @@
       },
       {
         "title": "Double Squaring Machine",
-        "content": "For high-precision and consistent cuts for our wood pieces."
-      }
+        "content": "For high-precision and consistent cuts for our wood pieces."      },
+      {
+        "title": "Automated Painting",
+        "content": "Ecological painting system with water-based inks that eliminates toxic solvents. Combines automated application with UV and IR curing for durable finishes, reducing pollutant emissions and improving workplace safety while ensuring superior results."      }
     ]
   },
   "paintTechnology": {
@@ -100,6 +102,10 @@
       {
         "title": "Computer Numerical Control",
         "description": "Efficient production with minimal margin of error"
+      },
+      {
+        "title": "Advanced CNC Technology",
+        "description": "Total automation for maximum precision"
       },
       {
         "title": "Double Squaring Machine",

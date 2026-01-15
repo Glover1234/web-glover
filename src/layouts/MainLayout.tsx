@@ -13,7 +13,7 @@ const MainLayout: React.FC = () => {
   
   // Scroll to top when location changes
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [location.pathname]);
 
   return (
@@ -21,15 +21,15 @@ const MainLayout: React.FC = () => {
       <div className="fixed top-0 left-0 right-0 z-50">
         <Header />
       </div>
-      <main className="flex-grow">
-        <AnimatePresence mode="wait">
+      <main className="flex-grow relative">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="page-transition"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="relative"
           >
             <Outlet />
           </motion.div>

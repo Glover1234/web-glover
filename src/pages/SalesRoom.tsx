@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { MapPin, Phone, Clock, Mail, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import ContactCTA from '../components/home/ContactCTA';
 import Map from '../components/contact/Map';
 import salesroomBanner from '../assets/salesroom/salesroom5.jpeg';
@@ -10,18 +11,8 @@ import salesroom5 from '../assets/salesroom/salesroom5.jpeg';
 
 const salesroomImages = [salesroom3, salesroom4, salesroom5];
 
-const locations = [
-	{
-		name: 'Sala de Ventas Principal',
-		address: 'Kilómetro 655, Pillanlelbún',
-		phone: '+56 45 2 967500',
-		email: 'contacto@glover.com',
-		schedule: 'Lunes a Viernes: 9:00 - 16:30',
-		image: salesroom3,
-	},
-];
-
 const SalesRoom: React.FC = () => {
+	const { t } = useTranslation('salesroom');
 	const { scrollY } = useScroll();
 	const y = useTransform(scrollY, [0, 500], [0, 150]);
 	const [isCarouselOpen, setIsCarouselOpen] = useState(false);
@@ -45,7 +36,7 @@ const SalesRoom: React.FC = () => {
 	};
 
 	return (
-		<div>
+		<div className="relative">
 			{/* Hero Section */}
 			<div className="relative h-[75vh] overflow-hidden pt-20">
 				<motion.div style={{ y }} className="absolute inset-0">
@@ -66,11 +57,11 @@ const SalesRoom: React.FC = () => {
 							className="text-center max-w-4xl mx-auto"
 						>
 							<h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-								SALA DE VENTAS
+								{t('hero.title')}
 							</h1>
 							<div className="w-24 h-0.5 bg-red-600 mx-auto mb-8"></div>
 							<p className="text-xl text-white/90">
-								Visita nuestras salas de venta y conoce nuestros productos
+								{t('hero.subtitle')}
 							</p>
 						</motion.div>
 					</div>
@@ -106,25 +97,23 @@ const SalesRoom: React.FC = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 						{/* Image (left) */}
 						<div>
-							{locations[0] && (
-								<motion.div
-									initial={{ opacity: 0, y: 20 }}
-									whileInView={{ opacity: 1, y: 0 }}
-									viewport={{ once: true }}
-									className="bg-white rounded-lg shadow-lg overflow-hidden"
+							<motion.div
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								className="bg-white rounded-lg shadow-lg overflow-hidden"
+							>
+								<div
+									className="aspect-video overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+									onClick={() => openCarousel(0)}
 								>
-									<div
-										className="aspect-video overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-										onClick={() => openCarousel(0)}
-									>
-										<img
-											src={locations[0].image}
-											alt={locations[0].name}
-											className="w-full h-full object-cover"
-										/>
-									</div>
-								</motion.div>
-							)}
+									<img
+										src={salesroom3}
+										alt={t('location.imageAlt')}
+										className="w-full h-full object-cover"
+									/>
+								</div>
+							</motion.div>
 						</div>
 
 						{/* Map (right) */}
@@ -138,25 +127,25 @@ const SalesRoom: React.FC = () => {
 					{/* Bottom: full-width info panel */}
 					<div className="mt-8 bg-white rounded-lg shadow-lg overflow-hidden">
 						<div className="p-8">
-							<h3 className="text-xl font-semibold mb-4">{locations[0].name}</h3>
+							<h3 className="text-xl font-semibold mb-4">{t('location.name')}</h3>
 							<div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
 								<div className="md:col-span-3">
 									<div className="space-y-4">
 										<div className="flex items-start gap-4">
 											<MapPin className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">{locations[0].address}</span>
+											<span className="text-neutral-600">{t('location.address')}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Phone className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">{locations[0].phone}</span>
+											<span className="text-neutral-600">{t('location.phone')}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Mail className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">{locations[0].email}</span>
+											<span className="text-neutral-600">{t('location.email')}</span>
 										</div>
 										<div className="flex items-start gap-4">
 											<Clock className="w-6 h-6 text-red-600" />
-											<span className="text-neutral-600">{locations[0].schedule}</span>
+											<span className="text-neutral-600">{t('location.schedule')}</span>
 										</div>
 									</div>
 								</div>
@@ -165,7 +154,7 @@ const SalesRoom: React.FC = () => {
 										onClick={() => openCarousel(0)}
 										className="w-full px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
 									>
-										Ver imágenes
+										{t('location.viewImages')}
 									</button>
 								</div>
 							</div>
