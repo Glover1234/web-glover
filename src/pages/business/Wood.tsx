@@ -75,21 +75,6 @@ const WoodPage: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <div className="w-8 h-12 border-2 border-white rounded-full flex items-start justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: 'reverse' }}
-              className="w-1 h-3 bg-white rounded-full"
-            />
-          </div>
-        </motion.div>
       </div>
 
       {/* Sections full-width */}

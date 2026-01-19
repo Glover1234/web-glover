@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ImageModal from '../components/ImageModal';
 
 const businessLines = [
   { id: 'doors', title: 'Puertas', path: '/business-lines/doors', image: '/src/assets/home_lines/doors.jpeg' },
@@ -10,6 +11,14 @@ const businessLines = [
 ];
 
 const BusinessLinesPage: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (e: React.MouseEvent, imageSrc: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setSelectedImage(imageSrc);
+  };
+
   return (
     <div className="container pt-24 md:pt-28 pb-12">
       <div className="flex items-center justify-between mb-8">
@@ -24,12 +33,18 @@ const BusinessLinesPage: React.FC = () => {
             key={line.id}
             className="group flex items-center bg-white rounded-lg shadow hover:shadow-xl transition-all overflow-hidden"
           >
-            <div className="relative w-48 h-32 flex-shrink-0 bg-neutral-100">
+            <div className="relative w-48 h-32 flex-shrink-0 bg-neutral-100 cursor-pointer group/image">
               <img
                 src={line.image}
                 alt={line.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onClick={(e) => handleImageClick(e, line.image)}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
               />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover/image:bg-opacity-20 transition-all flex items-center justify-center">
+                <svg className="w-8 h-8 text-white opacity-0 group-hover/image:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
             </div>
             <div className="flex-1 p-6">
               <h3 className="text-xl font-semibold text-neutral-900 mb-2 group-hover:text-red-600 transition-colors">{line.title}</h3>
@@ -43,6 +58,13 @@ const BusinessLinesPage: React.FC = () => {
           </Link>
         ))}
       </div>
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        imageSrc={selectedImage || ''}
+        imageAlt="Vista completa"
+        onClose={() => setSelectedImage(null)}
+      />
     </div>
   );
 };

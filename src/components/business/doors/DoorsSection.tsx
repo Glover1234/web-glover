@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import ImageModal from '../../ImageModal';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -29,9 +30,15 @@ interface DoorModel {
 const DoorsSection: React.FC = () => {
   const { t } = useTranslation('business');
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   const doorsData = t('doors.models', { returnObjects: true }) as DoorModel[];
   const selected = doorsData.find(d => d.id === selectedId) || null;
+
+  const handleImageClick = (e: React.MouseEvent, imageSrc: string) => {
+    e.stopPropagation();
+    setSelectedImage(imageSrc);
+  };
 
   return (
     <section id="doors-section" className="py-12 w-full px-4 lg:px-8">
@@ -53,13 +60,18 @@ const DoorsSection: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               onClick={() => setSelectedId(prod.id)}
             >
-              <div className={`${aspectRatio} overflow-hidden`}>
+              <div className={`${aspectRatio} overflow-hidden relative`}>
                 <img
                   src={imgSrc}
                   alt={prod.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  onClick={(e) => handleImageClick(e, imgSrc)}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{prod.name}</h3>
                 </div>
@@ -114,6 +126,13 @@ const DoorsSection: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        imageSrc={selectedImage || ''}
+        imageAlt="Vista completa"
+        onClose={() => setSelectedImage(null)}
+      />
     </section>
   );
 };

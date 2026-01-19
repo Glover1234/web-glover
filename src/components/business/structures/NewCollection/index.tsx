@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import ImageModal from '../../../ImageModal';
 
 // Import local collection images for estructuras
 import Collection1 from '../../../../assets/structures/coleccion/coleccion1.jpeg';
@@ -11,6 +12,7 @@ import Collection3 from '../../../../assets/structures/coleccion/coleccion3.jpeg
 const NewCollection: React.FC = () => {
   const { t } = useTranslation('business');
   const [openSection, setOpenSection] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
   const features = t('structures.attributes', { returnObjects: true }) as Array<{ title: string; content: string }>;
 
@@ -84,39 +86,66 @@ const NewCollection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="col-span-2"
+              className="col-span-2 relative group cursor-pointer"
+              onClick={() => setSelectedImage(Collection3)}
             >
               <img
                 src={Collection3}
                 alt="Estructura Premium"
-                className="w-full h-[350px] object-cover rounded-lg"
+                className="w-full h-[350px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
+                <svg className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedImage(Collection1)}
             >
               <img
                 src={Collection1}
                 alt="Detalle de base de cama"
-                className="w-full h-[200px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
+                <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedImage(Collection2)}
             >
               <img
                 src={Collection2}
                 alt="Detalle de respaldo"
-                className="w-full h-[200px] object-cover rounded-lg"
+                className="w-full h-[200px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
+                <svg className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
             </motion.div>
           </div>
         </div>
       </div>
+
+      <ImageModal
+        isOpen={!!selectedImage}
+        imageSrc={selectedImage || ''}
+        imageAlt="Vista completa"
+        onClose={() => setSelectedImage(null)}
+      />
     </section>
   );
 };

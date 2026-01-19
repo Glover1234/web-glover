@@ -93,7 +93,7 @@
     "title": "GLOVER'S DNA",
     "mission": {
       "title": "MISSION",
-      "content": "Deliver excellence solutions in wood-derived products, achieve sustainable development, harmonizing economic growth, social inclusion and environmental protection, creating value for our shareholders, employees and customers."
+      "content": "Deliver high quality solutions in wood-derived products, achieve sustainable development, harmonizing economic growth, social inclusion and environmental protection, creating value for our shareholders, employees and customers."
     },
     "vision": {
       "title": "VISION",
@@ -102,9 +102,9 @@
     "values": {
       "title": "VALUES",
       "items": [
-        "Excellence in quality",
-        "Constant innovation",
-        "Environmental commitment"
+        "Excellence in quality.",
+        "Constant innovation.",
+        "Environmental commitment."
       ]
     }
   }
