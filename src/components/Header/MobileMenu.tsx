@@ -23,6 +23,12 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     { path: '/business-lines/complements', name: t('businessLines.complements') },
   ];
 
+  const aboutItems = [
+    { path: '/about-us', name: t('nav.aboutUs') },
+    { path: '/technological-processes', name: t('nav.processes') },
+    { path: '/certifications-sustainability', name: t('nav.sustainability') },
+  ];
+
   const menuVariants = {
     closed: {
       opacity: 0,
@@ -62,81 +68,163 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           variants={menuVariants}
         >
           <motion.ul className="flex flex-col py-4 container">
-            {navigationItems.map((item) => {
-              const translatedName = item.path === '/' 
-                ? t('nav.home')
-                : item.path === '/business-lines'
-                ? t('nav.businessLines')
-                : item.path === '/certifications-sustainability'
-                ? t('nav.sustainability')
-                : item.path === '/technological-processes'
-                ? t('nav.processes')
-                : item.path === '/sales-room'
+            {/* Home */}
+            <motion.li variants={itemVariants}>
+              <Link
+                to="/"
+                className={`block py-3 px-4 text-sm font-medium ${
+                  location.pathname === '/'
+                    ? 'text-red-900'
+                    : 'text-neutral-900 hover:text-red-900'
+                }`}
+                onClick={onClose}
+              >
+                {t('nav.home')}
+              </Link>
+            </motion.li>
+
+            {/* Products Dropdown */}
+            <motion.li variants={itemVariants}>
+              <div>
+                <button
+                  onClick={() => setExpandedItem(expandedItem === 'products' ? null : 'products')}
+                  className="flex items-center justify-between w-full py-3 px-4 text-sm font-medium text-neutral-900 hover:text-red-900"
+                >
+                  {t('nav.products')}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      expandedItem === 'products' ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {expandedItem === 'products' && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="bg-neutral-50"
+                    >
+                      {/* Business Lines nested dropdown */}
+                      <div>
+                        <button
+                          onClick={() => setExpandedItem(expandedItem === 'business' ? 'products' : 'business')}
+                          className="flex items-center justify-between w-full py-2 px-8 text-sm font-medium text-neutral-900 hover:text-red-900"
+                        >
+                          {t('nav.businessLines')}
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform ${
+                              expandedItem === 'business' ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {expandedItem === 'business' && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              className="bg-neutral-100"
+                            >
+                              {businessLines.map((subItem) => (
+                                <Link
+                                  key={subItem.path}
+                                  to={subItem.path}
+                                  className={`block py-2 px-12 text-sm font-medium ${
+                                    location.pathname === subItem.path
+                                      ? 'text-red-900'
+                                      : 'text-neutral-900 hover:text-red-900'
+                                  }`}
+                                  onClick={onClose}
+                                >
+                                  {subItem.name}
+                                </Link>
+                              ))}
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                      {/* Catalog direct link */}
+                      <Link
+                        to="/catalog"
+                        className={`block py-2 px-8 text-sm font-medium ${
+                          location.pathname === '/catalog'
+                            ? 'text-red-900'
+                            : 'text-neutral-900 hover:text-red-900'
+                        }`}
+                        onClick={onClose}
+                      >
+                        {t('nav.catalog')}
+                      </Link>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.li>
+
+            {/* About Dropdown */}
+            <motion.li variants={itemVariants}>
+              <div>
+                <button
+                  onClick={() => setExpandedItem(expandedItem === 'about' ? null : 'about')}
+                  className="flex items-center justify-between w-full py-3 px-4 text-sm font-medium text-neutral-900 hover:text-red-900"
+                >
+                  {t('nav.about')}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      expandedItem === 'about' ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {expandedItem === 'about' && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="bg-neutral-50"
+                    >
+                      {aboutItems.map((subItem) => (
+                        <Link
+                          key={subItem.path}
+                          to={subItem.path}
+                          className={`block py-2 px-8 text-sm font-medium ${
+                            location.pathname === subItem.path
+                              ? 'text-red-900'
+                              : 'text-neutral-900 hover:text-red-900'
+                          }`}
+                          onClick={onClose}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.li>
+
+            {/* Remaining navigation items */}
+            {navigationItems.filter(item => item.path !== '/').map((item) => {
+              const translatedName = item.path === '/sales-room'
                 ? t('nav.salesroom')
-                : item.path === '/about-us'
-                ? t('nav.aboutUs')
                 : item.path === '/contact'
                 ? t('nav.contact')
                 : item.name;
 
               return (
               <motion.li key={item.path} variants={itemVariants}>
-                {item.path === '/business-lines' ? (
-                  <div>
-                    <button
-                      onClick={() => setExpandedItem(expandedItem === 'business' ? null : 'business')}
-                      className={`flex items-center justify-between w-full py-3 px-4 text-sm font-medium ${
-                        location.pathname.includes(item.path)
-                          ? 'text-red-900'
-                          : 'text-neutral-900 hover:text-red-900'
-                      }`}
-                    >
-                      {translatedName}
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform ${
-                          expandedItem === 'business' ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    <AnimatePresence>
-                      {expandedItem === 'business' && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="bg-neutral-50"
-                        >
-                          {businessLines.map((subItem) => (
-                            <Link
-                              key={subItem.path}
-                              to={subItem.path}
-                              className={`block py-2 px-8 text-sm font-medium ${
-                                location.pathname === subItem.path
-                                  ? 'text-red-900'
-                                  : 'text-neutral-900 hover:text-red-900'
-                              }`}
-                              onClick={onClose}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`block py-3 px-4 text-sm font-medium ${
-                      location.pathname === item.path
-                        ? 'text-red-900'
-                        : 'text-neutral-900 hover:text-red-900'
-                    }`}
-                    onClick={onClose}
-                  >
-                    {translatedName}
-                  </Link>
-                )}
+                <Link
+                  to={item.path}
+                  className={`block py-3 px-4 text-sm font-medium ${
+                    location.pathname === item.path
+                      ? 'text-red-900'
+                      : 'text-neutral-900 hover:text-red-900'
+                  }`}
+                  onClick={onClose}
+                >
+                  {translatedName}
+                </Link>
               </motion.li>
             );
             })}

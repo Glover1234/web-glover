@@ -5,6 +5,8 @@ import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
 import AboutUs from '../pages/AboutUs';
 import BusinessLines from '../pages/BusinessLines';
+import Catalog from '../pages/Catalog';
+import ProductDetail from '../pages/ProductDetail';
 import Doors from '../pages/business/Doors';
 import Furniture from '../pages/business/Furniture';
 import Wood from '../pages/business/Wood';
@@ -17,11 +19,7 @@ import SalesRoom from '../pages/SalesRoom';
 
 export const navigationItems = [
   { path: '/', name: 'Home' },
-  { path: '/business-lines', name: 'Líneas de negocio' },
-  { path: '/certifications-sustainability', name: 'Sustentabilidad' },
-  { path: '/technological-processes', name: 'Nuestros Procesos Tecnológicos' },
   { path: '/sales-room', name: 'Sala de ventas' },
-  { path: '/about-us', name: 'Nosotros' },
   { path: '/contact', name: 'Contacto' },
 ];
 
@@ -58,6 +56,14 @@ const router = createBrowserRouter(
         {
           path: 'business-lines/complements',
           element: <Complements />,
+        },
+        {
+          path: 'catalog',
+          element: <Catalog />,
+        },
+        {
+          path: 'catalog/:productId',
+          element: <ProductDetail />,
         },
         {
           path: 'certifications-sustainability',

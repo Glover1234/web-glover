@@ -1,0 +1,223 @@
+{
+  "title": "Product Catalog",
+  "filters": {
+    "title": "Filter by line",
+    "clear": "Clear filters",
+    "active": "active filters"
+  },
+  "lines": {
+    "doors": "Radiata Pine Doors",
+    "furniture": "Bedside Tables",
+    "wood": "Export Wood",
+    "structures": "Bed Headboards",
+    "complements": "Bed & Sofa Legs"
+  },
+  "results": {
+    "none": "No products found",
+    "singular": "product found",
+    "plural": "products found"
+  },
+  "empty": {
+    "title": "No products available",
+    "message": "Try adjusting the filters or check back later for new products."
+  },
+  "backToCatalog": "Back to catalog",
+  "description": "Description",
+  "specifications": "Specifications",
+  "contactUs": "Request information",
+  "viewMoreInLine": "View more products from this line",
+  "viewDetails": "View details",
+  "bannerImage": "/src/assets/sustainability/sustentabilidad1.jpeg",
+  "bannerAlt": "FSC Certification - Sustainable Wood",
+  "bannerTitle": "FSC® Certification - Commitment to the Future",
+  "bannerDescription": "All our products are made with FSC® certified wood, guaranteeing responsible and sustainable forest management.",
+  "bannerCTA": "Learn more about our sustainability",
+  "productNotFound": {
+    "title": "Product not found",
+    "message": "The product you're looking for doesn't exist or has been removed."
+  },
+  "products": {
+    "puerta-bari": {
+      "name": "Bari Door",
+      "descriptionShort": "100% solid radiata pine wood door with elegant design.",
+      "descriptionExtended": "The Bari Door combines the natural beauty of radiata pine wood with an elegant and contemporary design. Made from 100% solid wood, it offers excellent thermal and acoustic insulation. Its water-based paint finish ensures durability and environmental friendliness. FSC® certification guarantees sustainable origin.",
+      "specs": {
+        "Material": "100% Radiata Pine",
+        "Finish": "Water-based paint",
+        "Certification": "FSC®",
+        "Dimensions": "200 x 80 cm"
+      }
+    },
+    "puerta-llaima": {
+      "name": "Llaima Door",
+      "descriptionShort": "Modern design with solid wood, perfect for main entrances.",
+      "descriptionExtended": "The Llaima Door represents the perfect fusion between modernity and naturalness. Its clean and contemporary design makes it ideal for main entrances. Made from solid radiata pine wood, it guarantees exceptional resistance and durability.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Finish": "Natural varnished",
+        "Dimensions": "200 x 90 cm"
+      }
+    },
+    "puerta-murano": {
+      "name": "Murano Door",
+      "descriptionShort": "Contemporary style with high durability and resistance.",
+      "descriptionExtended": "The Murano Door stands out for its contemporary style and robust construction. Designed to withstand intensive use, it offers a perfect combination of modern aesthetics and lasting functionality. Ideal for residential and commercial spaces.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Finish": "Lacquered",
+        "Dimensions": "200 x 80 cm"
+      }
+    },
+    "puerta-lascar": {
+      "name": "Lascar Door",
+      "descriptionShort": "Versatile design with excellent insulation properties.",
+      "descriptionExtended": "The Lascar Door offers a versatile design that adapts to various architectural styles. Its excellent thermal and acoustic insulation properties make it an ideal choice for maintaining comfort in any environment.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Insulation": "Thermal and acoustic",
+        "Dimensions": "200 x 85 cm"
+      }
+    },
+    "puerta-turin": {
+      "name": "Turin Door",
+      "descriptionShort": "Classic elegance with modern technology.",
+      "descriptionExtended": "The Turin Door combines the elegance of classic designs with modern manufacturing technology. Its premium finish and attention to detail make it a standout piece that brings distinction to any space.",
+      "specs": {
+        "Material": "Premium Radiata Pine",
+        "Finish": "Premium lacquered",
+        "Dimensions": "210 x 90 cm"
+      }
+    },
+    "mueble-velador-clasico": {
+      "name": "Classic Bedside Table",
+      "descriptionShort": "Night table in solid wood with timeless design.",
+      "descriptionExtended": "The Classic Bedside Table is a functional and elegant piece, perfect to complement your bedroom. Made from solid radiata pine wood, it combines durability with a design that never goes out of style. Includes drawers with smooth slides for practical storage.",
+      "specs": {
+        "Material": "Solid Radiata Pine",
+        "Dimensions": "45 x 40 x 50 cm",
+        "Drawers": "2 drawers"
+      }
+    },
+    "mueble-comoda-moderna": {
+      "name": "Modern Dresser",
+      "descriptionShort": "Functional dresser with multiple drawers and premium finish.",
+      "descriptionExtended": "The Modern Dresser offers ample storage space with a contemporary design. Its multiple drawers of different sizes allow you to efficiently organize your clothes and accessories. Premium finish that highlights the natural beauty of the wood.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Dimensions": "120 x 50 x 90 cm",
+        "Drawers": "6 drawers",
+        "Finish": "Premium varnish"
+      }
+    },
+    "mueble-armario": {
+      "name": "Bedroom Wardrobe",
+      "descriptionShort": "Ample storage space with elegant design.",
+      "descriptionExtended": "The Bedroom Wardrobe offers versatile storage solutions with an elegant design. Optimized interior with adjustable shelves and hanging rod. Its robust construction in radiata pine guarantees years of use.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Dimensions": "200 x 60 x 220 cm",
+        "Doors": "2 doors with premium hinges",
+        "Interior": "Adjustable shelves"
+      }
+    },
+    "madera-finger-joint": {
+      "name": "Finger Joint Wood",
+      "descriptionShort": "Export wood with finger joint technology for maximum strength.",
+      "descriptionExtended": "Our finger joint technology woods offer superior strength through high-precision interlocking joints. This process allows obtaining longer pieces without losing structural stability, ideal for demanding construction and carpentry applications. FSC® certification guaranteed.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Technology": "Finger Joint",
+        "Certification": "FSC®",
+        "Use": "Construction and carpentry"
+      }
+    },
+    "madera-premium": {
+      "name": "Premium Export Wood",
+      "descriptionShort": "High quality radiata pine for international markets.",
+      "descriptionExtended": "Radiata pine wood specially selected for export. Meets the highest international quality standards. Controlled drying and professional treatment that guarantees dimensional stability and pest resistance.",
+      "specs": {
+        "Material": "Premium Radiata Pine",
+        "Classification": "Export Grade",
+        "Moisture": "12-14%",
+        "Certification": "FSC®"
+      }
+    },
+    "madera-estructural": {
+      "name": "Structural Wood",
+      "descriptionShort": "Construction wood with FSC® certification.",
+      "descriptionExtended": "Radiata pine structural wood designed to support loads and offer maximum resistance in construction applications. Classified according to international standards, it guarantees safety and durability in structural projects.",
+      "specs": {
+        "Material": "Structural Radiata Pine",
+        "Resistance": "High load",
+        "Certification": "FSC®",
+        "Standards": "Meets NCh 1198"
+      }
+    },
+    "estructura-respaldo-cama": {
+      "name": "Premium Bed Headboard",
+      "descriptionShort": "Ergonomic headboard in solid wood with elegant design.",
+      "descriptionExtended": "The Premium Bed Headboard combines ergonomics and aesthetics in a piece of superior quality. Made from solid wood, it offers perfect support for comfortable reading or watching TV. Its elegant design brings character to the bedroom.",
+      "specs": {
+        "Material": "Solid Radiata Pine",
+        "Dimensions": "160 x 10 x 120 cm",
+        "Assembly": "Fixing system included",
+        "Finish": "Natural varnished"
+      }
+    },
+    "estructura-base-cama": {
+      "name": "Bed Base",
+      "descriptionShort": "Sturdy and removable base for easy transport.",
+      "descriptionExtended": "Bed base designed for maximum strength and functionality. Its removable system facilitates transport and assembly. Built with reinforced joints to support weight without deformations. Compatible with most standard mattresses.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Dimensions": "200 x 160 cm",
+        "System": "Removable",
+        "Capacity": "Up to 200 kg"
+      }
+    },
+    "estructura-sofa": {
+      "name": "Sofa Frame",
+      "descriptionShort": "Robust sofa structure with finger joint connections.",
+      "descriptionExtended": "Sofa structure manufactured with finger joint technology to guarantee maximum strength and durability. Designed to withstand intensive use, it offers the perfect base for upholstery. Each piece is inspected to ensure superior quality.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Technology": "Finger Joint",
+        "Dimensions": "Variable depending on model",
+        "Use": "Structure for upholstery"
+      }
+    },
+    "complemento-pata-cama": {
+      "name": "Bed Legs",
+      "descriptionShort": "Turned wood legs with different heights available.",
+      "descriptionExtended": "Artisan-turned bed legs that combine functionality and aesthetics. Available in different heights to suit your needs. Smooth and resistant finish that guarantees durability. Easy installation with universal thread system.",
+      "specs": {
+        "Material": "Turned Radiata Pine",
+        "Available heights": "15, 20, 25 cm",
+        "System": "Universal thread",
+        "Finish": "Protective varnish"
+      }
+    },
+    "complemento-perilla": {
+      "name": "Decorative Knobs",
+      "descriptionShort": "Handcrafted wooden knobs with variety of designs.",
+      "descriptionExtended": "Handmade decorative knobs that add a touch of distinction to your furniture. Each piece is unique, with a variety of designs from classic to contemporary. Easy installation on doors, drawers and cabinets.",
+      "specs": {
+        "Material": "Turned Radiata Pine",
+        "Designs": "Variety available",
+        "Diameter": "3-5 cm",
+        "Includes": "Mounting screw"
+      }
+    },
+    "complemento-moldura": {
+      "name": "Decorative Moldings",
+      "descriptionShort": "Wooden moldings for custom finishes.",
+      "descriptionExtended": "Decorative moldings that allow you to customize and give elegant finishes to your projects. Ideal for frames, baseboards and architectural details. Variety of profiles available for different decorative applications.",
+      "specs": {
+        "Material": "Radiata Pine",
+        "Profiles": "Several available",
+        "Length": "2.4 meters",
+        "Finish": "Natural for painting or varnishing"
+      }
+    }
+  }
+}

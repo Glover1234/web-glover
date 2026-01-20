@@ -1,11 +1,14 @@
 {
   "nav": {
     "home": "Home",
+    "products": "Productos",
     "businessLines": "Líneas de negocio",
+    "catalog": "Catálogo",
+    "about": "Nosotros",
+    "aboutUs": "Sobre Nosotros",
+    "processes": "Procesos Tecnológicos",
     "sustainability": "Sustentabilidad",
-    "processes": "Nuestros Procesos Tecnológicos",
     "salesroom": "Sala de ventas",
-    "aboutUs": "Nosotros",
     "contact": "Contacto"
   },
   "businessLines": {

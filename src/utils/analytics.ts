@@ -137,6 +137,42 @@ export const trackGloverProduct = (productType: string, productId: string, actio
   });
 };
 
+// Tracking específico para el catálogo de productos
+export const trackCatalogView = () => {
+  trackPageView('/catalog', 'Catálogo de Productos');
+  trackEvent('catalog_view', {
+    page_location: window.location.pathname,
+    timestamp: Date.now()
+  });
+};
+
+export const trackCatalogFilter = (filters: string[]) => {
+  trackEvent('catalog_filter_applied', {
+    filters: filters.join(','),
+    filter_count: filters.length,
+    page_location: window.location.pathname,
+    timestamp: Date.now()
+  });
+};
+
+export const trackProductDetailView = (productId: string, productLine: string) => {
+  trackEvent('product_detail_view', {
+    product_id: productId,
+    product_line: productLine,
+    page_location: window.location.pathname,
+    timestamp: Date.now()
+  });
+};
+
+export const trackProductImageView = (productId: string, imageType: string) => {
+  trackEvent('product_image_expanded', {
+    product_id: productId,
+    image_type: imageType, // 'main', 'product1', 'ambient'
+    page_location: window.location.pathname,
+    timestamp: Date.now()
+  });
+};
+
 export const trackGloverLead = (leadType: string, source: string, businessLine?: string) => {
   trackEvent('glover_lead_generated', {
     lead_type: leadType, // 'contact_form', 'phone_call', 'email', 'catalog_download'

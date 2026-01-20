@@ -1,0 +1,223 @@
+{
+  "title": "Catálogo de Productos",
+  "filters": {
+    "title": "Filtrar por línea",
+    "clear": "Limpiar filtros",
+    "active": "filtros activos"
+  },
+  "lines": {
+    "doors": "Puertas Pino Radiata",
+    "furniture": "Veladores de Cama",
+    "wood": "Maderas de Exportación",
+    "structures": "Respaldos de Cama",
+    "complements": "Patas de Cama y Sofás"
+  },
+  "results": {
+    "none": "No se encontraron productos",
+    "singular": "producto encontrado",
+    "plural": "productos encontrados"
+  },
+  "empty": {
+    "title": "No hay productos disponibles",
+    "message": "Intenta ajustar los filtros o vuelve más tarde para ver nuevos productos."
+  },
+  "backToCatalog": "Volver al catálogo",
+  "description": "Descripción",
+  "specifications": "Especificaciones",
+  "contactUs": "Solicitar información",
+  "viewMoreInLine": "Ver más productos de esta línea",
+  "viewDetails": "Ver detalles",
+  "bannerImage": "/src/assets/sustainability/sustentabilidad1.jpeg",
+  "bannerAlt": "Certificación FSC - Madera Sostenible",
+  "bannerTitle": "Certificación FSC® - Compromiso con el Futuro",
+  "bannerDescription": "Todos nuestros productos están fabricados con madera certificada FSC®, garantizando un manejo forestal responsable y sostenible.",
+  "bannerCTA": "Conoce más sobre nuestra sostenibilidad",
+  "productNotFound": {
+    "title": "Producto no encontrado",
+    "message": "El producto que buscas no existe o ha sido eliminado."
+  },
+  "products": {
+    "puerta-bari": {
+      "name": "Puerta Bari",
+      "descriptionShort": "Puerta en madera 100% sólida de pino radiata con diseño elegante.",
+      "descriptionExtended": "La Puerta Bari combina la belleza natural de la madera de pino radiata con un diseño elegante y contemporáneo. Fabricada con madera 100% sólida, ofrece excelente aislamiento térmico y acústico. Su acabado en pintura al agua garantiza durabilidad y respeto al medio ambiente. Certificación FSC® que asegura un origen sostenible.",
+      "specs": {
+        "Material": "Pino Radiata 100%",
+        "Acabado": "Pintura al agua",
+        "Certificación": "FSC®",
+        "Dimensiones": "200 x 80 cm"
+      }
+    },
+    "puerta-llaima": {
+      "name": "Puerta Llaima",
+      "descriptionShort": "Diseño moderno con madera sólida, perfecta para accesos principales.",
+      "descriptionExtended": "La Puerta Llaima representa la perfecta fusión entre modernidad y naturalidad. Su diseño limpio y contemporáneo la hace ideal para accesos principales. Fabricada en madera sólida de pino radiata, garantiza resistencia y durabilidad excepcional.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Acabado": "Natural barnizado",
+        "Dimensiones": "200 x 90 cm"
+      }
+    },
+    "puerta-murano": {
+      "name": "Puerta Murano",
+      "descriptionShort": "Estilo contemporáneo con alta durabilidad y resistencia.",
+      "descriptionExtended": "La Puerta Murano destaca por su estilo contemporáneo y su construcción robusta. Diseñada para soportar el uso intensivo, ofrece una combinación perfecta de estética moderna y funcionalidad duradera. Ideal para espacios residenciales y comerciales.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Acabado": "Lacado",
+        "Dimensiones": "200 x 80 cm"
+      }
+    },
+    "puerta-lascar": {
+      "name": "Puerta Lascar",
+      "descriptionShort": "Diseño versátil con excelentes propiedades de aislamiento.",
+      "descriptionExtended": "La Puerta Lascar ofrece un diseño versátil que se adapta a diversos estilos arquitectónicos. Sus excelentes propiedades de aislamiento térmico y acústico la convierten en una opción ideal para mantener el confort en cualquier ambiente.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Aislamiento": "Térmico y acústico",
+        "Dimensiones": "200 x 85 cm"
+      }
+    },
+    "puerta-turin": {
+      "name": "Puerta Turin",
+      "descriptionShort": "Elegancia clásica con tecnología moderna.",
+      "descriptionExtended": "La Puerta Turin combina la elegancia de diseños clásicos con tecnología de fabricación moderna. Su acabado premium y atención al detalle la convierten en una pieza destacada que aporta distinción a cualquier espacio.",
+      "specs": {
+        "Material": "Pino Radiata Premium",
+        "Acabado": "Premium lacado",
+        "Dimensiones": "210 x 90 cm"
+      }
+    },
+    "mueble-velador-clasico": {
+      "name": "Velador Clásico",
+      "descriptionShort": "Velador de noche en madera maciza con diseño atemporal.",
+      "descriptionExtended": "El Velador Clásico es una pieza funcional y elegante, perfecta para acompañar tu dormitorio. Fabricado en madera maciza de pino radiata, combina durabilidad con un diseño que nunca pasa de moda. Incluye cajones con correderas suaves para un almacenamiento práctico.",
+      "specs": {
+        "Material": "Pino Radiata macizo",
+        "Dimensiones": "45 x 40 x 50 cm",
+        "Cajones": "2 cajones"
+      }
+    },
+    "mueble-comoda-moderna": {
+      "name": "Cómoda Moderna",
+      "descriptionShort": "Cómoda funcional con múltiples cajones y acabado premium.",
+      "descriptionExtended": "La Cómoda Moderna ofrece amplio espacio de almacenamiento con un diseño contemporáneo. Sus múltiples cajones de diferentes tamaños permiten organizar eficientemente tu ropa y accesorios. Acabado premium que resalta la belleza natural de la madera.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Dimensiones": "120 x 50 x 90 cm",
+        "Cajones": "6 cajones",
+        "Acabado": "Barniz premium"
+      }
+    },
+    "mueble-armario": {
+      "name": "Armario Dormitorio",
+      "descriptionShort": "Amplio espacio de almacenamiento con diseño elegante.",
+      "descriptionExtended": "El Armario de Dormitorio ofrece soluciones de almacenamiento versátiles con un diseño elegante. Interior optimizado con estantes ajustables y barra para colgadores. Su construcción robusta en pino radiata garantiza años de uso.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Dimensiones": "200 x 60 x 220 cm",
+        "Puertas": "2 puertas con bisagras premium",
+        "Interior": "Estantes ajustables"
+      }
+    },
+    "madera-finger-joint": {
+      "name": "Madera Finger Joint",
+      "descriptionShort": "Madera de exportación con tecnología finger joint para máxima resistencia.",
+      "descriptionExtended": "Nuestras maderas con tecnología finger joint ofrecen resistencia superior mediante uniones entrelazadas de alta precisión. Este proceso permite obtener piezas de mayor longitud sin perder estabilidad estructural, ideal para aplicaciones de construcción y carpintería exigentes. Certificación FSC® garantizada.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Tecnología": "Finger Joint",
+        "Certificación": "FSC®",
+        "Uso": "Construcción y carpintería"
+      }
+    },
+    "madera-premium": {
+      "name": "Madera Premium Export",
+      "descriptionShort": "Pino radiata de alta calidad para mercados internacionales.",
+      "descriptionExtended": "Madera de pino radiata seleccionada especialmente para exportación. Cumple con los más altos estándares internacionales de calidad. Secado controlado y tratamiento profesional que garantiza estabilidad dimensional y resistencia a plagas.",
+      "specs": {
+        "Material": "Pino Radiata Premium",
+        "Clasificación": "Export Grade",
+        "Humedad": "12-14%",
+        "Certificación": "FSC®"
+      }
+    },
+    "madera-estructural": {
+      "name": "Madera Estructural",
+      "descriptionShort": "Madera para construcción con certificación FSC®.",
+      "descriptionExtended": "Madera estructural de pino radiata diseñada para soportar cargas y ofrecer máxima resistencia en aplicaciones de construcción. Clasificada según normativas internacionales, garantiza seguridad y durabilidad en proyectos estructurales.",
+      "specs": {
+        "Material": "Pino Radiata estructural",
+        "Resistencia": "Alta carga",
+        "Certificación": "FSC®",
+        "Normas": "Cumple NCh 1198"
+      }
+    },
+    "estructura-respaldo-cama": {
+      "name": "Respaldo de Cama Premium",
+      "descriptionShort": "Respaldo ergonómico en madera sólida con diseño elegante.",
+      "descriptionExtended": "El Respaldo de Cama Premium combina ergonomía y estética en una pieza de calidad superior. Fabricado en madera sólida, ofrece el soporte perfecto para una lectura cómoda o ver televisión. Su diseño elegante aporta carácter al dormitorio.",
+      "specs": {
+        "Material": "Pino Radiata macizo",
+        "Dimensiones": "160 x 10 x 120 cm",
+        "Montaje": "Sistema de fijación incluido",
+        "Acabado": "Natural barnizado"
+      }
+    },
+    "estructura-base-cama": {
+      "name": "Base de Cama",
+      "descriptionShort": "Base resistente y desmontable para fácil transporte.",
+      "descriptionExtended": "Base de cama diseñada para máxima resistencia y funcionalidad. Su sistema desmontable facilita el transporte y montaje. Construida con uniones reforzadas para soportar peso sin deformaciones. Compatible con la mayoría de colchones estándar.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Dimensiones": "200 x 160 cm",
+        "Sistema": "Desmontable",
+        "Capacidad": "Hasta 200 kg"
+      }
+    },
+    "estructura-sofa": {
+      "name": "Estructura de Sofá",
+      "descriptionShort": "Estructura robusta para sofás con uniones finger joint.",
+      "descriptionExtended": "Estructura de sofá fabricada con tecnología finger joint para garantizar máxima resistencia y durabilidad. Diseñada para soportar uso intensivo, ofrece la base perfecta para tapicería. Cada pieza es inspeccionada para asegurar calidad superior.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Tecnología": "Finger Joint",
+        "Dimensiones": "Variable según modelo",
+        "Uso": "Estructura para tapicería"
+      }
+    },
+    "complemento-pata-cama": {
+      "name": "Patas de Cama",
+      "descriptionShort": "Patas torneadas en madera con diferentes alturas disponibles.",
+      "descriptionExtended": "Patas de cama torneadas artesanalmente que combinan funcionalidad y estética. Disponibles en diferentes alturas para adaptarse a tus necesidades. Acabado suave y resistente que garantiza durabilidad. Fácil instalación con sistema de rosca universal.",
+      "specs": {
+        "Material": "Pino Radiata torneado",
+        "Alturas disponibles": "15, 20, 25 cm",
+        "Sistema": "Rosca universal",
+        "Acabado": "Barniz protector"
+      }
+    },
+    "complemento-perilla": {
+      "name": "Perillas Decorativas",
+      "descriptionShort": "Perillas artesanales en madera con variedad de diseños.",
+      "descriptionExtended": "Perillas decorativas hechas a mano que añaden un toque de distinción a tus muebles. Cada pieza es única, con variedad de diseños desde clásicos hasta contemporáneos. Fácil instalación en puertas, cajones y armarios.",
+      "specs": {
+        "Material": "Pino Radiata torneado",
+        "Diseños": "Variedad disponible",
+        "Diámetro": "3-5 cm",
+        "Incluye": "Tornillo de montaje"
+      }
+    },
+    "complemento-moldura": {
+      "name": "Molduras Decorativas",
+      "descriptionShort": "Molduras en madera para acabados personalizados.",
+      "descriptionExtended": "Molduras decorativas que permiten personalizar y dar terminaciones elegantes a tus proyectos. Ideales para marcos, zócalos y detalles arquitectónicos. Variedad de perfiles disponibles para diferentes aplicaciones decorativas.",
+      "specs": {
+        "Material": "Pino Radiata",
+        "Perfiles": "Varios disponibles",
+        "Largo": "2.4 metros",
+        "Acabado": "Natural para pintar o barnizar"
+      }
+    }
+  }
+}

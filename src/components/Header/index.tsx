@@ -12,10 +12,16 @@ const Header: React.FC = () => {
   const { t } = useTranslation('common');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
+  const [isBusinessLinesDropdownOpen, setIsBusinessLinesDropdownOpen] = useState(false);
+  const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const location = useLocation();
-  const dropdownTimeoutRef = useRef<number | null>(null);
-  const dropdownRef = useRef<HTMLLIElement>(null);
+  const productsDropdownTimeoutRef = useRef<number | null>(null);
+  const businessLinesDropdownTimeoutRef = useRef<number | null>(null);
+  const aboutDropdownTimeoutRef = useRef<number | null>(null);
+  const productsDropdownRef = useRef<HTMLLIElement>(null);
+  const businessLinesDropdownRef = useRef<HTMLDivElement>(null);
+  const aboutDropdownRef = useRef<HTMLLIElement>(null);
 
   const businessLines = [
     { path: '/business-lines/doors', name: t('businessLines.doors') },
@@ -23,6 +29,12 @@ const Header: React.FC = () => {
     { path: '/business-lines/wood', name: t('businessLines.wood') },
     { path: '/business-lines/structures', name: t('businessLines.structures') },
     { path: '/business-lines/complements', name: t('businessLines.complements') },
+  ];
+
+  const aboutItems = [
+    { path: '/about-us', name: t('nav.aboutUs') },
+    { path: '/technological-processes', name: t('nav.processes') },
+    { path: '/certifications-sustainability', name: t('nav.sustainability') },
   ];
 
   useEffect(() => {
@@ -37,8 +49,14 @@ const Header: React.FC = () => {
   // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
-      if (dropdownTimeoutRef.current) {
-        clearTimeout(dropdownTimeoutRef.current);
+      if (aboutDropdownTimeoutRef.current) {
+        clearTimeout(aboutDropdownTimeoutRef.current);
+      }
+      if (productsDropdownTimeoutRef.current) {
+        clearTimeout(productsDropdownTimeoutRef.current);
+      }
+      if (businessLinesDropdownTimeoutRef.current) {
+        clearTimeout(businessLinesDropdownTimeoutRef.current);
       }
     };
   }, []);
@@ -47,27 +65,58 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleDropdownOpen = () => {
-    // Clear any existing timeout
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-      dropdownTimeoutRef.current = null;
+  const handleProductsDropdownOpen = () => {
+    if (productsDropdownTimeoutRef.current) {
+      clearTimeout(productsDropdownTimeoutRef.current);
+      productsDropdownTimeoutRef.current = null;
     }
-    setIsDropdownOpen(true);
+    setIsProductsDropdownOpen(true);
   };
 
-  const handleDropdownClose = () => {
-    // Set a small delay before closing to allow cursor movement between items
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setIsDropdownOpen(false);
+  const handleProductsDropdownClose = () => {
+    productsDropdownTimeoutRef.current = setTimeout(() => {
+      setIsProductsDropdownOpen(false);
+      setIsBusinessLinesDropdownOpen(false);
+    }, 100);
+  };
+
+  const handleBusinessLinesDropdownOpen = () => {
+    if (businessLinesDropdownTimeoutRef.current) {
+      clearTimeout(businessLinesDropdownTimeoutRef.current);
+      businessLinesDropdownTimeoutRef.current = null;
+    }
+    setIsBusinessLinesDropdownOpen(true);
+  };
+
+  const handleBusinessLinesDropdownClose = () => {
+    businessLinesDropdownTimeoutRef.current = setTimeout(() => {
+      setIsBusinessLinesDropdownOpen(false);
+    }, 100);
+  };
+
+  const handleAboutDropdownOpen = () => {
+    if (aboutDropdownTimeoutRef.current) {
+      clearTimeout(aboutDropdownTimeoutRef.current);
+      aboutDropdownTimeoutRef.current = null;
+    }
+    setIsAboutDropdownOpen(true);
+  };
+
+  const handleAboutDropdownClose = () => {
+    aboutDropdownTimeoutRef.current = setTimeout(() => {
+      setIsAboutDropdownOpen(false);
     }, 100);
   };
 
   // Handle clicks outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
+      if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target as Node)) {
+        setIsProductsDropdownOpen(false);
+        setIsBusinessLinesDropdownOpen(false);
+      }
+      if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(event.target as Node)) {
+        setIsAboutDropdownOpen(false);
       }
     };
 
@@ -96,70 +145,180 @@ const Header: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center space-x-8">
-            {navigationItems.map((item) => {
-              const translatedName = item.path === '/' 
-                ? t('nav.home')
-                : item.path === '/business-lines'
-                ? t('nav.businessLines')
-                : item.path === '/certifications-sustainability'
-                ? t('nav.sustainability')
-                : item.path === '/technological-processes'
-                ? t('nav.processes')
-                : item.path === '/sales-room'
+            {/* Home */}
+            <li>
+              <Link
+                to="/"
+                className={`relative py-2 text-sm font-medium transition-colors ${
+                  location.pathname === '/'
+                    ? 'text-red-900'
+                    : 'text-neutral-900 hover:text-red-900'
+                }`}
+              >
+                {t('nav.home')}
+                {location.pathname === '/' && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 h-0.5 bg-red-900"
+                    layoutId="underline"
+                    initial={{ width: 0 }}
+                    animate={{ width: '100%' }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </Link>
+            </li>
+
+            {/* Menu Productos con dropdown anidado */}
+            <li className="relative" ref={productsDropdownRef}>
+              <button
+                className={`relative py-2 text-sm font-medium transition-colors inline-flex items-center ${
+                  location.pathname.includes('/business-lines') || location.pathname.includes('/catalog')
+                    ? 'text-red-900'
+                    : 'text-neutral-900 hover:text-red-900'
+                }`}
+                onMouseEnter={handleProductsDropdownOpen}
+                onMouseLeave={handleProductsDropdownClose}
+                onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+              >
+                {t('nav.products')}
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <AnimatePresence>
+                {isProductsDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 w-64 bg-white shadow-lg py-2 rounded-md"
+                    onMouseEnter={handleProductsDropdownOpen}
+                    onMouseLeave={handleProductsDropdownClose}
+                    style={{ marginTop: '-2px' }}
+                  >
+                    {/* Líneas de Negocio con sub-dropdown */}
+                    <div
+                      className="relative"
+                      ref={businessLinesDropdownRef}
+                      onMouseEnter={handleBusinessLinesDropdownOpen}
+                      onMouseLeave={handleBusinessLinesDropdownClose}
+                    >
+                      <button
+                        className={`w-full text-left px-4 py-2 text-sm font-medium transition-colors flex items-center justify-between ${
+                          location.pathname.includes('/business-lines')
+                            ? 'text-red-900 bg-neutral-50'
+                            : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
+                        }`}
+                      >
+                        {t('nav.businessLines')}
+                        <ChevronDown className="ml-1 w-4 h-4 -rotate-90" />
+                      </button>
+                      <AnimatePresence>
+                        {isBusinessLinesDropdownOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 10 }}
+                            transition={{ duration: 0.2 }}
+                            className="absolute left-full top-0 w-64 bg-white shadow-lg py-2 rounded-md"
+                            onMouseEnter={handleBusinessLinesDropdownOpen}
+                            onMouseLeave={handleBusinessLinesDropdownClose}
+                            style={{ marginLeft: '-2px' }}
+                          >
+                            {businessLines.map((subItem) => (
+                              <Link
+                                key={subItem.path}
+                                to={subItem.path}
+                                className={`block px-4 py-2 text-sm font-medium transition-colors ${
+                                  location.pathname === subItem.path
+                                    ? 'text-red-900 bg-neutral-50'
+                                    : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
+                                }`}
+                                onClick={() => {
+                                  setIsProductsDropdownOpen(false);
+                                  setIsBusinessLinesDropdownOpen(false);
+                                }}
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
+                    {/* Catálogo */}
+                    <Link
+                      to="/catalog"
+                      className={`block px-4 py-2 text-sm font-medium transition-colors ${
+                        location.pathname.includes('/catalog')
+                          ? 'text-red-900 bg-neutral-50'
+                          : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
+                      }`}
+                      onClick={() => setIsProductsDropdownOpen(false)}
+                    >
+                      {t('nav.catalog')}
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </li>
+
+            {/* Menu Nosotros con dropdown */}
+            <li className="relative" ref={aboutDropdownRef}>
+              <button
+                className={`relative py-2 text-sm font-medium transition-colors inline-flex items-center ${
+                  location.pathname.includes('/about-us') || 
+                  location.pathname.includes('/technological-processes') || 
+                  location.pathname.includes('/certifications-sustainability')
+                    ? 'text-red-900'
+                    : 'text-neutral-900 hover:text-red-900'
+                }`}
+                onMouseEnter={handleAboutDropdownOpen}
+                onMouseLeave={handleAboutDropdownClose}
+                onClick={() => setIsAboutDropdownOpen(!isAboutDropdownOpen)}
+              >
+                {t('nav.about')}
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              <AnimatePresence>
+                {isAboutDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 w-64 bg-white shadow-lg py-2 rounded-md"
+                    onMouseEnter={handleAboutDropdownOpen}
+                    onMouseLeave={handleAboutDropdownClose}
+                    style={{ marginTop: '-2px' }}
+                  >
+                    {aboutItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        className={`block px-4 py-2 text-sm font-medium transition-colors ${
+                          location.pathname === item.path
+                            ? 'text-red-900 bg-neutral-50'
+                            : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
+                        }`}
+                        onClick={() => setIsAboutDropdownOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </li>
+
+            {/* Resto de items del menú */}
+            {navigationItems.filter(item => item.path !== '/').map((item) => {
+              const translatedName = item.path === '/sales-room'
                 ? t('nav.salesroom')
-                : item.path === '/about-us'
-                ? t('nav.aboutUs')
                 : item.path === '/contact'
                 ? t('nav.contact')
                 : item.name;
 
-              if (item.path === '/business-lines') {
-                return (
-                  <li key={item.path} className="relative" ref={dropdownRef}>
-                    <button
-                      className={`relative py-2 text-sm font-medium transition-colors inline-flex items-center ${
-                        location.pathname.includes(item.path)
-                          ? 'text-red-900'
-                          : 'text-neutral-900 hover:text-red-900'
-                      }`}
-                      onMouseEnter={handleDropdownOpen}
-                      onMouseLeave={handleDropdownClose}
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    >
-                      {translatedName}
-                      <ChevronDown className="ml-1 w-4 h-4" />
-                    </button>
-                    <AnimatePresence>
-                      {isDropdownOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: 10 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 w-64 bg-white shadow-lg py-2 rounded-md"
-                          onMouseEnter={handleDropdownOpen}
-                          onMouseLeave={handleDropdownClose}
-                          style={{ marginTop: '-2px' }}
-                        >
-                          {businessLines.map((subItem) => (
-                            <Link
-                              key={subItem.path}
-                              to={subItem.path}
-                              className={`block px-4 py-2 text-sm font-medium transition-colors ${
-                                location.pathname === subItem.path
-                                  ? 'text-red-900 bg-neutral-50'
-                                  : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
-                              }`}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </li>
-                );
-              }
               return (
                 <li key={item.path}>
                   <Link

@@ -32,18 +32,18 @@ const CombinedSection: React.FC = () => {
         <div className="block lg:hidden space-y-12">
           {/* Corporate Presentation Mobile */}
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-6">
-              <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 text-neutral-900">
-                {t('home:companyIntro.title')}
-              </h3>
-              <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
-            </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white p-6 rounded-lg shadow-lg"
             >
+              <div className="text-center mb-4">
+                <h3 className="text-xl md:text-2xl font-bold uppercase mb-2 text-neutral-900">
+                  {t('home:companyIntro.title')}
+                </h3>
+                <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
+              </div>
               <div className="space-y-3 text-neutral-600 text-center">
                 <p className="text-base md:text-lg">
                   {t('home:companyIntro.paragraph1')}
@@ -119,13 +119,13 @@ const CombinedSection: React.FC = () => {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold uppercase mb-2 text-neutral-900">
-                {t('home:companyIntro.title')}
-              </h3>
-              <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
-            </div>
             <div className="bg-white p-6 xl:p-8 rounded-lg shadow-lg flex-1 flex flex-col justify-center">
+              <div className="text-center mb-4">
+                <h3 className="text-2xl font-bold uppercase mb-2 text-neutral-900">
+                  {t('home:companyIntro.title')}
+                </h3>
+                <div className="w-24 h-0.5 bg-red-600 mx-auto"></div>
+              </div>
               <div className="space-y-3 text-neutral-600 text-center">
                 <p className="text-lg">
                   {t('home:companyIntro.paragraph1')}

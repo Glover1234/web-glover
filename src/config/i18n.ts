@@ -19,6 +19,8 @@ import processesES from '../locales/es/processes.json';
 import processesEN from '../locales/en/processes.json';
 import salesroomES from '../locales/es/salesroom.json';
 import salesroomEN from '../locales/en/salesroom.json';
+import catalogES from '../locales/es/catalog.json';
+import catalogEN from '../locales/en/catalog.json';
 
 const resources = {
   es: {
@@ -30,6 +32,7 @@ const resources = {
     sustainability: sustainabilityES,
     processes: processesES,
     salesroom: salesroomES,
+    catalog: catalogES,
   },
   en: {
     common: commonEN,
@@ -40,6 +43,7 @@ const resources = {
     sustainability: sustainabilityEN,
     processes: processesEN,
     salesroom: salesroomEN,
+    catalog: catalogEN,
   },
 };
 
