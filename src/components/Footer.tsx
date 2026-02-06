@@ -87,9 +87,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2 text-sm">
                 <li>
                   <a
-                    href="https://es.surveymonkey.com/r/canal_de_denuncias_del_modelo_de_prevencion_de_delitos"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:cumplimiento@rosen.cl"
                     className="text-neutral-600 hover:text-red-600 flex items-center"
                   >
                     <MapPin className="w-4 h-4 mr-2" /> {t('footer.complaintChannel')}
@@ -129,7 +127,7 @@ const Footer: React.FC = () => {
             <p className="text-sm text-neutral-600">
               {t('footer.rights', { year: currentYear })} - Desarrollado por{' '}
               <a 
-                href="https://zaas.cl/servicios" 
+                href="https://zaas.cl/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-red-600 hover:text-red-700 transition-colors"

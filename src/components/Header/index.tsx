@@ -12,15 +12,12 @@ const Header: React.FC = () => {
   const { t } = useTranslation('common');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isBusinessLinesDropdownOpen, setIsBusinessLinesDropdownOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
   const location = useLocation();
-  const productsDropdownTimeoutRef = useRef<number | null>(null);
   const businessLinesDropdownTimeoutRef = useRef<number | null>(null);
   const aboutDropdownTimeoutRef = useRef<number | null>(null);
-  const productsDropdownRef = useRef<HTMLLIElement>(null);
-  const businessLinesDropdownRef = useRef<HTMLDivElement>(null);
+  const businessLinesDropdownRef = useRef<HTMLLIElement>(null);
   const aboutDropdownRef = useRef<HTMLLIElement>(null);
 
   const businessLines = [
@@ -52,9 +49,6 @@ const Header: React.FC = () => {
       if (aboutDropdownTimeoutRef.current) {
         clearTimeout(aboutDropdownTimeoutRef.current);
       }
-      if (productsDropdownTimeoutRef.current) {
-        clearTimeout(productsDropdownTimeoutRef.current);
-      }
       if (businessLinesDropdownTimeoutRef.current) {
         clearTimeout(businessLinesDropdownTimeoutRef.current);
       }
@@ -63,21 +57,6 @@ const Header: React.FC = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleProductsDropdownOpen = () => {
-    if (productsDropdownTimeoutRef.current) {
-      clearTimeout(productsDropdownTimeoutRef.current);
-      productsDropdownTimeoutRef.current = null;
-    }
-    setIsProductsDropdownOpen(true);
-  };
-
-  const handleProductsDropdownClose = () => {
-    productsDropdownTimeoutRef.current = setTimeout(() => {
-      setIsProductsDropdownOpen(false);
-      setIsBusinessLinesDropdownOpen(false);
-    }, 100);
   };
 
   const handleBusinessLinesDropdownOpen = () => {
@@ -111,8 +90,7 @@ const Header: React.FC = () => {
   // Handle clicks outside the dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (productsDropdownRef.current && !productsDropdownRef.current.contains(event.target as Node)) {
-        setIsProductsDropdownOpen(false);
+      if (businessLinesDropdownRef.current && !businessLinesDropdownRef.current.contains(event.target as Node)) {
         setIsBusinessLinesDropdownOpen(false);
       }
       if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(event.target as Node)) {
@@ -168,100 +146,67 @@ const Header: React.FC = () => {
               </Link>
             </li>
 
-            {/* Menu Productos con dropdown anidado */}
-            <li className="relative" ref={productsDropdownRef}>
+            {/* Líneas de Negocio con dropdown */}
+            <li className="relative" ref={businessLinesDropdownRef}>
               <button
                 className={`relative py-2 text-sm font-medium transition-colors inline-flex items-center ${
-                  location.pathname.includes('/business-lines') || location.pathname.includes('/catalog')
+                  location.pathname.includes('/business-lines')
                     ? 'text-red-900'
                     : 'text-neutral-900 hover:text-red-900'
                 }`}
-                onMouseEnter={handleProductsDropdownOpen}
-                onMouseLeave={handleProductsDropdownClose}
-                onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
+                onMouseEnter={handleBusinessLinesDropdownOpen}
+                onMouseLeave={handleBusinessLinesDropdownClose}
+                onClick={() => setIsBusinessLinesDropdownOpen(!isBusinessLinesDropdownOpen)}
               >
-                {t('nav.products')}
+                {t('nav.businessLines')}
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               <AnimatePresence>
-                {isProductsDropdownOpen && (
+                {isBusinessLinesDropdownOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 w-64 bg-white shadow-lg py-2 rounded-md"
-                    onMouseEnter={handleProductsDropdownOpen}
-                    onMouseLeave={handleProductsDropdownClose}
+                    onMouseEnter={handleBusinessLinesDropdownOpen}
+                    onMouseLeave={handleBusinessLinesDropdownClose}
                     style={{ marginTop: '-2px' }}
                   >
-                    {/* Líneas de Negocio con sub-dropdown */}
-                    <div
-                      className="relative"
-                      ref={businessLinesDropdownRef}
-                      onMouseEnter={handleBusinessLinesDropdownOpen}
-                      onMouseLeave={handleBusinessLinesDropdownClose}
-                    >
-                      <button
-                        className={`w-full text-left px-4 py-2 text-sm font-medium transition-colors flex items-center justify-between ${
-                          location.pathname.includes('/business-lines')
+                    {businessLines.map((subItem) => (
+                      <Link
+                        key={subItem.path}
+                        to={subItem.path}
+                        className={`block px-4 py-2 text-sm font-medium transition-colors ${
+                          location.pathname === subItem.path
                             ? 'text-red-900 bg-neutral-50'
                             : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
                         }`}
+                        onClick={() => setIsBusinessLinesDropdownOpen(false)}
                       >
-                        {t('nav.businessLines')}
-                        <ChevronDown className="ml-1 w-4 h-4 -rotate-90" />
-                      </button>
-                      <AnimatePresence>
-                        {isBusinessLinesDropdownOpen && (
-                          <motion.div
-                            initial={{ opacity: 0, x: 10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: 10 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute left-full top-0 w-64 bg-white shadow-lg py-2 rounded-md"
-                            onMouseEnter={handleBusinessLinesDropdownOpen}
-                            onMouseLeave={handleBusinessLinesDropdownClose}
-                            style={{ marginLeft: '-2px' }}
-                          >
-                            {businessLines.map((subItem) => (
-                              <Link
-                                key={subItem.path}
-                                to={subItem.path}
-                                className={`block px-4 py-2 text-sm font-medium transition-colors ${
-                                  location.pathname === subItem.path
-                                    ? 'text-red-900 bg-neutral-50'
-                                    : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
-                                }`}
-                                onClick={() => {
-                                  setIsProductsDropdownOpen(false);
-                                  setIsBusinessLinesDropdownOpen(false);
-                                }}
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-
-                    {/* Catálogo */}
-                    <Link
-                      to="/catalog"
-                      className={`block px-4 py-2 text-sm font-medium transition-colors ${
-                        location.pathname.includes('/catalog')
-                          ? 'text-red-900 bg-neutral-50'
-                          : 'text-neutral-900 hover:text-red-900 hover:bg-neutral-50'
-                      }`}
-                      onClick={() => setIsProductsDropdownOpen(false)}
-                    >
-                      {t('nav.catalog')}
-                    </Link>
+                        {subItem.name}
+                      </Link>
+                    ))}
                   </motion.div>
                 )}
               </AnimatePresence>
             </li>
+
+            {/* Catálogo - Commented out for now */}
+            {/* 
+            <li>
+              <Link
+                to="/catalog"
+                className={`relative py-2 text-sm font-medium transition-colors ${
+                  location.pathname.includes('/catalog')
+                    ? 'text-red-900'
+                    : 'text-neutral-900 hover:text-red-900'
+                }`}
+              >
+                {t('nav.catalog')}
+              </Link>
+            </li>
+            */}
 
             {/* Menu Nosotros con dropdown */}
             <li className="relative" ref={aboutDropdownRef}>
